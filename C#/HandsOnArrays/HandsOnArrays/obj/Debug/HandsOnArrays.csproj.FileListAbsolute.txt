@@ -1,0 +1,6 @@
+D:\lendi_35173\HandsOnArrays\HandsOnArrays\bin\Debug\HandsOnArrays.exe.config
+D:\lendi_35173\HandsOnArrays\HandsOnArrays\bin\Debug\HandsOnArrays.exe
+D:\lendi_35173\HandsOnArrays\HandsOnArrays\bin\Debug\HandsOnArrays.pdb
+D:\lendi_35173\HandsOnArrays\HandsOnArrays\obj\Debug\HandsOnArrays.csprojResolveAssemblyReference.cache
+D:\lendi_35173\HandsOnArrays\HandsOnArrays\obj\Debug\HandsOnArrays.exe
+D:\lendi_35173\HandsOnArrays\HandsOnArrays\obj\Debug\HandsOnArrays.pdb

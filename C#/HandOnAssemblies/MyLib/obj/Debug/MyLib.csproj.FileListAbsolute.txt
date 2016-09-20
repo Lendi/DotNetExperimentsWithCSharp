@@ -1,0 +1,5 @@
+D:\lendi_35173\Assignments\Assignments\HandOnAssemblies\MyLib\bin\Debug\MyLib.dll
+D:\lendi_35173\Assignments\Assignments\HandOnAssemblies\MyLib\bin\Debug\MyLib.pdb
+D:\lendi_35173\Assignments\Assignments\HandOnAssemblies\MyLib\obj\Debug\MyLib.csprojResolveAssemblyReference.cache
+D:\lendi_35173\Assignments\Assignments\HandOnAssemblies\MyLib\obj\Debug\MyLib.dll
+D:\lendi_35173\Assignments\Assignments\HandOnAssemblies\MyLib\obj\Debug\MyLib.pdb

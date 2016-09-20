@@ -1,0 +1,6 @@
+D:\lendi_35173\HandsOnStrings\HandsOnStrings\bin\Debug\HandsOnStrings.exe.config
+D:\lendi_35173\HandsOnStrings\HandsOnStrings\obj\Debug\HandsOnStrings.csprojResolveAssemblyReference.cache
+D:\lendi_35173\HandsOnStrings\HandsOnStrings\bin\Debug\HandsOnStrings.exe
+D:\lendi_35173\HandsOnStrings\HandsOnStrings\bin\Debug\HandsOnStrings.pdb
+D:\lendi_35173\HandsOnStrings\HandsOnStrings\obj\Debug\HandsOnStrings.exe
+D:\lendi_35173\HandsOnStrings\HandsOnStrings\obj\Debug\HandsOnStrings.pdb

@@ -1,0 +1,6 @@
+D:\lendi_35173\Assignments\Assignments\HandsOnException\bin\Debug\HandsOnException.exe.config
+D:\lendi_35173\Assignments\Assignments\HandsOnException\bin\Debug\HandsOnException.exe
+D:\lendi_35173\Assignments\Assignments\HandsOnException\bin\Debug\HandsOnException.pdb
+D:\lendi_35173\Assignments\Assignments\HandsOnException\obj\Debug\HandsOnException.csprojResolveAssemblyReference.cache
+D:\lendi_35173\Assignments\Assignments\HandsOnException\obj\Debug\HandsOnException.exe
+D:\lendi_35173\Assignments\Assignments\HandsOnException\obj\Debug\HandsOnException.pdb

@@ -1,0 +1,6 @@
+D:\lendi_35173\Assignments\Assignments\HandsOnStruct\bin\Debug\HandsOnStruct.exe.config
+D:\lendi_35173\Assignments\Assignments\HandsOnStruct\obj\Debug\HandsOnStruct.csprojResolveAssemblyReference.cache
+D:\lendi_35173\Assignments\Assignments\HandsOnStruct\bin\Debug\HandsOnStruct.exe
+D:\lendi_35173\Assignments\Assignments\HandsOnStruct\bin\Debug\HandsOnStruct.pdb
+D:\lendi_35173\Assignments\Assignments\HandsOnStruct\obj\Debug\HandsOnStruct.exe
+D:\lendi_35173\Assignments\Assignments\HandsOnStruct\obj\Debug\HandsOnStruct.pdb

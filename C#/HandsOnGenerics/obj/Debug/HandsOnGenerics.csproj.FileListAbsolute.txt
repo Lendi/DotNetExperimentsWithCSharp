@@ -1,0 +1,5 @@
+D:\lendi_35173\Assignments\Assignments\HandsOnGenerics\bin\Debug\HandsOnGenerics.exe.config
+D:\lendi_35173\Assignments\Assignments\HandsOnGenerics\bin\Debug\HandsOnGenerics.exe
+D:\lendi_35173\Assignments\Assignments\HandsOnGenerics\bin\Debug\HandsOnGenerics.pdb
+D:\lendi_35173\Assignments\Assignments\HandsOnGenerics\obj\Debug\HandsOnGenerics.exe
+D:\lendi_35173\Assignments\Assignments\HandsOnGenerics\obj\Debug\HandsOnGenerics.pdb

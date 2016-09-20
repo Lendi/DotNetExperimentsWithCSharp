@@ -1,0 +1,6 @@
+D:\lendi_35173\Assignments\Assignments\PropertiesAssignment\bin\Debug\PropertiesAssignment.exe.config
+D:\lendi_35173\Assignments\Assignments\PropertiesAssignment\obj\Debug\PropertiesAssignment.csprojResolveAssemblyReference.cache
+D:\lendi_35173\Assignments\Assignments\PropertiesAssignment\bin\Debug\PropertiesAssignment.exe
+D:\lendi_35173\Assignments\Assignments\PropertiesAssignment\bin\Debug\PropertiesAssignment.pdb
+D:\lendi_35173\Assignments\Assignments\PropertiesAssignment\obj\Debug\PropertiesAssignment.exe
+D:\lendi_35173\Assignments\Assignments\PropertiesAssignment\obj\Debug\PropertiesAssignment.pdb

@@ -1,0 +1,6 @@
+D:\lendi_35173\Assignments\Assignments\HandsOnFileHandling\bin\Debug\HandsOnFileHandling.exe.config
+D:\lendi_35173\Assignments\Assignments\HandsOnFileHandling\bin\Debug\HandsOnFileHandling.exe
+D:\lendi_35173\Assignments\Assignments\HandsOnFileHandling\bin\Debug\HandsOnFileHandling.pdb
+D:\lendi_35173\Assignments\Assignments\HandsOnFileHandling\obj\Debug\HandsOnFileHandling.exe
+D:\lendi_35173\Assignments\Assignments\HandsOnFileHandling\obj\Debug\HandsOnFileHandling.pdb
+D:\lendi_35173\Assignments\Assignments\HandsOnFileHandling\obj\Debug\HandsOnFileHandling.csprojResolveAssemblyReference.cache

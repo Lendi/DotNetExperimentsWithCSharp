@@ -1,0 +1,6 @@
+D:\lendi_35173\Assignments\Assignments\HandsOnInterface\bin\Debug\HandsOnInterface.exe.config
+D:\lendi_35173\Assignments\Assignments\HandsOnInterface\bin\Debug\HandsOnInterface.exe
+D:\lendi_35173\Assignments\Assignments\HandsOnInterface\bin\Debug\HandsOnInterface.pdb
+D:\lendi_35173\Assignments\Assignments\HandsOnInterface\obj\Debug\HandsOnInterface.csprojResolveAssemblyReference.cache
+D:\lendi_35173\Assignments\Assignments\HandsOnInterface\obj\Debug\HandsOnInterface.exe
+D:\lendi_35173\Assignments\Assignments\HandsOnInterface\obj\Debug\HandsOnInterface.pdb

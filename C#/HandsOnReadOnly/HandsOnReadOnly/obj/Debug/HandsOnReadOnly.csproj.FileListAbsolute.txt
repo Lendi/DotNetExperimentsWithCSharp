@@ -1,0 +1,6 @@
+D:\lendi_35173\Assignments\Assignments\HandsOnReadOnly\HandsOnReadOnly\bin\Debug\HandsOnReadOnly.exe.config
+D:\lendi_35173\Assignments\Assignments\HandsOnReadOnly\HandsOnReadOnly\obj\Debug\HandsOnReadOnly.csprojResolveAssemblyReference.cache
+D:\lendi_35173\Assignments\Assignments\HandsOnReadOnly\HandsOnReadOnly\bin\Debug\HandsOnReadOnly.exe
+D:\lendi_35173\Assignments\Assignments\HandsOnReadOnly\HandsOnReadOnly\bin\Debug\HandsOnReadOnly.pdb
+D:\lendi_35173\Assignments\Assignments\HandsOnReadOnly\HandsOnReadOnly\obj\Debug\HandsOnReadOnly.exe
+D:\lendi_35173\Assignments\Assignments\HandsOnReadOnly\HandsOnReadOnly\obj\Debug\HandsOnReadOnly.pdb

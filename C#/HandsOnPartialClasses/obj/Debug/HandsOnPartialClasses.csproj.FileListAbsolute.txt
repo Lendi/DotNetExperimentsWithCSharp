@@ -1,0 +1,6 @@
+D:\lendi_35173\Assignments\Assignments\HandsOnPartialClasses\bin\Debug\HandsOnPartialClasses.exe.config
+D:\lendi_35173\Assignments\Assignments\HandsOnPartialClasses\bin\Debug\HandsOnPartialClasses.exe
+D:\lendi_35173\Assignments\Assignments\HandsOnPartialClasses\bin\Debug\HandsOnPartialClasses.pdb
+D:\lendi_35173\Assignments\Assignments\HandsOnPartialClasses\obj\Debug\HandsOnPartialClasses.csprojResolveAssemblyReference.cache
+D:\lendi_35173\Assignments\Assignments\HandsOnPartialClasses\obj\Debug\HandsOnPartialClasses.exe
+D:\lendi_35173\Assignments\Assignments\HandsOnPartialClasses\obj\Debug\HandsOnPartialClasses.pdb

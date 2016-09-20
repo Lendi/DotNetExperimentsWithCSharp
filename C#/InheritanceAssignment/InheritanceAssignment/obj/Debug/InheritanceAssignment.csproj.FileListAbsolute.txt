@@ -1,0 +1,6 @@
+D:\lendi_35173\Assignments\Assignments\InheritanceAssignment\InheritanceAssignment\bin\Debug\InheritanceAssignment.exe.config
+D:\lendi_35173\Assignments\Assignments\InheritanceAssignment\InheritanceAssignment\bin\Debug\InheritanceAssignment.exe
+D:\lendi_35173\Assignments\Assignments\InheritanceAssignment\InheritanceAssignment\bin\Debug\InheritanceAssignment.pdb
+D:\lendi_35173\Assignments\Assignments\InheritanceAssignment\InheritanceAssignment\obj\Debug\InheritanceAssignment.csprojResolveAssemblyReference.cache
+D:\lendi_35173\Assignments\Assignments\InheritanceAssignment\InheritanceAssignment\obj\Debug\InheritanceAssignment.exe
+D:\lendi_35173\Assignments\Assignments\InheritanceAssignment\InheritanceAssignment\obj\Debug\InheritanceAssignment.pdb

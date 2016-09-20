@@ -1,0 +1,6 @@
+D:\lendi_35173\Assignments\Assignments\StringAssignment\bin\Debug\StringAssignment.exe.config
+D:\lendi_35173\Assignments\Assignments\StringAssignment\bin\Debug\StringAssignment.exe
+D:\lendi_35173\Assignments\Assignments\StringAssignment\bin\Debug\StringAssignment.pdb
+D:\lendi_35173\Assignments\Assignments\StringAssignment\obj\Debug\StringAssignment.csprojResolveAssemblyReference.cache
+D:\lendi_35173\Assignments\Assignments\StringAssignment\obj\Debug\StringAssignment.exe
+D:\lendi_35173\Assignments\Assignments\StringAssignment\obj\Debug\StringAssignment.pdb

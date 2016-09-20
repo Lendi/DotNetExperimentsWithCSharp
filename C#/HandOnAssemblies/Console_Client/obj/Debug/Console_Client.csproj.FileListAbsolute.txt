@@ -1,0 +1,8 @@
+D:\lendi_35173\Assignments\Assignments\HandOnAssemblies\Console_Client\bin\Debug\Console_Client.exe.config
+D:\lendi_35173\Assignments\Assignments\HandOnAssemblies\Console_Client\bin\Debug\Console_Client.exe
+D:\lendi_35173\Assignments\Assignments\HandOnAssemblies\Console_Client\bin\Debug\Console_Client.pdb
+D:\lendi_35173\Assignments\Assignments\HandOnAssemblies\Console_Client\bin\Debug\MyLib.dll
+D:\lendi_35173\Assignments\Assignments\HandOnAssemblies\Console_Client\bin\Debug\MyLib.pdb
+D:\lendi_35173\Assignments\Assignments\HandOnAssemblies\Console_Client\obj\Debug\Console_Client.csprojResolveAssemblyReference.cache
+D:\lendi_35173\Assignments\Assignments\HandOnAssemblies\Console_Client\obj\Debug\Console_Client.exe
+D:\lendi_35173\Assignments\Assignments\HandOnAssemblies\Console_Client\obj\Debug\Console_Client.pdb

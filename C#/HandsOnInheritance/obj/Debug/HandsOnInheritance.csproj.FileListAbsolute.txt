@@ -1,0 +1,6 @@
+D:\lendi_35173\Assignments\Assignments\HandsOnInheritance\bin\Debug\HandsOnInheritance.exe.config
+D:\lendi_35173\Assignments\Assignments\HandsOnInheritance\obj\Debug\HandsOnInheritance.csprojResolveAssemblyReference.cache
+D:\lendi_35173\Assignments\Assignments\HandsOnInheritance\bin\Debug\HandsOnInheritance.exe
+D:\lendi_35173\Assignments\Assignments\HandsOnInheritance\bin\Debug\HandsOnInheritance.pdb
+D:\lendi_35173\Assignments\Assignments\HandsOnInheritance\obj\Debug\HandsOnInheritance.exe
+D:\lendi_35173\Assignments\Assignments\HandsOnInheritance\obj\Debug\HandsOnInheritance.pdb

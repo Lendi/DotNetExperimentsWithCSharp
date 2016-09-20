@@ -1,0 +1,6 @@
+D:\lendi_35173\Assignments\Assignments\HandsOnAbstractClass\bin\Debug\HandsOnAbstractClass.exe.config
+D:\lendi_35173\Assignments\Assignments\HandsOnAbstractClass\bin\Debug\HandsOnAbstractClass.exe
+D:\lendi_35173\Assignments\Assignments\HandsOnAbstractClass\bin\Debug\HandsOnAbstractClass.pdb
+D:\lendi_35173\Assignments\Assignments\HandsOnAbstractClass\obj\Debug\HandsOnAbstractClass.csprojResolveAssemblyReference.cache
+D:\lendi_35173\Assignments\Assignments\HandsOnAbstractClass\obj\Debug\HandsOnAbstractClass.exe
+D:\lendi_35173\Assignments\Assignments\HandsOnAbstractClass\obj\Debug\HandsOnAbstractClass.pdb
