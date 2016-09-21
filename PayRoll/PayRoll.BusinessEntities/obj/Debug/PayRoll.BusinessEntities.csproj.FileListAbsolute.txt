@@ -1,0 +1,4 @@
+D:\DotNetExperimentsWithCSharp\PayRoll\PayRoll.BusinessEntities\bin\Debug\PayRoll.BusinessEntities.dll
+D:\DotNetExperimentsWithCSharp\PayRoll\PayRoll.BusinessEntities\bin\Debug\PayRoll.BusinessEntities.pdb
+D:\DotNetExperimentsWithCSharp\PayRoll\PayRoll.BusinessEntities\obj\Debug\PayRoll.BusinessEntities.dll
+D:\DotNetExperimentsWithCSharp\PayRoll\PayRoll.BusinessEntities\obj\Debug\PayRoll.BusinessEntities.pdb

@@ -1,0 +1,6 @@
+D:\DotNetExperimentsWithCSharp\PayRoll\PayRoll.DataLayer\bin\Debug\PayRoll.DataLayer.dll.config
+D:\DotNetExperimentsWithCSharp\PayRoll\PayRoll.DataLayer\bin\Debug\PayRoll.DataLayer.dll
+D:\DotNetExperimentsWithCSharp\PayRoll\PayRoll.DataLayer\bin\Debug\PayRoll.DataLayer.pdb
+D:\DotNetExperimentsWithCSharp\PayRoll\PayRoll.DataLayer\obj\Debug\PayRoll.DataLayer.csprojResolveAssemblyReference.cache
+D:\DotNetExperimentsWithCSharp\PayRoll\PayRoll.DataLayer\obj\Debug\PayRoll.DataLayer.dll
+D:\DotNetExperimentsWithCSharp\PayRoll\PayRoll.DataLayer\obj\Debug\PayRoll.DataLayer.pdb

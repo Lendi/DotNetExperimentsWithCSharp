@@ -1,0 +1,7 @@
+D:\DotNetExperimentsWithCSharp\PayRoll\PayRoll.BusinessLayer\bin\Debug\PayRoll.BusinessLayer.dll
+D:\DotNetExperimentsWithCSharp\PayRoll\PayRoll.BusinessLayer\bin\Debug\PayRoll.BusinessLayer.pdb
+D:\DotNetExperimentsWithCSharp\PayRoll\PayRoll.BusinessLayer\bin\Debug\PayRoll.DataLayer.dll
+D:\DotNetExperimentsWithCSharp\PayRoll\PayRoll.BusinessLayer\bin\Debug\PayRoll.DataLayer.pdb
+D:\DotNetExperimentsWithCSharp\PayRoll\PayRoll.BusinessLayer\obj\Debug\PayRoll.BusinessLayer.csprojResolveAssemblyReference.cache
+D:\DotNetExperimentsWithCSharp\PayRoll\PayRoll.BusinessLayer\obj\Debug\PayRoll.BusinessLayer.dll
+D:\DotNetExperimentsWithCSharp\PayRoll\PayRoll.BusinessLayer\obj\Debug\PayRoll.BusinessLayer.pdb
