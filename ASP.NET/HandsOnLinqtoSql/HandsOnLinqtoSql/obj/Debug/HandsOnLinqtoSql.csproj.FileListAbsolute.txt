@@ -1,0 +1,5 @@
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnLinqtoSql\HandsOnLinqtoSql\bin\HandsOnLinqtoSql.dll
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnLinqtoSql\HandsOnLinqtoSql\bin\HandsOnLinqtoSql.pdb
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnLinqtoSql\HandsOnLinqtoSql\obj\Debug\HandsOnLinqtoSql.csprojResolveAssemblyReference.cache
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnLinqtoSql\HandsOnLinqtoSql\obj\Debug\HandsOnLinqtoSql.dll
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnLinqtoSql\HandsOnLinqtoSql\obj\Debug\HandsOnLinqtoSql.pdb

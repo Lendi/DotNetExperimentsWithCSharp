@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CSCDB" Class="ModelDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=CSCINDAE745733;Initial Catalog=CSCDB;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="CSCDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Employeee" Member="Employeees">
+    <Type Name="Employeee">
+      <Column Name="Eid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Ename" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Desig" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Sal" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="hiredate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Did" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Association Name="Dept_Employeee" Member="Dept" ThisKey="Did" OtherKey="Did" Type="Dept" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Dept" Member="Depts">
+    <Type Name="Dept">
+      <Column Name="Did" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Dname" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="Dept_Employeee" Member="Employeees" ThisKey="Did" OtherKey="Did" Type="Employeee" />
+    </Type>
+  </Table>
+</Database>
