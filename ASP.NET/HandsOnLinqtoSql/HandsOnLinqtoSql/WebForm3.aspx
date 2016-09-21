@@ -25,7 +25,8 @@
                 <td class="auto-style2">Eid</td>
                 <td>
                     <asp:TextBox ID="tbID" runat="server"></asp:TextBox>
-                    <asp:Button ID="btnSearch" runat="server" Text="Search" />
+                    <asp:Button ID="btnSearch" runat="server" OnClick="btnSearch_Click" 
+                        Text="Search" />
                 </td>
             </tr>
             <tr>
@@ -63,8 +64,10 @@
                 <td class="auto-style2">&nbsp;</td>
                 <td>
                     <asp:Button ID="btnAdd" runat="server" OnClick="btnAdd_Click" Text="Add" />
-                    <asp:Button ID="btnUpdate" runat="server" Text="Update" />
-                    <asp:Button ID="btnDelete" runat="server" Text="Delete" />
+                    <asp:Button ID="btnUpdate" runat="server" OnClick="btnUpdate_Click" 
+                        Text="Update" />
+                    <asp:Button ID="btnDelete" runat="server" OnClick="btnDelete_Click" 
+                        Text="Delete" />
                 </td>
             </tr>
             <tr>

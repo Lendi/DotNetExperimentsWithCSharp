@@ -46,5 +46,52 @@ namespace HandsOnLinqtoSql
 
            
         }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            int eid = int.Parse(tbID.Text);
+            //one record is returned
+            Employeee objEmp = (from emp in obj.Employeees
+                       where emp.Eid == eid select emp).SingleOrDefault();//extension method used
+            //from the given extension, singleordefault returns a single record
+            //if returns more than one rec, it returns an exception
+            // single Vs singleOrdefault --> 
+
+            if (objEmp != null)
+            {
+                tbEname.Text = objEmp.Ename;
+                tbDesig.Text = objEmp.Desig;
+                tbHiredate.Text = objEmp.hiredate.ToString();
+                tbSal.Text = objEmp.Sal.ToString();
+                ddlDid.Text = objEmp.Did;
+            }
+            else
+                Label1.Text = "Invalid ID";
+        }
+
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+            int eid = int.Parse(tbID.Text);
+            Employeee objEmp = (from emp in obj.Employeees
+                                where emp.Eid == eid
+                                select emp).SingleOrDefault();
+
+            objEmp.Sal = decimal.Parse(tbSal.Text);
+            obj.SubmitChanges();
+            Label1.Text = "Record Updated!";
+        }
+
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+            int eid = int.Parse(tbID.Text);
+            Employeee objEmp = (from emp in obj.Employeees
+                                where emp.Eid == eid
+                                select emp).SingleOrDefault();
+
+            obj.Employeees.DeleteOnSubmit(objEmp);
+            obj.SubmitChanges();
+            Label1.Text = "Record Deleted!";
+
+        }
     }
 }
