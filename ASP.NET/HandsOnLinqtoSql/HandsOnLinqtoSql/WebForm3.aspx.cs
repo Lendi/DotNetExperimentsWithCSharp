@@ -9,8 +9,7 @@ namespace HandsOnLinqtoSql
 {
     public partial class WebForm3 : System.Web.UI.Page
     {
-        ModelDataContext obj = new ModelDataContext();//why?
-        
+        ModelDataContext obj = new ModelDataContext();//why?        
         
 
         protected void Page_Load(object sender, EventArgs e)
@@ -22,6 +21,11 @@ namespace HandsOnLinqtoSql
                 ddlDid.DataTextField = "Dname";// user sees ful forms like banking and Finance
                 ddlDid.DataValueField = "Did";// but when he selects Banking and finance, BFS gets stored
                 ddlDid.DataBind(); //at max how many stored in dropdownlist? A. 2
+                //get a max value from LINQ expression
+                int id = (from emp in obj.Employeees select emp.Eid).Max();
+                id = id + 1;
+                tbID.Text = id.ToString();
+                
             }
             Response.Write(Page.IsPostBack);
             //for everypost back request, 
@@ -61,7 +65,9 @@ namespace HandsOnLinqtoSql
             {
                 tbEname.Text = objEmp.Ename;
                 tbDesig.Text = objEmp.Desig;
-                tbHiredate.Text = objEmp.hiredate.ToString();
+                //tbHiredate.Text = objEmp.hiredate.ToString();
+                tbHiredate.TextMode = TextBoxMode.SingleLine;
+                tbHiredate.Text = objEmp.hiredate.Value.ToShortDateString();
                 tbSal.Text = objEmp.Sal.ToString();
                 ddlDid.Text = objEmp.Did;
             }
