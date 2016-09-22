@@ -1,0 +1,5 @@
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnStyles\HandsOnStyles\bin\HandsOnStyles.dll
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnStyles\HandsOnStyles\bin\HandsOnStyles.pdb
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnStyles\HandsOnStyles\obj\Debug\HandsOnStyles.csprojResolveAssemblyReference.cache
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnStyles\HandsOnStyles\obj\Debug\HandsOnStyles.dll
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnStyles\HandsOnStyles\obj\Debug\HandsOnStyles.pdb

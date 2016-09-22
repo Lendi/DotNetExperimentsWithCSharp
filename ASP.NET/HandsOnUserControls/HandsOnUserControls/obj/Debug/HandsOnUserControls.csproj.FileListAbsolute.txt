@@ -1,0 +1,5 @@
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnUserControls\HandsOnUserControls\bin\HandsOnUserControls.dll
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnUserControls\HandsOnUserControls\bin\HandsOnUserControls.pdb
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnUserControls\HandsOnUserControls\obj\Debug\HandsOnUserControls.csprojResolveAssemblyReference.cache
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnUserControls\HandsOnUserControls\obj\Debug\HandsOnUserControls.dll
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnUserControls\HandsOnUserControls\obj\Debug\HandsOnUserControls.pdb
