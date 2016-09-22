@@ -1,0 +1,41 @@
+body
+{
+    background-color: #CCCCFF;
+}
+h1
+{
+    color: #9900FF;
+    text-align: center;
+    font-family: Impact, Charcoal, sans-serif;
+}
+p
+{
+    text-indent: 10px;
+    text-align: left;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 22px;
+}
+a
+{
+background-color: #FF9966;
+color: #333333;
+}
+a:hover
+{
+    background-color: #CC0066;
+}
+#table1
+{
+          text-align: center;
+          border:1px solid gray;
+          width: 300px;
+
+}
+.row1
+{
+background-color: #339900;
+}
+.row2
+{
+    background-color: #FFCC66;
+}

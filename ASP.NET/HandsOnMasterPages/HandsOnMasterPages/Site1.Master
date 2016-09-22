@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="HandsOnMasterPages.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link href="Basic.css" rel="stylesheet" />
+</head>
+
+
+<body>
+    <form id="form1" runat="server">
+    <div class = "Main">
+    <div class = "Header">
+    <div class = "DisplyText">
+    <h1> Online Job Portal</h1>       
+    </div>
+    <div class="showlinks">
+    <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Login.aspx"> Login</asp:LinkButton> </div>
+        
+    </div>
+
+
+
+    <div class="Menu">
+    <table>
+    <tr>
+    <td> <a href = "home.aspx">Home</a></td>
+    <td> <a href = "about.aspx">About Us</a> </td>
+    <td> <a href = "contact.aspx">Contact Us</a> </td>
+    <td> <a href = "routemap.aspx">Route Map</a> </td>
+    </tr>
+    </table>
+    </div>
+
+    <div class = "Content">  
+    
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+    </div>
+
+
+    <div class="footer">
+
+    All Rights Reserved &copy;2016-18
+    </div>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,5 @@
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnMasterPages\HandsOnMasterPages\bin\HandsOnMasterPages.dll
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnMasterPages\HandsOnMasterPages\bin\HandsOnMasterPages.pdb
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnMasterPages\HandsOnMasterPages\obj\Debug\HandsOnMasterPages.csprojResolveAssemblyReference.cache
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnMasterPages\HandsOnMasterPages\obj\Debug\HandsOnMasterPages.dll
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnMasterPages\HandsOnMasterPages\obj\Debug\HandsOnMasterPages.pdb
