@@ -1,0 +1,4 @@
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnDatabBindControls\HandsOnDatabBindControls\bin\HandsOnDatabBindControls.dll
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnDatabBindControls\HandsOnDatabBindControls\bin\HandsOnDatabBindControls.pdb
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnDatabBindControls\HandsOnDatabBindControls\obj\Debug\HandsOnDatabBindControls.dll
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnDatabBindControls\HandsOnDatabBindControls\obj\Debug\HandsOnDatabBindControls.pdb

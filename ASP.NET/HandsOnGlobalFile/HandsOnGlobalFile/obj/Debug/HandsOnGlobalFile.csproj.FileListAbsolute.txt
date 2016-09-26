@@ -1,0 +1,5 @@
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnGlobalFile\HandsOnGlobalFile\bin\HandsOnGlobalFile.dll
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnGlobalFile\HandsOnGlobalFile\bin\HandsOnGlobalFile.pdb
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnGlobalFile\HandsOnGlobalFile\obj\Debug\HandsOnGlobalFile.csprojResolveAssemblyReference.cache
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnGlobalFile\HandsOnGlobalFile\obj\Debug\HandsOnGlobalFile.dll
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnGlobalFile\HandsOnGlobalFile\obj\Debug\HandsOnGlobalFile.pdb

@@ -1,0 +1,5 @@
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnAjax\HandsOnAjax\bin\HandsOnAjax.dll
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnAjax\HandsOnAjax\bin\HandsOnAjax.pdb
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnAjax\HandsOnAjax\obj\Debug\HandsOnAjax.csprojResolveAssemblyReference.cache
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnAjax\HandsOnAjax\obj\Debug\HandsOnAjax.dll
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnAjax\HandsOnAjax\obj\Debug\HandsOnAjax.pdb
