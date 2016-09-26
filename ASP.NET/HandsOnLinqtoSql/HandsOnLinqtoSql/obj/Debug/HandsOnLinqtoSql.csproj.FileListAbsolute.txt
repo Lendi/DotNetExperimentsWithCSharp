@@ -3,3 +3,9 @@ D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnLinqtoSql\HandsOnLinqtoSql\bin\Han
 D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnLinqtoSql\HandsOnLinqtoSql\obj\Debug\HandsOnLinqtoSql.csprojResolveAssemblyReference.cache
 D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnLinqtoSql\HandsOnLinqtoSql\obj\Debug\HandsOnLinqtoSql.dll
 D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnLinqtoSql\HandsOnLinqtoSql\obj\Debug\HandsOnLinqtoSql.pdb
+H:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnLinqtoSql\HandsOnLinqtoSql\bin\HandsOnLinqtoSql.dll.config
+H:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnLinqtoSql\HandsOnLinqtoSql\bin\HandsOnLinqtoSql.dll
+H:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnLinqtoSql\HandsOnLinqtoSql\bin\HandsOnLinqtoSql.pdb
+H:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnLinqtoSql\HandsOnLinqtoSql\obj\Debug\HandsOnLinqtoSql.csprojResolveAssemblyReference.cache
+H:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnLinqtoSql\HandsOnLinqtoSql\obj\Debug\HandsOnLinqtoSql.dll
+H:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnLinqtoSql\HandsOnLinqtoSql\obj\Debug\HandsOnLinqtoSql.pdb
