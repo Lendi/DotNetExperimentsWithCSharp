@@ -51,9 +51,3 @@ remarks varchar(100)
 
 
 
-CREATE TABLE Orders
-(
-O_Id int NOT NULL PRIMARY KEY,
-OrderNo int NOT NULL,
-P_Id int FOREIGN KEY REFERENCES Persons(P_Id)
-)
