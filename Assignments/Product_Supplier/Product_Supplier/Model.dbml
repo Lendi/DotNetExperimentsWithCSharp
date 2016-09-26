@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CSCDB" Class="ModelDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=CSCINDAE745733;Initial Catalog=CSCDB;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="CSCDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Product_Details" Member="Product_Details">
+    <Type Name="Product_Detail">
+      <Column Name="prodid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prodname" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="supplierid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Product_Detail_supplier_info" Member="supplier_infos" ThisKey="supplierid" OtherKey="supplierid" Type="supplier_info" />
+    </Type>
+  </Table>
+  <Table Name="dbo.supplier_info" Member="supplier_infos">
+    <Type Name="supplier_info">
+      <Column Name="supplierid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="suppliername" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="supplier_address" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="city" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="contact_no" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Association Name="Product_Detail_supplier_info" Member="Product_Detail" ThisKey="supplierid" OtherKey="supplierid" Type="Product_Detail" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
