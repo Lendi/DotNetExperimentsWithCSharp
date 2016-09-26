@@ -1,0 +1,6 @@
+D:\DotNetExperimentsWithCSharp\AssetManagement\asset.datalayer\bin\Debug\asset.datalayer.dll.config
+D:\DotNetExperimentsWithCSharp\AssetManagement\asset.datalayer\bin\Debug\asset.datalayer.dll
+D:\DotNetExperimentsWithCSharp\AssetManagement\asset.datalayer\bin\Debug\asset.datalayer.pdb
+D:\DotNetExperimentsWithCSharp\AssetManagement\asset.datalayer\obj\Debug\asset.datalayer.csprojResolveAssemblyReference.cache
+D:\DotNetExperimentsWithCSharp\AssetManagement\asset.datalayer\obj\Debug\asset.datalayer.dll
+D:\DotNetExperimentsWithCSharp\AssetManagement\asset.datalayer\obj\Debug\asset.datalayer.pdb
