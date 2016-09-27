@@ -52,6 +52,13 @@ namespace HandsOnDatabBindControls.DataLayer
         
         }
 
+        //public List<string> GetDeptId() {
+        //    using (Model1DataContext obj = new Model1DataContext())
+        //    {
+        //        return obj.Employees.Select(i => i.Did).Distinct().ToList();
+        //    }
+        //}
+
 
     }
 }

@@ -2,3 +2,4 @@ D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnDatabBindControls\HandsOnDatabBind
 D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnDatabBindControls\HandsOnDatabBindControls\bin\HandsOnDatabBindControls.pdb
 D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnDatabBindControls\HandsOnDatabBindControls\obj\Debug\HandsOnDatabBindControls.dll
 D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnDatabBindControls\HandsOnDatabBindControls\obj\Debug\HandsOnDatabBindControls.pdb
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnDatabBindControls\HandsOnDatabBindControls\obj\Debug\HandsOnDatabBindControls.csprojResolveAssemblyReference.cache

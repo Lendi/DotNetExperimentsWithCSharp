@@ -13,7 +13,8 @@
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
             BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" 
             CellPadding="3" CellSpacing="1" DataSourceID="ObjectDataSource1" 
-            GridLines="None" AllowPaging="True">
+            GridLines="None" AllowPaging="True" Height="248px" 
+            style="margin-bottom: 0px">
             <Columns>
                 <asp:CommandField ShowEditButton="True" />
                 <asp:BoundField DataField="Eid" HeaderText="Eid" SortExpression="Eid" />
