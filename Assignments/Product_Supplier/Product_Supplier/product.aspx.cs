@@ -7,9 +7,8 @@ using System.Web.UI.WebControls;
 
 namespace Product_Supplier
 
-
-//use linkbutton instead of hyperlink. 
-    //
+//FEEDBACK: use try catch, ajax, everything taught to u.
+//use linkbutton instead of hyperlink.    
 
 {
     public partial class product : System.Web.UI.Page
