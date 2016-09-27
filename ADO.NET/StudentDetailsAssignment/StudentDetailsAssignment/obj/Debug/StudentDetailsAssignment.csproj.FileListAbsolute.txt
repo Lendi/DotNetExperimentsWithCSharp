@@ -1,1 +1,2 @@
 D:\lendi_35173\Assignments\Assignments\StudentDetailsAssignment\StudentDetailsAssignment\bin\Debug\StudentDetailsAssignment.exe.config
+D:\DotNetExperimentsWithCSharp\ADO.NET\StudentDetailsAssignment\StudentDetailsAssignment\bin\Debug\StudentDetailsAssignment.exe.config
