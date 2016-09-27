@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssetManagement", "AssetMan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "asset.datalayer", "asset.datalayer\asset.datalayer.csproj", "{7FC80C4C-87A0-49AC-9906-F106C2F2850E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asset.BusinessLayer", "Asset.BusinessLayer\Asset.BusinessLayer.csproj", "{D990FDAE-FAC8-4C5F-A4A6-48162B1A2117}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{7FC80C4C-87A0-49AC-9906-F106C2F2850E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FC80C4C-87A0-49AC-9906-F106C2F2850E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FC80C4C-87A0-49AC-9906-F106C2F2850E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D990FDAE-FAC8-4C5F-A4A6-48162B1A2117}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D990FDAE-FAC8-4C5F-A4A6-48162B1A2117}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D990FDAE-FAC8-4C5F-A4A6-48162B1A2117}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D990FDAE-FAC8-4C5F-A4A6-48162B1A2117}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

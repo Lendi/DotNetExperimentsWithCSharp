@@ -20,7 +20,7 @@
       <Column Name="request_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="manager_approved_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="remarks" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Association Name="user_RequestInfo" Member="user" ThisKey="emp_id" OtherKey="emp_id" Type="user" IsForeignKey="true" />
+      <Association Name="user_RequestInfo" Member="users" Storage="_user" ThisKey="emp_id" OtherKey="emp_id" Type="users" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.TransferHistory" Member="TransferHistories">
@@ -37,7 +37,7 @@
     </Type>
   </Table>
   <Table Name="dbo.users" Member="users">
-    <Type Name="user">
+    <Type Name="users">
       <Column Name="emp_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="short_id" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
       <Column Name="fname" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />

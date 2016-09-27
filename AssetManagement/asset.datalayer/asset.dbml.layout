@@ -21,13 +21,13 @@
       </nestedChildShapes>
     </classShape>
     <classShape Id="f50ea060-126b-4931-8345-d77d8a983b54" absoluteBounds="3.25, 0.625, 2, 2.9247054036458331">
-      <DataClassMoniker Name="/assetDataContext/user" />
+      <DataClassMoniker Name="/assetDataContext/users" />
       <nestedChildShapes>
         <elementListCompartment Id="817c0c1f-95a3-45ae-88de-0b3d1e1cdefd" absoluteBounds="3.2649999999999997, 1.085, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(3.25 : 3.02485270182292); (2.5 : 3.02485270182292)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/assetDataContext/user/user_RequestInfo" />
+    <associationConnector edgePoints="[(3.25 : 3.02485270182292); (2.5 : 3.02485270182292)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/assetDataContext/users/user_RequestInfo" />
       <nodes>
         <classShapeMoniker Id="f50ea060-126b-4931-8345-d77d8a983b54" />
         <classShapeMoniker Id="16c1cf7d-f496-4aae-9935-0cd183fb83dd" />

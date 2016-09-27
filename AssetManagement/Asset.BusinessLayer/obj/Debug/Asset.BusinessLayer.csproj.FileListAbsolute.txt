@@ -1,0 +1,7 @@
+D:\DotNetExperimentsWithCSharp\AssetManagement\Asset.BusinessLayer\bin\Debug\Asset.BusinessLayer.dll
+D:\DotNetExperimentsWithCSharp\AssetManagement\Asset.BusinessLayer\bin\Debug\Asset.BusinessLayer.pdb
+D:\DotNetExperimentsWithCSharp\AssetManagement\Asset.BusinessLayer\bin\Debug\asset.datalayer.dll
+D:\DotNetExperimentsWithCSharp\AssetManagement\Asset.BusinessLayer\bin\Debug\asset.datalayer.pdb
+D:\DotNetExperimentsWithCSharp\AssetManagement\Asset.BusinessLayer\obj\Debug\Asset.BusinessLayer.csprojResolveAssemblyReference.cache
+D:\DotNetExperimentsWithCSharp\AssetManagement\Asset.BusinessLayer\obj\Debug\Asset.BusinessLayer.dll
+D:\DotNetExperimentsWithCSharp\AssetManagement\Asset.BusinessLayer\obj\Debug\Asset.BusinessLayer.pdb

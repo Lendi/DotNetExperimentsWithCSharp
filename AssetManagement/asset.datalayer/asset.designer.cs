@@ -36,9 +36,9 @@ namespace asset.datalayer
     partial void InsertRequestInfo(RequestInfo instance);
     partial void UpdateRequestInfo(RequestInfo instance);
     partial void DeleteRequestInfo(RequestInfo instance);
-    partial void Insertuser(user instance);
-    partial void Updateuser(user instance);
-    partial void Deleteuser(user instance);
+    partial void Insertusers(users instance);
+    partial void Updateusers(users instance);
+    partial void Deleteusers(users instance);
     #endregion
 		
 		public assetDataContext() : 
@@ -95,11 +95,11 @@ namespace asset.datalayer
 			}
 		}
 		
-		public System.Data.Linq.Table<user> users
+		public System.Data.Linq.Table<users> users
 		{
 			get
 			{
-				return this.GetTable<user>();
+				return this.GetTable<users>();
 			}
 		}
 	}
@@ -286,7 +286,7 @@ namespace asset.datalayer
 		
 		private string _remarks;
 		
-		private EntityRef<user> _user;
+		private EntityRef<users> _user;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -314,7 +314,7 @@ namespace asset.datalayer
 		
 		public RequestInfo()
 		{
-			this._user = default(EntityRef<user>);
+			this._user = default(EntityRef<users>);
 			OnCreated();
 		}
 		
@@ -503,7 +503,7 @@ namespace asset.datalayer
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="user_RequestInfo", Storage="_user", ThisKey="emp_id", OtherKey="emp_id", IsForeignKey=true)]
-		public user user
+		public users users
 		{
 			get
 			{
@@ -511,7 +511,7 @@ namespace asset.datalayer
 			}
 			set
 			{
-				user previousValue = this._user.Entity;
+				users previousValue = this._user.Entity;
 				if (((previousValue != value) 
 							|| (this._user.HasLoadedOrAssignedValue == false)))
 				{
@@ -531,7 +531,7 @@ namespace asset.datalayer
 					{
 						this._emp_id = default(Nullable<int>);
 					}
-					this.SendPropertyChanged("user");
+					this.SendPropertyChanged("users");
 				}
 			}
 		}
@@ -729,7 +729,7 @@ namespace asset.datalayer
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.users")]
-	public partial class user : INotifyPropertyChanging, INotifyPropertyChanged
+	public partial class users : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -786,7 +786,7 @@ namespace asset.datalayer
     partial void OnactiveChanged();
     #endregion
 		
-		public user()
+		public users()
 		{
 			this._RequestInfos = new EntitySet<RequestInfo>(new Action<RequestInfo>(this.attach_RequestInfos), new Action<RequestInfo>(this.detach_RequestInfos));
 			OnCreated();
@@ -1048,13 +1048,13 @@ namespace asset.datalayer
 		private void attach_RequestInfos(RequestInfo entity)
 		{
 			this.SendPropertyChanging();
-			entity.user = this;
+			entity.users = this;
 		}
 		
 		private void detach_RequestInfos(RequestInfo entity)
 		{
 			this.SendPropertyChanging();
-			entity.user = null;
+			entity.users = null;
 		}
 	}
 }

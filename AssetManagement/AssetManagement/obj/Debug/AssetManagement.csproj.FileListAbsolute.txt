@@ -1,0 +1,5 @@
+D:\DotNetExperimentsWithCSharp\AssetManagement\AssetManagement\bin\AssetManagement.dll
+D:\DotNetExperimentsWithCSharp\AssetManagement\AssetManagement\bin\AssetManagement.pdb
+D:\DotNetExperimentsWithCSharp\AssetManagement\AssetManagement\obj\Debug\AssetManagement.csprojResolveAssemblyReference.cache
+D:\DotNetExperimentsWithCSharp\AssetManagement\AssetManagement\obj\Debug\AssetManagement.dll
+D:\DotNetExperimentsWithCSharp\AssetManagement\AssetManagement\obj\Debug\AssetManagement.pdb
