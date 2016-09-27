@@ -99,5 +99,10 @@ namespace HandsOnLinqtoSql
             Label1.Text = "Record Deleted!";
 
         }
+
+        protected void tbID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

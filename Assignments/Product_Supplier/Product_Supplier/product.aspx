@@ -10,29 +10,35 @@
     <form id="form1" runat="server">
     <div>
     
-        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+        <asp:Label ID="Label1" runat="server" Text="Product ID"></asp:Label>
 &nbsp;
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <asp:TextBox ID="tbProdID" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
 &nbsp;&nbsp;
-        <asp:Button ID="Button1" runat="server" Text="Search" />
+        <asp:Button ID="btnSearch" runat="server" Text="Search" Height="26px" 
+            OnClick="Button1_Click" />
         <br />
         <br />
-        <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+        <asp:Label ID="Label2" runat="server" Text="Prod Name"></asp:Label>
 &nbsp;
-        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+        <asp:TextBox ID="tbProdName" runat="server"></asp:TextBox>
         <br />
         <br />
-        <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+        <asp:Label ID="Label3" runat="server" Text="Supplier ID"></asp:Label>
 &nbsp;
-        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+        <asp:TextBox ID="tbSuplierID" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
         <br />
         <br />
 &nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button2" runat="server" Text="Button" />
+        <asp:Button ID="btnAdd" runat="server" Text="Add" OnClick="btnAdd_Click" />
 &nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button3" runat="server" Text="Button" />
+        <asp:Button ID="btnUpdate" runat="server" Text="Update" 
+            OnClick="btnUpdate_Click" />
 &nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button4" runat="server" Text="Button" />
+        <asp:Button ID="btnDelete" runat="server" Text="Delete" 
+            OnClick="btnDelete_Click" />
         <br />
     
     </div>
