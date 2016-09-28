@@ -77,12 +77,12 @@ namespace asset.datalayer
 
         //}
 
-        public void ChangePassword(int eid, string pwd)
+        public void ChangePassword(int eid, users ObjUser)
         {
             using (assetDataContext obj = new assetDataContext())
             {
                 users usr = obj.users.SingleOrDefault(i => i.emp_id == eid);
-                usr.user_password = pwd;
+                usr.user_password = ObjUser.user_password;
                 obj.SubmitChanges();
             }
 
