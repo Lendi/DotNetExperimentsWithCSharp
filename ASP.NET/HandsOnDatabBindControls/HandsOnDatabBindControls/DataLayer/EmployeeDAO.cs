@@ -52,6 +52,17 @@ namespace HandsOnDatabBindControls.DataLayer
         
         }
 
+        public void UpdateImage(int eid, string profilepic) {
+            using (Model1DataContext obj = new Model1DataContext())
+            {
+                Employee e1 = obj.Employees.SingleOrDefault(i => i.Eid == eid);
+                e1.ProfilePic = profilepic;
+                obj.SubmitChanges();
+            }
+        
+        
+        }
+
         //public List<string> GetDeptId() {
         //    using (Model1DataContext obj = new Model1DataContext())
         //    {

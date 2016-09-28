@@ -99,6 +99,8 @@ namespace HandsOnDatabBindControls
 		
 		private string _Did;
 		
+		private string _ProfilePic;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -115,6 +117,8 @@ namespace HandsOnDatabBindControls
     partial void OnhiredateChanged();
     partial void OnDidChanging(string value);
     partial void OnDidChanged();
+    partial void OnProfilePicChanging(string value);
+    partial void OnProfilePicChanged();
     #endregion
 		
 		public Employee()
@@ -238,6 +242,26 @@ namespace HandsOnDatabBindControls
 					this._Did = value;
 					this.SendPropertyChanged("Did");
 					this.OnDidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProfilePic", DbType="VarChar(30)")]
+		public string ProfilePic
+		{
+			get
+			{
+				return this._ProfilePic;
+			}
+			set
+			{
+				if ((this._ProfilePic != value))
+				{
+					this.OnProfilePicChanging(value);
+					this.SendPropertyChanging();
+					this._ProfilePic = value;
+					this.SendPropertyChanged("ProfilePic");
+					this.OnProfilePicChanged();
 				}
 			}
 		}

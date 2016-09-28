@@ -8,6 +8,7 @@
       <Column Name="Sal" Type="System.Decimal" DbType="Money" CanBeNull="true" />
       <Column Name="hiredate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="Did" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="ProfilePic" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
     </Type>
   </Table>
   <Function Name="dbo.UpdateProduct" Method="UpdateProduct">
