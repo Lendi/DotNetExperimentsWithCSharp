@@ -1,0 +1,5 @@
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnConfigFiles\HandsOnConfigFiles\bin\HandsOnConfigFiles.dll
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnConfigFiles\HandsOnConfigFiles\bin\HandsOnConfigFiles.pdb
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnConfigFiles\HandsOnConfigFiles\obj\Debug\HandsOnConfigFiles.csprojResolveAssemblyReference.cache
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnConfigFiles\HandsOnConfigFiles\obj\Debug\HandsOnConfigFiles.dll
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnConfigFiles\HandsOnConfigFiles\obj\Debug\HandsOnConfigFiles.pdb
