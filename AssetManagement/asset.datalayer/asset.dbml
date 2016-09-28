@@ -1,26 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AssetManagement" Class="assetDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=CSCINDAE745733;Initial Catalog=AssetManagement;Integrated Security=True" SettingsObjectName="asset.datalayer.Properties.Settings" SettingsPropertyName="AssetManagementConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.AssetInfo" Member="AssetInfos">
-    <Type Name="AssetInfo">
-      <Column Name="asset_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="assetname" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
-      <Column Name="emp_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="request_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="issueddate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.RequestInfo" Member="RequestInfos">
-    <Type Name="RequestInfo">
-      <Column Name="request_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="emp_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=JUMPER\SQLEXPRESS;Initial Catalog=AssetManagement;Integrated Security=True" SettingsObjectName="asset.datalayer.Properties.Settings" SettingsPropertyName="AssetManagementConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.users" Member="users">
+    <Type Name="users">
+      <Column Name="emp_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="short_id" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
-      <Column Name="asset_name" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="fname" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="lname" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="email_id" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="user_password" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
       <Column Name="manager_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="request_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="request_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="manager_approved_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="remarks" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Association Name="user_RequestInfo" Member="users" Storage="_user" ThisKey="emp_id" OtherKey="emp_id" Type="users" IsForeignKey="true" />
+      <Column Name="designation" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="mobile" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="date_of_join" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="active" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Association Name="user_RequestInfo" Member="RequestInfos" ThisKey="emp_id" OtherKey="emp_id" Type="RequestInfo" />
     </Type>
   </Table>
   <Table Name="dbo.TransferHistory" Member="TransferHistories">
@@ -36,20 +29,27 @@
       <Column Name="remarks" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.users" Member="users">
-    <Type Name="users">
-      <Column Name="emp_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+  <Table Name="dbo.RequestInfo" Member="RequestInfos">
+    <Type Name="RequestInfo">
+      <Column Name="request_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="emp_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="short_id" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
-      <Column Name="fname" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
-      <Column Name="lname" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
-      <Column Name="email_id" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
-      <Column Name="user_password" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="asset_name" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
       <Column Name="manager_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="designation" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
-      <Column Name="mobile" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="date_of_join" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="active" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
-      <Association Name="user_RequestInfo" Member="RequestInfos" ThisKey="emp_id" OtherKey="emp_id" Type="RequestInfo" />
+      <Column Name="request_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="request_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="manager_approved_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="remarks" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="user_RequestInfo" Member="users" ThisKey="emp_id" OtherKey="emp_id" Type="users" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AssetInfo" Member="AssetInfos">
+    <Type Name="AssetInfo">
+      <Column Name="asset_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="assetname" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="emp_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="request_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="issueddate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
     </Type>
   </Table>
 </Database>
