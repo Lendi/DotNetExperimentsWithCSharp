@@ -8,5 +8,9 @@ namespace asset.datalayer
 {
     class ManagerDAO
     {
+
+
+
+
     }
 }

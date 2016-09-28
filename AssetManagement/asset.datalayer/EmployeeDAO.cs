@@ -8,5 +8,33 @@ namespace asset.datalayer
 {
     public class EmployeeDAO
     {
+
+        public List<users> ViewProfile()
+        {
+            using (assetDataContext obj = new assetDataContext())
+            {
+                return obj.users
+            }
+        }
+
+        public void CreateRequest(int eid, string assetname) {
+            using (assetDataContext obj = new assetDataContext()) {
+                RequestInfo reqinf = obj.RequestInfos.SingleOrDefault(i => i.emp_id == eid);
+                reqinf.asset_name = assetname;
+                obj.SubmitChanges();
+                                            
+            }        
+        }
+
+        public void ViewRequest(int eid, int status, DateTime Mapprovedate) {
+            using (assetDataContext obj = new assetDataContext()) {
+                RequestInfo reqinf = obj.RequestInfos.SingleOrDefault(i => i.emp_id == eid);
+                //
+            
+            }
+        }
+
+        
+
     }
 }
