@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        function ValidateUsername() {
+            var uname = document.getElementById('t1').value;
+            if (uname == "")
+                confirm("Pls enter name");
+            document.getElementById('t1').focus();
+        }
+        function ValidatePassword() {
+            var pwd = document.getElementById('t2').value;
+            if (pwd == "")
+                confirm("Pls enter pwd");
+            document.getElementById('t2').focus();
+        }
+
+    </script>
+
+</head>
+<body>
+<fieldset style="width:300px;height:120px">
+<legend>Login here</legend>
+Usename:<input type="text" id="t1" onblur="ValidateUsername()" /> <br />
+Password:<input type="password" id="t2" onblur="ValidatePassword()" /> <br />
+    <input id="b1" type="button" value="Login" />
+
+</fieldset>
+
+</body>
+</html>

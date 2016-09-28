@@ -1,5 +1,0 @@
-D:\DotNetExperimentsWithCSharp\Assignments\Product_Supplier\Product_Supplier\bin\Product_Supplier.dll
-D:\DotNetExperimentsWithCSharp\Assignments\Product_Supplier\Product_Supplier\bin\Product_Supplier.pdb
-D:\DotNetExperimentsWithCSharp\Assignments\Product_Supplier\Product_Supplier\obj\Debug\Product_Supplier.csprojResolveAssemblyReference.cache
-D:\DotNetExperimentsWithCSharp\Assignments\Product_Supplier\Product_Supplier\obj\Debug\Product_Supplier.dll
-D:\DotNetExperimentsWithCSharp\Assignments\Product_Supplier\Product_Supplier\obj\Debug\Product_Supplier.pdb

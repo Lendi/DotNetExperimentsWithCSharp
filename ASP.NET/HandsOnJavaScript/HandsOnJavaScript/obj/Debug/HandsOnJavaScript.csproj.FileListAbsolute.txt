@@ -1,0 +1,5 @@
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnJavaScript\HandsOnJavaScript\bin\HandsOnJavaScript.dll
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnJavaScript\HandsOnJavaScript\bin\HandsOnJavaScript.pdb
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnJavaScript\HandsOnJavaScript\obj\Debug\HandsOnJavaScript.csprojResolveAssemblyReference.cache
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnJavaScript\HandsOnJavaScript\obj\Debug\HandsOnJavaScript.dll
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnJavaScript\HandsOnJavaScript\obj\Debug\HandsOnJavaScript.pdb
