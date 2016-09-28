@@ -3,3 +3,9 @@ D:\DotNetExperimentsWithCSharp\AssetManagement\AssetManagement\bin\AssetManageme
 D:\DotNetExperimentsWithCSharp\AssetManagement\AssetManagement\obj\Debug\AssetManagement.csprojResolveAssemblyReference.cache
 D:\DotNetExperimentsWithCSharp\AssetManagement\AssetManagement\obj\Debug\AssetManagement.dll
 D:\DotNetExperimentsWithCSharp\AssetManagement\AssetManagement\obj\Debug\AssetManagement.pdb
+H:\DotNetExperimentsWithCSharp\AssetManagement\AssetManagement\bin\AssetManagement.dll.config
+H:\DotNetExperimentsWithCSharp\AssetManagement\AssetManagement\bin\AssetManagement.dll
+H:\DotNetExperimentsWithCSharp\AssetManagement\AssetManagement\bin\AssetManagement.pdb
+H:\DotNetExperimentsWithCSharp\AssetManagement\AssetManagement\obj\Debug\AssetManagement.csprojResolveAssemblyReference.cache
+H:\DotNetExperimentsWithCSharp\AssetManagement\AssetManagement\obj\Debug\AssetManagement.dll
+H:\DotNetExperimentsWithCSharp\AssetManagement\AssetManagement\obj\Debug\AssetManagement.pdb
