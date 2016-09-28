@@ -61,6 +61,7 @@
     <Content Include="EmpDetails.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
+    <Content Include="WebForm10.aspx" />
     <Content Include="WebForm2.aspx" />
     <Content Include="WebForm3.aspx" />
     <Content Include="WebForm4.aspx" />
@@ -68,6 +69,7 @@
     <Content Include="WebForm6.aspx" />
     <Content Include="WebForm7.aspx" />
     <Content Include="WebForm8.aspx" />
+    <Content Include="WebForm9.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataLayer\EmployeeDAO.cs" />
@@ -90,6 +92,13 @@
     </Compile>
     <Compile Include="WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm10.aspx.cs">
+      <DependentUpon>WebForm10.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm10.aspx.designer.cs">
+      <DependentUpon>WebForm10.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm2.aspx.cs">
       <DependentUpon>WebForm2.aspx</DependentUpon>
@@ -139,6 +148,13 @@
     </Compile>
     <Compile Include="WebForm8.aspx.designer.cs">
       <DependentUpon>WebForm8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm9.aspx.cs">
+      <DependentUpon>WebForm9.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm9.aspx.designer.cs">
+      <DependentUpon>WebForm9.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
