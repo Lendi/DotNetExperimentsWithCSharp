@@ -1,0 +1,141 @@
+Login.aspx.cs
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using AssetManagementProject.BusinessLayer;
+using System.Collections;
+namespace WebApplication2.Account
+{
+    public partial class Login : Page
+    {
+        LoginBAL obj =new  LoginBAL();
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        protected void Submit_Click(object sender, EventArgs e)
+        {
+            string UserName = Username.Text;
+            string Password = PassWord.Text;
+            ArrayList o=obj.Login_Check(UserName, Password);
+            if ((string)o[1] == "Manager")
+            {
+                Session["Eid"] = (int)o[0];
+                Response.Redirect(@"~\Account\Manager.aspx");
+            }
+            else if ((string)o[1] == "Employee")
+            {
+                Session["Eid"] =(int) o[0];
+                Response.Redirect(@"~\Account\Employee.aspx");
+            }
+            else
+            {
+                Label3.Text = "invalid Login";
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LoginBAL.cs
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections;
+namespace AssetManagementProject.BusinessLayer
+{
+    public class LoginBAL
+    {
+        LoginDAL obj = new LoginDAL();
+        public ArrayList Login_Check(string uname, string pass)
+        {
+            return obj.Login_Check(uname, pass);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LoginDAL.cs
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections;
+namespace AssetManagementProject
+{
+    public class LoginDAL
+    {
+        AssetManagementDBModelDataContext obj = new AssetManagementDBModelDataContext();
+        public ArrayList Login_Check(string uname,string pass)
+        {
+            string UserName = uname;
+            string Password = pass;
+            int eid;
+            ArrayList o=new ArrayList();
+            UserDetail user = obj.UserDetails.SingleOrDefault(i => i.Email_ID == UserName&&i.Password==Password);
+            eid = user.Emp_ID;
+            o.Add(eid);
+            o.Add("Employee");
+            var ObjUSer = from o1 in obj.UserDetails
+                          join o2 in obj.UserDetails on o1.Emp_ID equals o2.Manager_ID
+                          select new { o1.Email_ID, o1.Password,o1.Emp_ID };
+            foreach (var k in ObjUSer)
+            {
+                if (UserName==k.Email_ID && Password==k.Password)
+                {
+                    o.Clear();
+                    eid = k.Emp_ID;
+                    o.Add(eid);
+                    o.Add("Manager");
+                    return o;
+                }
+               
+            }
+            return o;
+            
+        }
+    }
+}

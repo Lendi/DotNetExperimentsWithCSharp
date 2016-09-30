@@ -24,51 +24,77 @@
         <table align="center" class="auto-style1">
             <tr>
                 <td class="auto-style2">Employee ID</td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:TextBox ID="tbEmpID" runat="server" Width="196px"></asp:TextBox>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style2">Short ID (Username)</td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:TextBox ID="tbUname" runat="server" Width="196px"></asp:TextBox>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style2">First Name</td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:TextBox ID="tbFirstname" runat="server" Width="196px"></asp:TextBox>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style2">Last Name</td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:TextBox ID="tbLastName" runat="server" Width="196px"></asp:TextBox>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style2">Email ID</td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:TextBox ID="TextBox5" runat="server" Width="196px"></asp:TextBox>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style2">Password</td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:TextBox ID="TextBox6" runat="server" Width="196px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">Manager ID</td>
+                <td>
+                    <asp:TextBox ID="TextBox7" runat="server" Width="196px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">Designation</td>
+                <td>
+                    <asp:DropDownList ID="DropDownList1" runat="server">
+                    </asp:DropDownList>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">Phone Number</td>
+                <td>
+                    <asp:TextBox ID="TextBox8" runat="server" Width="196px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">Date of Joining</td>
+                <td>
+                    <asp:Calendar ID="Calendar1" runat="server" Height="114px"></asp:Calendar>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">Account Status</td>
+                <td>
+                    <asp:DropDownList ID="DropDownList2" runat="server">
+                    </asp:DropDownList>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style2">&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style2">&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style2">&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style2">&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style2">&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style2">&nbsp;</td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:Button ID="Button1" runat="server" Text="Button" />
+                </td>
             </tr>
         </table>
     
