@@ -1,0 +1,111 @@
+﻿body
+{
+    background-color: #3366CC;
+}
+
+    /*.Main
+    {
+        width:900px;
+        height:auto;
+        margin-top:10px;
+        margin-left:auto;
+        margin-right:auto;
+       background-color:White;
+    }*/
+    .Header
+    {
+        width:auto;
+        height:50px;
+        background-color:Maroon;
+    }
+    /*
+   .DisplayText
+   {
+       float:left;
+       padding-left:30px;
+       padding-top:40px;
+   } 
+   
+   .DisplayText h1
+   {
+       color:White;
+       text-transform:capitalize;
+       font-size:20px;
+   }
+
+   .Menu
+   {
+      width:auto;
+      height:30px;
+      background-color:Red;
+   }
+   .Menu td
+   {
+      width:150px;
+      text-align:center;
+   }
+   .Menu a:visited, .Menu a:active
+   {
+       color:White;
+   }
+   .Menu a:hover
+   {
+       color:Black;
+   }
+
+        */
+   .showlinks
+   {
+       float:right;
+       padding-top:5px;
+       padding-right:10px;
+       
+   }
+   .showlinks a:link
+   {
+       color:blue;
+   }
+   .showlinks a:visited
+   {
+       color:White;
+   }
+   .showlinks a:hover
+   {
+       color:Black;
+       font-size:20px;
+   }
+   .showlinks a:active
+   {
+       color:red;
+   }  
+  
+   .Content
+   {
+      width:auto;
+      height:400px;
+      background-color:White;
+      padding-left:50px;
+      padding-right:50px;
+      padding-top:30px;
+   }
+   .footer
+   {
+       height:20px;
+       background-color:Maroon;
+       text-align:center;
+       color:White;
+       padding-top:5px;
+   }
+   .footer h2
+   {
+       font-size:15px;
+   }
+   .footer a:visited
+   {
+       color:Black;
+   }
+   .Content fieldset
+   {
+       width:600px;
+   }
+

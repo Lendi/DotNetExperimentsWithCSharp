@@ -1,37 +1,53 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="AssetManagement.Login" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Login.master.cs" Inherits="AssetManagement.Login" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
     <style type="text/css">
         .auto-style1
         {
             width: 50%;
             border-style: solid;
             border-width: 1px;
+            margin-left: 0px;
         }
         .auto-style2
         {
-            width: 200px;
+            width: 94px;
         }
         .auto-style3
         {
-            width: 200px;
+            width: 94px;
             height: 35px;
         }
         .auto-style4
         {
             height: 35px;
+            width: 319px;
+        }
+        .auto-style5
+        {
+            width: 319px;
         }
     </style>
+
+
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
-    
-        <br />
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+
+
+         <br />
         <br />
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -41,30 +57,36 @@
         <br />
         <table align="center" cellpadding="2" cellspacing="4" class="auto-style1">
             <tr>
-                <td class="auto-style3">Username</td>
+                <td class="auto-style3" align="right" >Username</td>
                 <td class="auto-style4">
                     
-                    <asp:TextBox ID="tbUname" runat="server" Width="186px"></asp:TextBox>
+                    &nbsp;<asp:TextBox ID="tbUname" runat="server" Width="239px"></asp:TextBox>
                     
                 </td>
             </tr>
             <tr>
-                <td class="auto-style2">Password</td>
-                <td>
-                    <asp:TextBox ID="tbPwd" runat="server" TextMode="Password" Width="189px"></asp:TextBox>
+                <td class="auto-style2" align="right">Password</td>
+                <td class="auto-style5">
+                    <asp:TextBox ID="tbPwd" runat="server" TextMode="Password" Width="236px"></asp:TextBox>
                     <br />
                 </td>
             </tr>
             <tr>
                 <td class="auto-style2">&nbsp;</td>
-                <td>
+                <td class="auto-style5">
                     <asp:Button ID="btnLogin" runat="server" OnClick="btnLogin_Click" 
                         Text="Login" />
                 </td>
             </tr>
         </table>
-    
+
+
+
     </div>
     </form>
 </body>
 </html>
+
+
+
+

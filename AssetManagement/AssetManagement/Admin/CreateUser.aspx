@@ -25,7 +25,8 @@
             <tr>
                 <td class="auto-style2">Employee ID</td>
                 <td>
-                    <asp:TextBox ID="tbEmpID" runat="server" Width="196px"></asp:TextBox>
+                    <asp:TextBox ID="tbEmpID" runat="server" Width="196px" 
+                        OnTextChanged="tbEmpID_TextChanged"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -49,51 +50,57 @@
             <tr>
                 <td class="auto-style2">Email ID</td>
                 <td>
-                    <asp:TextBox ID="TextBox5" runat="server" Width="196px"></asp:TextBox>
+                    <asp:TextBox ID="tbEmailID" runat="server" Width="196px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style2">Password</td>
                 <td>
-                    <asp:TextBox ID="TextBox6" runat="server" Width="196px"></asp:TextBox>
+                    <asp:TextBox ID="tbPassword" runat="server" Width="196px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style2">Manager ID</td>
                 <td>
-                    <asp:TextBox ID="TextBox7" runat="server" Width="196px"></asp:TextBox>
+                    <asp:TextBox ID="tbManagerID" runat="server" Width="196px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style2">Designation</td>
                 <td>
-                    <asp:DropDownList ID="DropDownList1" runat="server">
+                    <asp:DropDownList ID="ddlDesignation" runat="server">
+                        <asp:ListItem>Team Leader</asp:ListItem>
+                        <asp:ListItem>Junior Developer</asp:ListItem>
+                        <asp:ListItem>Software Developer</asp:ListItem>
+                        <asp:ListItem>Software Engineer</asp:ListItem>
                     </asp:DropDownList>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style2">Phone Number</td>
                 <td>
-                    <asp:TextBox ID="TextBox8" runat="server" Width="196px"></asp:TextBox>
+                    <asp:TextBox ID="tbPhno" runat="server" Width="196px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style2">Date of Joining</td>
                 <td>
-                    <asp:Calendar ID="Calendar1" runat="server" Height="114px"></asp:Calendar>
+                    <asp:Calendar ID="CalendarDOJ" runat="server" Height="114px"></asp:Calendar>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style2">Account Status</td>
                 <td>
-                    <asp:DropDownList ID="DropDownList2" runat="server">
+                    <asp:DropDownList ID="ddlAccountStatus" runat="server">
+                        <asp:ListItem Value="a">Active</asp:ListItem>
+                        <asp:ListItem Value="i">Inactive</asp:ListItem>
                     </asp:DropDownList>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style2">&nbsp;</td>
                 <td>
-                    <asp:Button ID="Button1" runat="server" Text="Button" />
+                    <asp:Button ID="btnSubmit" runat="server" Text="Submit" />
                 </td>
             </tr>
         </table>

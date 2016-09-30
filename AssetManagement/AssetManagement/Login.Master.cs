@@ -5,17 +5,11 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace AssetManagement.Admin
+namespace AssetManagement
 {
-    public partial class CreateUser : System.Web.UI.Page
+    public partial class Login : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-
-        }
-
-        protected void tbEmpID_TextChanged(object sender, EventArgs e)
         {
 
         }
