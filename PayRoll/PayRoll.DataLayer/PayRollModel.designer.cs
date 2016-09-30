@@ -19,6 +19,7 @@ namespace PayRoll.DataLayer
 	using System.Linq;
 	using System.Linq.Expressions;
 	using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
 	using System;
 	
 	
@@ -210,8 +211,10 @@ namespace PayRoll.DataLayer
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_hiredate", DbType="DateTime")]
+        
 		public System.Nullable<System.DateTime> hiredate
 		{
+           [DataType(DataType.Date)] 
 			get
 			{
 				return this._hiredate;

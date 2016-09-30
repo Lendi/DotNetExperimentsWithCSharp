@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayRoll.BusinessLayer", "Pa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayRoll.UI", "PayRoll.UI\PayRoll.UI.csproj", "{563FDB66-C32F-4BF8-83C5-84DB27F0CC64}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayRoll.MVCUI", "PayRoll.MVCUI\PayRoll.MVCUI.csproj", "{99F56867-6150-4A7B-B083-BF9B4F3BD2BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{563FDB66-C32F-4BF8-83C5-84DB27F0CC64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{563FDB66-C32F-4BF8-83C5-84DB27F0CC64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{563FDB66-C32F-4BF8-83C5-84DB27F0CC64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99F56867-6150-4A7B-B083-BF9B4F3BD2BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99F56867-6150-4A7B-B083-BF9B4F3BD2BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99F56867-6150-4A7B-B083-BF9B4F3BD2BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99F56867-6150-4A7B-B083-BF9B4F3BD2BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

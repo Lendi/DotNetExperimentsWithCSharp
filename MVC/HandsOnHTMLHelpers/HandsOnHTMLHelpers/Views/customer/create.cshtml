@@ -1,0 +1,39 @@
+﻿@model HandsOnHTMLHelpers.Models.customer
+
+@{
+    ViewBag.Title = "create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>create</h2>
+
+@using (Html.BeginForm("show","customer")) 
+{
+    <div id="cid">
+    CustomerId:@Html.TextBoxFor(m=> m.cid) <!-- m is object of custoer-->
+    </div>
+    
+    <div id="cname">
+    CustomerName:@Html.TextBoxFor(m=> m.cname)
+    </div>
+    
+    
+    <div id="address">
+    Address:@Html.TextAreaFor(m=> m.address) 
+    </div>
+    
+     <div id="country">
+    Country:@Html.DropDownListFor(m=> m.country, new SelectList(new string[]{"India", "US", "China", "UK"}))     
+    </div>
+    
+    <div id="joindate">
+    JoinDate:@Html.TextBoxFor(m=> m.JoinDate, new {type="Date"})<!-- passing as an anonymous object-->
+    </div>
+
+    <div id ="submit">
+    <input type = "submit" value="Register" />
+    </div>
+    }
+    
+    
+

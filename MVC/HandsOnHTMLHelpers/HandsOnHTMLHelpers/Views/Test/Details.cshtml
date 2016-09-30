@@ -1,0 +1,54 @@
+﻿@model HandsOnHTMLHelpers.Models.customer
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>customer</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.cid)
+    </div>
+
+    <div class="display-field">
+        @Html.DisplayFor(model => model.cid)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.cname)
+    </div>
+
+    <div class="display-field">
+        @Html.DisplayFor(model => model.cname)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.address)
+    </div>
+
+    <div class="display-field">
+        @Html.DisplayFor(model => model.address)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.country)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.country)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.JoinDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.JoinDate)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

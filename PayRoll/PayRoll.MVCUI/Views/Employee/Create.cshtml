@@ -1,0 +1,77 @@
+﻿@model PayRoll.DataLayer.Employee
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Employee</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Eid)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Eid)
+            @Html.ValidationMessageFor(model => model.Eid)
+        </div>
+
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Ename)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Ename)
+            @Html.ValidationMessageFor(model => model.Ename)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Desig)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Desig)
+            @Html.ValidationMessageFor(model => model.Desig)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Sal)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Sal)
+            @Html.ValidationMessageFor(model => model.Sal)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.hiredate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.hiredate)
+            @Html.ValidationMessageFor(model => model.hiredate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Did)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Did)
+            @Html.ValidationMessageFor(model => model.Did)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

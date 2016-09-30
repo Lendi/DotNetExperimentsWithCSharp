@@ -1,0 +1,61 @@
+﻿@model IEnumerable<PayRoll.DataLayer.Employee>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ename)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Desig)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hiredate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Did)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ename)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Desig)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hiredate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Did)
+        </td>
+        <td>
+
+        <!-- the paramater name is eid in Employee Controller edit, delete, details methods, thats why use same 
+        paramaters below. -->
+            @Html.ActionLink("Edit", "Edit", new { eid=item.Eid }) | 
+            @Html.ActionLink("Details", "Details", new { eid=item.Eid }) |
+            @Html.ActionLink("Delete", "Delete", new { eid=item.Eid })
+        </td>
+    </tr>
+}
+
+</table>

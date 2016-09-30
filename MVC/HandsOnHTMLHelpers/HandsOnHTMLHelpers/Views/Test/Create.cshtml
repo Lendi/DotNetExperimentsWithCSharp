@@ -1,0 +1,70 @@
+﻿@model HandsOnHTMLHelpers.Models.customer
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm("Details")) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>customer</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.cid)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.cid)
+            @Html.ValidationMessageFor(model => model.cid)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.cname)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.cname)
+            @Html.ValidationMessageFor(model => model.cname)
+        </div>
+
+        <div class="editor-label">
+            Address:@Html.TextAreaFor(model => model.address)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.address)
+            @Html.ValidationMessageFor(model => model.address)
+        </div>
+
+        <div class="editor-label">
+        @Html.DropDownListFor(m=> m.country, 
+        new SelectList(new string[]{"India", "US", "China", "UK"}))  
+            @Html.LabelFor(model => model.country)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.country)
+            @Html.ValidationMessageFor(model => model.country)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.JoinDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.JoinDate)
+            @Html.ValidationMessageFor(model => model.JoinDate)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

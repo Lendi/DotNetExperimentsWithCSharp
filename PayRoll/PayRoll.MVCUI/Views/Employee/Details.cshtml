@@ -1,0 +1,51 @@
+﻿@model PayRoll.DataLayer.Employee
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Employee</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Ename)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Ename)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Desig)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Desig)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Sal)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Sal)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.hiredate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.hiredate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Did)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Did)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Eid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

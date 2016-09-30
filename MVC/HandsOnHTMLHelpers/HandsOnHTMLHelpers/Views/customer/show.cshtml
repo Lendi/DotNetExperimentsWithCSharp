@@ -1,0 +1,13 @@
+﻿@model HandsOnHTMLHelpers.Models.customer
+
+@{
+    ViewBag.Title = "show";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Show Details</h2>
+
+<p>Cid:@Html.DisplayFor(m=> m.cid) </p>
+<p>Cname:@Html.DisplayFor(m=> m.cname) </p>
+<p>Address:@Html.DisplayFor(m=> m.address) </p>
+<p>Country:@Html.DisplayFor(m=> m.country) </p>
