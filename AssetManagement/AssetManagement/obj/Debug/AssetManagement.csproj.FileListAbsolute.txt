@@ -9,3 +9,7 @@ H:\DotNetExperimentsWithCSharp\AssetManagement\AssetManagement\bin\AssetManageme
 H:\DotNetExperimentsWithCSharp\AssetManagement\AssetManagement\obj\Debug\AssetManagement.csprojResolveAssemblyReference.cache
 H:\DotNetExperimentsWithCSharp\AssetManagement\AssetManagement\obj\Debug\AssetManagement.dll
 H:\DotNetExperimentsWithCSharp\AssetManagement\AssetManagement\obj\Debug\AssetManagement.pdb
+D:\DotNetExperimentsWithCSharp\AssetManagement\AssetManagement\bin\Asset.BusinessLayer.dll
+D:\DotNetExperimentsWithCSharp\AssetManagement\AssetManagement\bin\asset.datalayer.dll
+D:\DotNetExperimentsWithCSharp\AssetManagement\AssetManagement\bin\Asset.BusinessLayer.pdb
+D:\DotNetExperimentsWithCSharp\AssetManagement\AssetManagement\bin\asset.datalayer.pdb

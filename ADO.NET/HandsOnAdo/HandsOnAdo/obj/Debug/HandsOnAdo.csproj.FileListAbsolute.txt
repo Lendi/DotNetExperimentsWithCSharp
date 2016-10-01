@@ -1,2 +1,3 @@
 D:\lendi_35173\Assignments\Assignments\HandsOnAdo\HandsOnAdo\bin\Debug\HandsOnAdo.exe.config
 H:\DotNetExperimentsWithCSharp\ADO.NET\HandsOnAdo\HandsOnAdo\bin\Debug\HandsOnAdo.exe.config
+D:\DotNetExperimentsWithCSharp\ADO.NET\HandsOnAdo\HandsOnAdo\bin\Debug\HandsOnAdo.exe.config

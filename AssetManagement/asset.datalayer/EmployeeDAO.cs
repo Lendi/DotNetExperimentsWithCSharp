@@ -9,13 +9,13 @@ namespace asset.datalayer
     public class EmployeeDAO
     {
 
-        public List<users> ViewProfile()
-        {
-            using (assetDataContext obj = new assetDataContext())
-            {
-                return obj.users
-            }
-        }
+        //public List<users> ViewProfile()
+        //{
+        //    using (assetDataContext obj = new assetDataContext())
+        //    {
+               
+        //    }
+        //}
 
         public void CreateRequest(int eid, string assetname) {
             using (assetDataContext obj = new assetDataContext()) {

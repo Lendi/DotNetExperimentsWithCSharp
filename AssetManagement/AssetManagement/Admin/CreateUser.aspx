@@ -25,20 +25,22 @@
             <tr>
                 <td class="auto-style2">Employee ID</td>
                 <td>
-                    <asp:TextBox ID="tbEmpID" runat="server" Width="196px" 
-                        OnTextChanged="tbEmpID_TextChanged"></asp:TextBox>
+                    <asp:TextBox ID="tbEmpID" runat="server" Width="196px" >
+                       </asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style2">Short ID (Username)</td>
                 <td>
-                    <asp:TextBox ID="tbUname" runat="server" Width="196px"></asp:TextBox>
+                    <asp:TextBox ID="tbUname" runat="server" Width="196px" 
+                        ></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style2">First Name</td>
                 <td>
-                    <asp:TextBox ID="tbFirstname" runat="server" Width="196px"></asp:TextBox>
+                    <asp:TextBox ID="tbFirstname" runat="server" Width="196px" 
+                        ></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -85,13 +87,15 @@
             <tr>
                 <td class="auto-style2">Date of Joining</td>
                 <td>
-                    <asp:Calendar ID="CalendarDOJ" runat="server" Height="114px"></asp:Calendar>
+                    <asp:Calendar ID="CalendarDOJ" runat="server" Height="114px" 
+                        OnSelectionChanged="CalendarDOJ_SelectionChanged"></asp:Calendar>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style2">Account Status</td>
                 <td>
-                    <asp:DropDownList ID="ddlAccountStatus" runat="server">
+                    <asp:DropDownList ID="ddlAccountStatus" runat="server" 
+                        >
                         <asp:ListItem Value="a">Active</asp:ListItem>
                         <asp:ListItem Value="i">Inactive</asp:ListItem>
                     </asp:DropDownList>
@@ -100,7 +104,9 @@
             <tr>
                 <td class="auto-style2">&nbsp;</td>
                 <td>
-                    <asp:Button ID="btnSubmit" runat="server" Text="Submit" />
+                    <asp:Button ID="btnSubmit" runat="server" Text="Submit" 
+                        OnClick="btnSubmit_Click" />
+                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
                 </td>
             </tr>
         </table>

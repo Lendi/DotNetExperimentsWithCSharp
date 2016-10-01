@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssetManagement", "AssetManagement\AssetManagement.csproj", "{28D34A72-301E-47A4-B85C-4629E2959576}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "asset.datalayer", "asset.datalayer\asset.datalayer.csproj", "{7FC80C4C-87A0-49AC-9906-F106C2F2850E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asset.DataLayer", "asset.datalayer\Asset.DataLayer.csproj", "{7FC80C4C-87A0-49AC-9906-F106C2F2850E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asset.BusinessLayer", "Asset.BusinessLayer\Asset.BusinessLayer.csproj", "{D990FDAE-FAC8-4C5F-A4A6-48162B1A2117}"
 EndProject

@@ -1,0 +1,1 @@
+D:\DotNetExperimentsWithCSharp\ADO.NET\HandsOnLinqWithObjects\HandsOnLinqWithObjects\bin\Debug\HandsOnLinqWithObjects.exe.config

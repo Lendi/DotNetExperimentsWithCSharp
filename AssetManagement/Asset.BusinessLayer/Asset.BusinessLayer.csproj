@@ -43,9 +43,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\asset.datalayer\asset.datalayer.csproj">
+    <ProjectReference Include="..\asset.datalayer\Asset.DataLayer.csproj">
       <Project>{7fc80c4c-87a0-49ac-9906-f106c2f2850e}</Project>
-      <Name>asset.datalayer</Name>
+      <Name>Asset.DataLayer</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
