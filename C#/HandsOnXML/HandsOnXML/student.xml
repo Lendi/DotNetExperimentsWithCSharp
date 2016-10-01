@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<class_room>
+  <student id="100" class="VI">
+<name>Rohan </name>
+    <marks>560 </marks>
+    </student>
+
+  <student id="101" class="VI">
+<name>Karan </name>
+    <marks>545 </marks>
+    </student>
+
+  <student id="102" class="VI">
+<name>Jason</name>
+    <marks>500 </marks>
+    </student>
+
+  <student id="103" class="VI">
+<name>Suren </name>
+    <marks>569 </marks>
+    </student>
+
+</class_room>

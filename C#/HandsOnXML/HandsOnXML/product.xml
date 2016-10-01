@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<products>
+  <product>
+<pid>1001 </pid>
+    <pname>Keyboadr </pname>
+    <price>5000 </price>
+    <stock>12 </stock>
+    </product>
+
+  <product>
+    <pid>1002 </pid>
+    <pname>Mouse</pname>
+    <price>1000 </price>
+    <stock>18 </stock>
+  </product>
+  
+  </products>
