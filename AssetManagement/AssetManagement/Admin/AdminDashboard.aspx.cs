@@ -18,7 +18,7 @@ namespace AssetManagement.Admin
 
         protected void lbModifyUser_Click(object sender, EventArgs e)
         {
-
+            Server.Transfer("/Admin/CreateUser.aspx");
         }
 
         protected void lbDeactivateUser_Click(object sender, EventArgs e)

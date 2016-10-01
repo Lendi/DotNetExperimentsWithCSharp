@@ -9,19 +9,17 @@ namespace asset.datalayer
 {
   public  class AdminDAO
     {
-        
+      assetDataContext obj = new assetDataContext();
         public void CreateUser(user ObjUser)
         {
-            using (assetDataContext obj = new assetDataContext())
-            {
-                //int eid = (obj.users.Select(i => i.emp_id)).Max();                
-                //eid = eid + 1;        
-                //ObjUser.emp_id = eid;
+            //using (assetDataContext obj = new assetDataContext())
+            //{
+                int eid = (obj.users.Select(i => i.emp_id)).Max();                
+                eid = eid + 1;        
+                ObjUser.emp_id = eid;
                 obj.users.InsertOnSubmit(ObjUser);
                 obj.SubmitChanges(); 
-                
-
-            }
+           // }
 
         }
 
@@ -43,6 +41,7 @@ namespace asset.datalayer
                 usr.active = ObjUser.active;
 
                 obj.SubmitChanges();
+                
                 
             }
 

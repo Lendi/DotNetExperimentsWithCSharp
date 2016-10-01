@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using Asset.BusinessLayer;
 using asset.datalayer;
 
+
 namespace AssetManagement.Admin
 {
     public partial class CreateUser : System.Web.UI.Page
@@ -38,9 +39,14 @@ namespace AssetManagement.Admin
 
             obj.CreateUser(usr);
             Label1.Text = "User Created!";
+            
+           
 
 
         }
+
+
+
 
         protected void CalendarDOJ_SelectionChanged(object sender, EventArgs e)
         {

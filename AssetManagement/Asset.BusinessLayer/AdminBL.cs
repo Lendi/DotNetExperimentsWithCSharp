@@ -15,6 +15,7 @@ namespace Asset.BusinessLayer
          public void CreateUser(user ObjUser)
         {
             Obj.CreateUser(ObjUser);
+            
          }
 
 
