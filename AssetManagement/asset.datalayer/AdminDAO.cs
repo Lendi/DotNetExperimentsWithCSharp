@@ -14,9 +14,9 @@ namespace asset.datalayer
         {
             //using (assetDataContext obj = new assetDataContext())
             //{
-                int eid = (obj.users.Select(i => i.emp_id)).Max();                
-                eid = eid + 1;        
-                ObjUser.emp_id = eid;
+                //int eid = (obj.users.Select(i => i.emp_id)).Max();                
+                //eid = eid + 1;        
+                //ObjUser.emp_id = eid;
                 obj.users.InsertOnSubmit(ObjUser);
                 obj.SubmitChanges(); 
            // }

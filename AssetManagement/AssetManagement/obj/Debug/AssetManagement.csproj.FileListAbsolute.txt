@@ -13,3 +13,7 @@ D:\DotNetExperimentsWithCSharp\AssetManagement\AssetManagement\bin\Asset.Busines
 D:\DotNetExperimentsWithCSharp\AssetManagement\AssetManagement\bin\asset.datalayer.dll
 D:\DotNetExperimentsWithCSharp\AssetManagement\AssetManagement\bin\Asset.BusinessLayer.pdb
 D:\DotNetExperimentsWithCSharp\AssetManagement\AssetManagement\bin\asset.datalayer.pdb
+H:\DotNetExperimentsWithCSharp\AssetManagement\AssetManagement\bin\Asset.BusinessLayer.dll
+H:\DotNetExperimentsWithCSharp\AssetManagement\AssetManagement\bin\asset.datalayer.dll
+H:\DotNetExperimentsWithCSharp\AssetManagement\AssetManagement\bin\Asset.BusinessLayer.pdb
+H:\DotNetExperimentsWithCSharp\AssetManagement\AssetManagement\bin\asset.datalayer.pdb
