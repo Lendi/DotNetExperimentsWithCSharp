@@ -1,0 +1,5 @@
+D:\DotNetExperimentsWithCSharp\ASP.NET\CalculateService\CalculateService\bin\CalculateService.dll
+D:\DotNetExperimentsWithCSharp\ASP.NET\CalculateService\CalculateService\bin\CalculateService.pdb
+D:\DotNetExperimentsWithCSharp\ASP.NET\CalculateService\CalculateService\obj\Debug\CalculateService.csprojResolveAssemblyReference.cache
+D:\DotNetExperimentsWithCSharp\ASP.NET\CalculateService\CalculateService\obj\Debug\CalculateService.dll
+D:\DotNetExperimentsWithCSharp\ASP.NET\CalculateService\CalculateService\obj\Debug\CalculateService.pdb

@@ -12,14 +12,15 @@ namespace Asset.BusinessLayer
         AdminDAO Obj=new AdminDAO();
 
 
-         public void CreateUser(users ObjUser)
+         public void CreateUser(user ObjUser)
         {
             Obj.CreateUser(ObjUser);
+            
          }
 
 
          public void ModifyUser(int eid, string sid, string fname, string lname, string email, string pwd, int mid,
-            string desig, int phno, DateTime doj, string active, users ObjUser)
+            string desig, int phno, DateTime doj, string active, user ObjUser)
          {
              Obj.ModifyUser(eid, sid, fname, lname, email, pwd, mid, desig, phno, doj, active, ObjUser);         
          }
@@ -30,7 +31,7 @@ namespace Asset.BusinessLayer
          }
 
 
-         public List<users> ViewUsers() {
+         public List<user> ViewUsers() {
              return Obj.ViewUsers();
          }
 
@@ -38,7 +39,7 @@ namespace Asset.BusinessLayer
          //    Obj.ReactivateUser(eid);
          //}
 
-         public void ChangePassword(int eid, users ObjUser) {
+         public void ChangePassword(int eid, user ObjUser) {
              Obj.ChangePassword(eid, ObjUser);
          }
 

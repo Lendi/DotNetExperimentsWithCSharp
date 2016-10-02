@@ -1,13 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Dashboard.Master" AutoEventWireup="true" CodeBehind="AdminDashboard.aspx.cs" Inherits="AssetManagement.Admin.AdminDashboard1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-   <style type="text/css">
+    <style type="text/css">
         .auto-style1
         {
-            width: 18%;
+            width: 139px;
             float: left;
-            height: 377px;
+            height: 375px;
             margin-right: 10px;
-            margin-top: 4px;
+            margin-top: 0px;
         }
         .auto-style2
         {
@@ -21,21 +21,21 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<table  class="auto-style1">
+    <table  class="auto-style1">
             <tr>
                 <td class="auto-style2">
-                    <asp:LinkButton ID="lbCreateUser" runat="server"  
-                        PostBackUrl="~/CreateUser.aspx" OnClick="~/CreateUser.aspx.cs">Create User</asp:LinkButton>
+                    <asp:LinkButton ID="lbCreateUser" runat="server" OnClick="lbCreateUser_Click">Create User</asp:LinkButton>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style2">
-                    <asp:LinkButton ID="lbModifyUser" runat="server">Modify User</asp:LinkButton>
+                    <asp:LinkButton ID="lbModifyUser" runat="server" OnClick="lbModifyUser_Click">Modify User</asp:LinkButton>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style2">
-                    <asp:LinkButton ID="lbDeactivateUser" runat="server">Deactivate User</asp:LinkButton>
+                    <asp:LinkButton ID="lbDeactivateUser" runat="server" 
+                        OnClick="lbDeactivateUser_Click">Deactivate User</asp:LinkButton>
                 </td>
             </tr>
             
@@ -52,7 +52,7 @@
             </tr>
             <tr>
                 <td class="auto-style3">
-                    <asp:LinkButton ID="lbChangePwd" runat="server">Change Password</asp:LinkButton>
+                    <asp:LinkButton ID="lbChangePwd" runat="server" OnClick="lbChangePwd_Click">Change Password</asp:LinkButton>
                 </td>
             </tr>
         </table>

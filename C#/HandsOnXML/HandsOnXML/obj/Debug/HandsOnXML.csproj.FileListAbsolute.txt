@@ -1,0 +1,6 @@
+D:\DotNetExperimentsWithCSharp\C#\HandsOnXML\HandsOnXML\bin\Debug\HandsOnXML.exe.config
+D:\DotNetExperimentsWithCSharp\C#\HandsOnXML\HandsOnXML\bin\Debug\HandsOnXML.exe
+D:\DotNetExperimentsWithCSharp\C#\HandsOnXML\HandsOnXML\bin\Debug\HandsOnXML.pdb
+D:\DotNetExperimentsWithCSharp\C#\HandsOnXML\HandsOnXML\obj\Debug\HandsOnXML.csprojResolveAssemblyReference.cache
+D:\DotNetExperimentsWithCSharp\C#\HandsOnXML\HandsOnXML\obj\Debug\HandsOnXML.exe
+D:\DotNetExperimentsWithCSharp\C#\HandsOnXML\HandsOnXML\obj\Debug\HandsOnXML.pdb

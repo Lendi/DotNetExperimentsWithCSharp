@@ -3,28 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace asset.datalayer
 {
   public  class AdminDAO
     {
-        
-        public void CreateUser(users ObjUser)
+      assetDataContext obj = new assetDataContext();
+        public void CreateUser(user ObjUser)
         {
-            using (assetDataContext obj = new assetDataContext())
-            {
+            //using (assetDataContext obj = new assetDataContext())
+            //{
+                int eid = (obj.users.Select(i => i.emp_id)).Max();                
+                eid = eid + 1;        
+                ObjUser.emp_id = eid;
                 obj.users.InsertOnSubmit(ObjUser);
-                obj.SubmitChanges();
-            }
+                obj.SubmitChanges(); 
+           // }
 
         }
 
         public void ModifyUser( int eid, string sid, string fname, string lname, string email, string pwd, int mid, 
-            string desig, int phno, DateTime doj, string active, users ObjUser)
+            string desig, int phno, DateTime doj, string active, user ObjUser)
         {
             using (assetDataContext obj = new assetDataContext())
             {
-                users usr = obj.users.SingleOrDefault(i => i.emp_id == eid);
+                user usr = obj.users.SingleOrDefault(i => i.emp_id == eid);
                 usr.short_id = ObjUser.short_id;
                 usr.fname = ObjUser.fname;
                 usr.lname = ObjUser.lname;
@@ -38,6 +42,7 @@ namespace asset.datalayer
 
                 obj.SubmitChanges();
                 
+                
             }
 
 
@@ -48,7 +53,7 @@ namespace asset.datalayer
         {
             using (assetDataContext obj = new assetDataContext())
             {
-                users usr = obj.users.SingleOrDefault(i => i.emp_id == eid);
+                user usr = obj.users.SingleOrDefault(i => i.emp_id == eid);
                 usr.active = "i";
 
                 obj.SubmitChanges();
@@ -57,7 +62,7 @@ namespace asset.datalayer
         }
 
 
-        public List<users> ViewUsers()
+        public List<user> ViewUsers()
         {
             using (assetDataContext obj = new assetDataContext())
             {
@@ -77,11 +82,11 @@ namespace asset.datalayer
 
         //}
 
-        public void ChangePassword(int eid, users ObjUser)
+        public void ChangePassword(int eid, user ObjUser)
         {
             using (assetDataContext obj = new assetDataContext())
             {
-                users usr = obj.users.SingleOrDefault(i => i.emp_id == eid);
+                user usr = obj.users.SingleOrDefault(i => i.emp_id == eid);
                 usr.user_password = ObjUser.user_password;
                 obj.SubmitChanges();
             }

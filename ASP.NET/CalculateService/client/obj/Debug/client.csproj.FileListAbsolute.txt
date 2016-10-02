@@ -1,0 +1,5 @@
+D:\DotNetExperimentsWithCSharp\ASP.NET\CalculateService\client\bin\client.dll
+D:\DotNetExperimentsWithCSharp\ASP.NET\CalculateService\client\bin\client.pdb
+D:\DotNetExperimentsWithCSharp\ASP.NET\CalculateService\client\obj\Debug\client.csprojResolveAssemblyReference.cache
+D:\DotNetExperimentsWithCSharp\ASP.NET\CalculateService\client\obj\Debug\client.dll
+D:\DotNetExperimentsWithCSharp\ASP.NET\CalculateService\client\obj\Debug\client.pdb
