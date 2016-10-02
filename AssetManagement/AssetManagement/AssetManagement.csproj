@@ -59,6 +59,7 @@
   <ItemGroup>
     <Content Include="Admin\AdminDashboard.aspx" />
     <Content Include="Admin\CreateUser.aspx" />
+    <Content Include="Admin\ModifyUser.aspx" />
     <Content Include="DashoardStyling.css" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -76,6 +77,13 @@
     </Compile>
     <Compile Include="Admin\CreateUser.aspx.designer.cs">
       <DependentUpon>CreateUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ModifyUser.aspx.cs">
+      <DependentUpon>ModifyUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ModifyUser.aspx.designer.cs">
+      <DependentUpon>ModifyUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="Dashboard.Master.cs">
       <DependentUpon>Dashboard.Master</DependentUpon>
