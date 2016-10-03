@@ -1,0 +1,5 @@
+D:\DotNetExperimentsWithCSharp\ASP.NET\WCF_CalculateService\WCF_CalculateService\bin\WCF_CalculateService.dll
+D:\DotNetExperimentsWithCSharp\ASP.NET\WCF_CalculateService\WCF_CalculateService\bin\WCF_CalculateService.pdb
+D:\DotNetExperimentsWithCSharp\ASP.NET\WCF_CalculateService\WCF_CalculateService\obj\Debug\WCF_CalculateService.csprojResolveAssemblyReference.cache
+D:\DotNetExperimentsWithCSharp\ASP.NET\WCF_CalculateService\WCF_CalculateService\obj\Debug\WCF_CalculateService.dll
+D:\DotNetExperimentsWithCSharp\ASP.NET\WCF_CalculateService\WCF_CalculateService\obj\Debug\WCF_CalculateService.pdb
