@@ -24,28 +24,36 @@ namespace asset.datalayer
         }
 
         public void ModifyUser( int eid, string sid, string fname, string lname, string email, string pwd, int mid, 
-            string desig, int phno, DateTime doj, string active, user ObjUser)
+            string desig, int phno, DateTime doj, string active)
         {
             using (assetDataContext obj = new assetDataContext())
             {
                 user usr = obj.users.SingleOrDefault(i => i.emp_id == eid);
-                usr.short_id = ObjUser.short_id;
-                usr.fname = ObjUser.fname;
-                usr.lname = ObjUser.lname;
-                usr.email_id = ObjUser.email_id;
-                usr.user_password = ObjUser.user_password;
-                usr.manager_id = ObjUser.manager_id;
-                usr.designation = ObjUser.designation;
-                usr.mobile = ObjUser.mobile;
-                usr.date_of_join = ObjUser.date_of_join;
-                usr.active = ObjUser.active;
+                usr.short_id = sid ;
+                usr.fname = fname;
+                usr.lname = lname;
+                usr.email_id = email;
+                usr.user_password = pwd;
+                usr.manager_id = mid;
+                usr.designation = desig;
+                usr.mobile = phno;
+                usr.date_of_join = doj;
+                usr.active = active;
 
-                obj.SubmitChanges();
-                
+                obj.SubmitChanges();                
                 
             }
 
 
+        }
+
+        public void DeleteUser(int eid) {
+            using (assetDataContext obj = new assetDataContext())
+            {
+                user usr = obj.users.SingleOrDefault(i => i.emp_id == eid);
+                obj.users.DeleteOnSubmit(usr);
+                obj.SubmitChanges();
+            }
         }
 
 

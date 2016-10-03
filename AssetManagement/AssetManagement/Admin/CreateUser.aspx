@@ -70,12 +70,13 @@
             <tr>
                 <td class="auto-style2">Designation</td>
                 <td>
-                    <asp:DropDownList ID="ddlDesignation" runat="server">
-                        <asp:ListItem>Team Leader</asp:ListItem>
-                        <asp:ListItem>Junior Developer</asp:ListItem>
-                        <asp:ListItem>Software Developer</asp:ListItem>
-                        <asp:ListItem>Software Engineer</asp:ListItem>
+                    <asp:DropDownList ID="ddlDesignation" runat="server" 
+                        DataSourceID="ObjectDataSource1" DataTextField="designation" 
+                        DataValueField="designation">
                     </asp:DropDownList>
+                    <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" 
+                        SelectMethod="ViewUsers" TypeName="asset.datalayer.AdminDAO">
+                    </asp:ObjectDataSource>
                 </td>
             </tr>
             <tr>
@@ -95,9 +96,8 @@
                 <td class="auto-style2">Account Status</td>
                 <td>
                     <asp:DropDownList ID="ddlAccountStatus" runat="server" 
+                        DataSourceID="ObjectDataSource1" DataTextField="active" DataValueField="active" 
                         >
-                        <asp:ListItem Value="a">Active</asp:ListItem>
-                        <asp:ListItem Value="i">Inactive</asp:ListItem>
                     </asp:DropDownList>
                 </td>
             </tr>

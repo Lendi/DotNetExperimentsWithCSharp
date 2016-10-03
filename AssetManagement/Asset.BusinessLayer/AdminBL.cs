@@ -20,9 +20,9 @@ namespace Asset.BusinessLayer
 
 
          public void ModifyUser(int eid, string sid, string fname, string lname, string email, string pwd, int mid,
-            string desig, int phno, DateTime doj, string active, user ObjUser)
+            string desig, int phno, DateTime doj, string active)
          {
-             Obj.ModifyUser(eid, sid, fname, lname, email, pwd, mid, desig, phno, doj, active, ObjUser);         
+             Obj.ModifyUser(eid, sid, fname, lname, email, pwd, mid, desig, phno, doj, active);         
          }
 
 
@@ -30,6 +30,9 @@ namespace Asset.BusinessLayer
              Obj.DeactivateUser(eid);
          }
 
+         public void DeleteUser(int eid) {
+             Obj.DeleteUser(eid);
+         }
 
          public List<user> ViewUsers() {
              return Obj.ViewUsers();

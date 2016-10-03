@@ -18,8 +18,8 @@ namespace HandsOnDatabBindControls
 
         private void FillGrid()
         {
-            GridView1.DataSource = obj.GetEmployees();
-            GridView1.DataBind();
+           
+
         }
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
