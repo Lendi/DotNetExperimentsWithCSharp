@@ -16,7 +16,9 @@ namespace AssetManagement.Admin
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            user usr = new user();
+            usr.emp_id = obj.GetID();
+            tbEmpID.Text = usr.emp_id.ToString();
 
         }
 
@@ -25,7 +27,7 @@ namespace AssetManagement.Admin
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
             user usr = new user();
-            usr.emp_id = int.Parse(tbEmpID.Text);
+            usr.emp_id = int.Parse(tbEmpID.Text);            
             usr.short_id = tbUname.Text;
             usr.fname = tbFirstname.Text;
             usr.lname = tbLastName.Text;
@@ -39,9 +41,14 @@ namespace AssetManagement.Admin
 
             obj.CreateUser(usr);
             Label1.Text = "User Created!";
-            
-           
 
+            if (usr.active == "a")
+            {
+                Label2.Text = "User Activated";
+            }
+            else {
+                Label2.Text = "User Deactivated!";
+            }
 
         }
 
@@ -49,6 +56,11 @@ namespace AssetManagement.Admin
 
 
         protected void CalendarDOJ_SelectionChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnSearchEid_Click(object sender, EventArgs e)
         {
 
         }

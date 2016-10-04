@@ -18,6 +18,11 @@ namespace Asset.BusinessLayer
             
          }
 
+         public int GetID()
+         {
+             return Obj.GetID();
+         }
+
 
          public void ModifyUser(int eid, string sid, string fname, string lname, string email, string pwd, int mid,
             string desig, int phno, DateTime doj, string active)

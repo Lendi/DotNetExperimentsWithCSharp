@@ -35,27 +35,22 @@
             <tr>
                 <td class="auto-style2">
                     <asp:LinkButton ID="lbDeactivateUser" runat="server" 
-                        OnClick="lbDeactivateUser_Click">Deactivate User</asp:LinkButton>
+                        OnClick="lbDeactivateUser_Click">De(Re)activate User</asp:LinkButton>
                 </td>
             </tr>
             
             <tr>
                 <td class="auto-style2">
-                    <asp:LinkButton ID="lbReactivateUser" runat="server">Reactivate User</asp:LinkButton>
+                    <asp:LinkButton ID="lbViewUser" runat="server" OnClick="lbViewUser_Click">View Users</asp:LinkButton>
                 </td>
             </tr>
            
             <tr>
                 <td class="auto-style2">
-                    <asp:LinkButton ID="lbViewUser" runat="server">View User</asp:LinkButton>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style3">
                     <asp:LinkButton ID="lbChangePwd" runat="server" OnClick="lbChangePwd_Click">Change Password</asp:LinkButton>
                 </td>
             </tr>
-        </table>
+            </table>
     
     <br />
     <br />

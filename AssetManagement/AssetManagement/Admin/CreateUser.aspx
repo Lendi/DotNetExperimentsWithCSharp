@@ -1,6 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CreateUser.aspx.cs" Inherits="AssetManagement.Admin.CreateUser" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Dashboard.Master" AutoEventWireup="true" CodeBehind="CreateUser.aspx.cs" Inherits="AssetManagement.Admin.CreateUser" %>
 
-<!DOCTYPE html>
+<%--<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -18,10 +18,24 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-    
+    <div>--%>
+
+
+
+    <asp:Content ID="Content1" runat="server" contentplaceholderid="head">
+        <style type="text/css">
+        .auto-style2
+        {
+            height: 38px;
+        }
+    </style>
+</asp:Content>
+
+
+    <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">    
+
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <table align="center" class="auto-style1">
+        <table  class="auto-style1" style="height: 629px; width: 275px">
             <tr>
                 <td class="auto-style2">Employee ID</td>
                 <td>
@@ -102,16 +116,25 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style2">&nbsp;</td>
-                <td>
+                <td style="height: 94px">
+                    <br />
+                    <br />
+                </td>
+                <td style="height: 94px">
                     <asp:Button ID="btnSubmit" runat="server" Text="Submit" 
                         OnClick="btnSubmit_Click" />
+                    &nbsp;
+                    <br />
                     <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                    <br />
+                    <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
                 </td>
             </tr>
         </table>
-    
-    </div>
+    </asp:Content>
+<%--    </div>
     </form>
 </body>
-</html>
+</html>--%>
+
+

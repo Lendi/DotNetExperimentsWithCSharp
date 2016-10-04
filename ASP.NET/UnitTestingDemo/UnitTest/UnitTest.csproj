@@ -42,6 +42,12 @@
     <Compile Include="TestCalculate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TestDAO\TestDAO.csproj">
+      <Project>{b826d8b3-51ef-4529-9c29-263e47ded24f}</Project>
+      <Name>TestDAO</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

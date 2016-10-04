@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using asset.datalayer;
+using Asset.BusinessLayer;
 
 namespace AssetManagement.Admin
 {
@@ -13,8 +15,10 @@ namespace AssetManagement.Admin
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            FillGrid();
+            if (IsPostBack == false) {
+                FillGrid();
+            }
+            
             
         }
 
@@ -66,7 +70,7 @@ namespace AssetManagement.Admin
             DateTime doj;//10 
             DropDownList active;//11 c
             eid =int.Parse(((GridView1.Rows[e.RowIndex].Cells[1].FindControl("LinkButton1"))as LinkButton).Text);
-            sid = GridView1.Rows[e.RowIndex].Cells[2].Text;
+            sid = ((GridView1.Rows[e.RowIndex].Cells[2].FindControl("Label1") as Label).Text);
             //fname = GridView1.Rows[e.RowIndex].Cells[3].Controls[0] as TextBox;
             //lname = GridView1.Rows[e.RowIndex].Cells[4].Controls[1] as TextBox;
             //email = GridView1.Rows[e.RowIndex].Cells[5].Controls[2] as TextBox;
@@ -75,19 +79,19 @@ namespace AssetManagement.Admin
             //desig = GridView1.Rows[e.RowIndex].Cells[8].Controls[5] as DropDownList;
             //phno = GridView1.Rows[e.RowIndex].Cells[9].Controls[6] as TextBox;
             //doj = DateTime.Parse(GridView1.Rows[e.RowIndex].Cells[10].Text) ;
+            //doj = DateTime.Parse(((GridView1.Rows[e.RowIndex].Cells[10].FindControl("Label1") as Label).Text));
             //active = GridView1.Rows[e.RowIndex].Cells[11].Controls[7] as DropDownList;
 
-            fname = GridView1.Rows[e.RowIndex].Cells[3].Controls[0] as TextBox;
-            lname = GridView1.Rows[e.RowIndex].Cells[4].Controls[1] as TextBox;
-            email = GridView1.Rows[e.RowIndex].Cells[5].Controls[2] as TextBox;
-            pwd = GridView1.Rows[e.RowIndex].Cells[6].Controls[3] as TextBox;
-            mid = GridView1.Rows[e.RowIndex].Cells[7].Controls[4] as TextBox;
-            desig = GridView1.Rows[e.RowIndex].Cells[8].Controls[5] as DropDownList;
-            phno = GridView1.Rows[e.RowIndex].Cells[9].Controls[6] as TextBox;
+            fname = ((GridView1.Rows[e.RowIndex].Cells[3].FindControl("TextBox1")) as TextBox);
+            lname = ((GridView1.Rows[e.RowIndex].Cells[4].FindControl("TextBox2")) as TextBox);
+            email = ((GridView1.Rows[e.RowIndex].Cells[5].FindControl("TextBox3")) as TextBox);
+            pwd = ((GridView1.Rows[e.RowIndex].Cells[6].FindControl("TextBox5")) as TextBox);
+            mid = ((GridView1.Rows[e.RowIndex].Cells[7].FindControl("TextBox6")) as TextBox);
+            desig = ((GridView1.Rows[e.RowIndex].Cells[8].FindControl("DropDownList1")) as DropDownList);
+            phno = ((GridView1.Rows[e.RowIndex].Cells[9].FindControl("TextBox7")) as TextBox);
             //doj = DateTime.Parse(GridView1.Rows[e.RowIndex].Cells[10].Text);          
-            doj = DateTime.Parse(((GridView1.Rows[e.RowIndex].Cells[10].FindControl("Label9") as Label).Text));
-            active = GridView1.Rows[e.RowIndex].Cells[11].Controls[7] as DropDownList;
-
+            doj = DateTime.Parse(((GridView1.Rows[e.RowIndex].Cells[10].FindControl("Label11") as Label).Text));
+            active = ((GridView1.Rows[e.RowIndex].Cells[11].FindControl("DropDownList2")) as DropDownList);
             obj.ModifyUser(eid, sid, fname.Text, lname.Text, email.Text, pwd.Text, int.Parse(mid.Text), 
                 desig.SelectedValue , int.Parse(phno.Text), doj, active.SelectedValue);
             GridView1.EditIndex = -1;//to set grid in normal mode

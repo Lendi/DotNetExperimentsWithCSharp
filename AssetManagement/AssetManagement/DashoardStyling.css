@@ -1,6 +1,6 @@
 ﻿body
 {
-    background-color: #3366CC;
+    background-color: none;
 }
 
     /*.Main
@@ -14,7 +14,7 @@
     }*/
     .Header
     {
-        width:auto;
+        width:2006px;
         height:50px;
         background-color:Maroon;
     }
@@ -81,31 +81,33 @@
   
    .Content
    {
-      width:auto;
-      height:400px;
+      width:782px;
+      height:1679px;
       background-color:White;
       padding-left:50px;
       padding-right:50px;
       padding-top:30px;
    }
-   .footer
+   /*.footer
    {
-       height:20px;
+       height:31px;
        background-color:Maroon;
        text-align:center;
        color:White;
        padding-top:5px;
-   }
+    width: 881px;
+    margin-top: 7px;
+}
    .footer h2
    {
-       font-size:15px;
+       font-size:5px;
    }
    .footer a:visited
    {
        color:Black;
-   }
+   }*/
    .Content fieldset
    {
-       width:600px;
+       width:auto;
    }
 

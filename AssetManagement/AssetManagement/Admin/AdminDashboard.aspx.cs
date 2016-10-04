@@ -18,12 +18,12 @@ namespace AssetManagement.Admin
 
         protected void lbModifyUser_Click(object sender, EventArgs e)
         {
-            Server.Transfer("/Admin/CreateUser.aspx");
+            Server.Transfer("/Admin/ModifyUser.aspx");
         }
 
         protected void lbDeactivateUser_Click(object sender, EventArgs e)
         {
-
+            Server.Transfer("/Admin/ModifyUser.aspx");
         }
 
         protected void lbChangePwd_Click(object sender, EventArgs e)
@@ -35,6 +35,11 @@ namespace AssetManagement.Admin
         {
             
             Server.Transfer("/Admin/CreateUser.aspx");
+        }
+
+        protected void lbViewUser_Click(object sender, EventArgs e)
+        {
+            Server.Transfer("/Admin/ViewUsers.aspx");
         }
     }
 }

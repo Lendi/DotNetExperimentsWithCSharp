@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="AssetManagementDBModel">
+  <DataContextMoniker Name="/AssetManagementDBModelDataContext" />
+  <nestedChildShapes>
+    <classShape Id="ba9ca113-c2a5-476a-9fdc-c13bba6482d9" absoluteBounds="4.75, 1.875, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/AssetManagementDBModelDataContext/AssetTable" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6b929aae-5f17-4230-8d16-c4d7e34fa393" absoluteBounds="4.765, 2.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6b7ec173-5604-4aed-bcc6-a7c2f3b516ea" absoluteBounds="1.375, 3.625, 2, 2.5401025390625">
+      <DataClassMoniker Name="/AssetManagementDBModelDataContext/RequestTable" />
+      <nestedChildShapes>
+        <elementListCompartment Id="66742893-daad-4a8f-8351-183396f1f3fe" absoluteBounds="1.3900000000000001, 4.085, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.375 : 4.54670922233073); (5.75 : 4.54670922233073); (5.75 : 3.64589680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AssetManagementDBModelDataContext/RequestTable/RequestTable_AssetTable" />
+      <nodes>
+        <classShapeMoniker Id="6b7ec173-5604-4aed-bcc6-a7c2f3b516ea" />
+        <classShapeMoniker Id="ba9ca113-c2a5-476a-9fdc-c13bba6482d9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="f179b597-6a23-4034-b9d6-95e77abce0fe" absoluteBounds="1.125, 0.625, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/AssetManagementDBModelDataContext/TranserHistory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fd0ef980-5632-4c4a-abbb-5778f063af22" absoluteBounds="1.1399999999999997, 1.085, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c660985b-62b9-480e-92c6-4e5756f0f3ee" absoluteBounds="7.25, 5.375, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/AssetManagementDBModelDataContext/UserDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9a22b635-73a2-4c2d-96d6-763ca6648b89" absoluteBounds="7.265, 5.835, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.031248875 : 5.375); (8.031248875 : 2.76044840494792); (7.69270527083333 : 2.76044840494792 : JumpStart); (7.52603860416667 : 2.76044840494792 : JumpEnd); (6.75 : 2.76044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AssetManagementDBModelDataContext/UserDetail/UserDetail_AssetTable" />
+      <nodes>
+        <classShapeMoniker Id="c660985b-62b9-480e-92c6-4e5756f0f3ee" />
+        <classShapeMoniker Id="ba9ca113-c2a5-476a-9fdc-c13bba6482d9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.25 : 5.77005126953125); (3.375 : 5.77005126953125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AssetManagementDBModelDataContext/UserDetail/UserDetail_RequestTable" />
+      <nodes>
+        <classShapeMoniker Id="c660985b-62b9-480e-92c6-4e5756f0f3ee" />
+        <classShapeMoniker Id="6b7ec173-5604-4aed-bcc6-a7c2f3b516ea" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.25 : 5.51002563476563); (3.375 : 5.51002563476563)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AssetManagementDBModelDataContext/UserDetail/UserDetail_RequestTable1" />
+      <nodes>
+        <classShapeMoniker Id="c660985b-62b9-480e-92c6-4e5756f0f3ee" />
+        <classShapeMoniker Id="6b7ec173-5604-4aed-bcc6-a7c2f3b516ea" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.87500275 : 5.375); (8.87500275 : 1.03125); (3.125 : 1.03125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AssetManagementDBModelDataContext/UserDetail/UserDetail_TranserHistory" />
+      <nodes>
+        <classShapeMoniker Id="c660985b-62b9-480e-92c6-4e5756f0f3ee" />
+        <classShapeMoniker Id="f179b597-6a23-4034-b9d6-95e77abce0fe" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.6093719375 : 5.375); (7.6093719375 : 1.4531275); (3.125 : 1.4531275)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AssetManagementDBModelDataContext/UserDetail/UserDetail_TranserHistory1" />
+      <nodes>
+        <classShapeMoniker Id="c660985b-62b9-480e-92c6-4e5756f0f3ee" />
+        <classShapeMoniker Id="f179b597-6a23-4034-b9d6-95e77abce0fe" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

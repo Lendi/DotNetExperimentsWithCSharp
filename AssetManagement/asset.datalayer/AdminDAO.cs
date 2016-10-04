@@ -7,21 +7,31 @@ using System.Data.SqlClient;
 
 namespace asset.datalayer
 {
-  public  class AdminDAO
+  public class AdminDAO
     {
       assetDataContext obj = new assetDataContext();
         public void CreateUser(user ObjUser)
         {
             //using (assetDataContext obj = new assetDataContext())
             //{
-                //int eid = (obj.users.Select(i => i.emp_id)).Max();                
-                //eid = eid + 1;        
-                //ObjUser.emp_id = eid;
+            int eid = GetID();
+                ObjUser.emp_id = eid;
                 obj.users.InsertOnSubmit(ObjUser);
                 obj.SubmitChanges(); 
-           // }
+           //}
 
         }
+
+        public int GetID()
+        {
+            //using (assetDataContext obj = new assetDataContext())
+            //{
+            int eid = (obj.users.Select(i => i.emp_id)).Max();
+            eid = eid + 1;
+            return eid;
+        }
+
+      
 
         public void ModifyUser( int eid, string sid, string fname, string lname, string email, string pwd, int mid, 
             string desig, int phno, DateTime doj, string active)

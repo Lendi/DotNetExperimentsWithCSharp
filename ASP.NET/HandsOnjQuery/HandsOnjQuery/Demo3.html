@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+<!--    <style>
+        .s1
+        {
+                    color:blue;
+        }        
+    </style>-->
+
+
+    <script src="Scripts/jquery-1.7.1.js"></script>
+    <script>
+        //$(document).ready(function () {
+        //    $("#p1").addClass("s1");
+        //});
+
+        $(document).ready(function () {
+            $("b1").click(function () {
+                var uname = $("#t1").val;
+                var pwd = $("#t2").val;
+
+                if (uname == "") {
+                    $("#s1").text("Enter name");
+                    $("#s1").css("color", "red");
+                }
+                else if (pwd == "") {
+                    $("#s2").text("Enter nampwd");
+                    $("#s2").css("color", "red");
+                }
+            });
+        });
+        //});
+    </script>
+
+
+</head>
+<body>
+<!--<p id="p1">Paragraph1</p>
+<p>Paragraph2</p>
+<p>Paragraph3</p>-->
+Username: <input type="text" id="t1" /> <span id = "s1"></span> <br /><br />
+Password: <input type="password" id="t2" /> <span id = "s2"></span> <br /><br />
+<input type ="button" 
+</body>
+</html>

@@ -42,12 +42,6 @@
     <Compile Include="Calculate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\UnitTest\UnitTest.csproj">
-      <Project>{8bc0ac5f-58f1-4c99-a63f-972b8944460c}</Project>
-      <Name>UnitTest</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
