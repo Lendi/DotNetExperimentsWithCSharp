@@ -1,0 +1,7 @@
+D:\DotNetExperimentsWithCSharp\ASP.NET\UnitTestingDemo\UnitTest\bin\Debug\UnitTest.dll
+D:\DotNetExperimentsWithCSharp\ASP.NET\UnitTestingDemo\UnitTest\bin\Debug\UnitTest.pdb
+D:\DotNetExperimentsWithCSharp\ASP.NET\UnitTestingDemo\UnitTest\bin\Debug\TestDAO.dll
+D:\DotNetExperimentsWithCSharp\ASP.NET\UnitTestingDemo\UnitTest\bin\Debug\TestDAO.pdb
+D:\DotNetExperimentsWithCSharp\ASP.NET\UnitTestingDemo\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
+D:\DotNetExperimentsWithCSharp\ASP.NET\UnitTestingDemo\UnitTest\obj\Debug\UnitTest.dll
+D:\DotNetExperimentsWithCSharp\ASP.NET\UnitTestingDemo\UnitTest\obj\Debug\UnitTest.pdb
