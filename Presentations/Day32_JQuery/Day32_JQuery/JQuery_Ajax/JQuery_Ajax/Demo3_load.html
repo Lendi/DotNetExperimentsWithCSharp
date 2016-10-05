@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/jquery-1.7.1.js"></script>
+    <script>
+        $(function () {
+            $("button").click(function () {
+                $(this).load("content.html", function (responseText, statusText, xhr) {
+                    if (statusText == "success") {
+                        $("#divTestArea1").text(responseText);
+                    }
+                    if (statusText == "error") {
+                        alert(xhr.status + "  " + xhr.statusText);
+                    }
+                });
+            });
+          
+        });
+    </script>
+</head>
+<body>
+     <div id="divTestArea1"></div>
+    <button>Click</button>
+</body>
+</html>

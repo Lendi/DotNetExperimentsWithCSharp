@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>AngularJs Expressions</title>
+    <script src="angular.min.js"></script>
+</head>
+<body >
+    <h1>Sample Applications</h1>
+   <div ng-app = "" ng-init = "qty = 1;cost = 30; student = {fname:'Santhosh',lname:'Parsi',rollno:101};marks = [80,90,75,73,60]">
+<p>Hello: {{student.fname+'  '+student.lname}}</p>
+<p>Exprense On Books {{cost*qty}}Rs</p>
+<p>RollNo:{{student.rollno}}</p>
+        <p>Marks(Math):{{marks[2]}}</p>
+
+    </div>
+</body>
+</html>

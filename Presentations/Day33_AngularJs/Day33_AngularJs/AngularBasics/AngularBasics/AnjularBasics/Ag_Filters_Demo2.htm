@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+   <!-- Demo on Currency Filter -->
+<html>
+
+<head>
+  <title>Untitled</title>
+<script src="angular.min.js"></script>
+</head>
+
+<body ng-app="" ng-init="qty,price">
+   Qty<input type="text" ng-model="qty" />
+   Price<input type="text" ng-model="price" /><br><br>
+   Total=<span>{{(qty*price)|currency}}</span>
+</body>
+
+</html>

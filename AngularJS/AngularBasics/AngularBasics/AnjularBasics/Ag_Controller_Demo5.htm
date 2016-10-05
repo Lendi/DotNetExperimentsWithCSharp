@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Angular Js Controller</title>
+  <script src="../angular.min.js"></script>
+</head>
+<h2>Angular Js Sample Application</h2>
+    <div ng-app="" ng-controller="StudentController">
+      Enter FirstName <input type="text" ng-model="student.fname" /> <br><br>
+      Enter LastName <input type="text" ng-model="student.lname" />  <br><br>
+      yor are entering {{student.fullname()}}
+
+    </div>
+    <script>
+       function StudentController($scope)
+       {
+           $scope.student={
+               fname:'Santhosh',
+               lname:'Parsi',
+               fullname:function()
+               {
+                   return $scope.student.fname+'  '+$scope.student.lname ;
+               }
+           };
+       }
+    </script>
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+D:\Wipro_Inod\UnitTestingDemo\Entity\bin\Debug\Entity.dll
+D:\Wipro_Inod\UnitTestingDemo\Entity\bin\Debug\Entity.pdb
+D:\Wipro_Inod\UnitTestingDemo\Entity\obj\Debug\Entity.dll
+D:\Wipro_Inod\UnitTestingDemo\Entity\obj\Debug\Entity.pdb
+D:\CSC\PPT\Day32_JQuery\UnitTestingDemo\Entity\bin\Debug\Entity.dll
+D:\CSC\PPT\Day32_JQuery\UnitTestingDemo\Entity\bin\Debug\Entity.pdb
+D:\CSC\PPT\Day32_JQuery\UnitTestingDemo\Entity\obj\Debug\Entity.dll
+D:\CSC\PPT\Day32_JQuery\UnitTestingDemo\Entity\obj\Debug\Entity.pdb

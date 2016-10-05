@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl"> 
+
+<p>Today's welcome message is:</p>
+
+<h1>{{mydata}}</h1>
+<p>StatusCode:{{status}}</p>
+<p>StatusText:{{statusText}}</p>
+<p>headers:{{config}}</p>
+
+</div>
+
+<p>The $http service requests a page on the server, and the response is set as the value of the "myWelcome" variable.</p>
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller("myCtrl", function ($scope, $http) {
+        $http({
+            method: "GET",
+            url:"welcome1.htm"
+        }).then(function SuccessCallback(response)
+        {
+            $scope.mydata = response.data;
+            $scope.status = response.status;
+            $scope.statusText = response.statusText;
+            $scope.config = response.config;
+        }, function errorCallback(response) {
+            alert("Something went wrong..");
+        })
+        
+    });
+</script>
+
+</body>
+</html>

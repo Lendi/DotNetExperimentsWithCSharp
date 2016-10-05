@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/jquery-1.7.1.js"></script>
+    <script>
+        $(function () {
+            var $tblrows = $("#tblProducts tbody tr");
+            alert("hi");
+            $tblrows.each(function (index) {
+                var $tblrow = $(this);
+                $tblrow.find('.qty').on('change', function () {
+ 
+                    var qty = $tblrow.find("[name=qty]").val();
+                    var price = $tblrow.find("[name=price]").val();
+                    var subTotal = parseInt(qty, 10) * parseFloat(price);
+                    if (!isNaN(subTotal)) {
+
+                        $tblrow.find('.subtot').val(subTotal.toFixed(2));
+                        var grandTotal = 0;
+
+                        $(".subtot").each(function () {
+                            var stval = parseFloat($(this).val());
+                            grandTotal += isNaN(stval) ? 0 : stval;
+                        });
+
+                        $('.grdtot').val(grandTotal.toFixed(2));
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <table id="tblproducts">
+        <thead>
+    <tr>
+    <td>Product</td>
+    <td>Quantity</td>
+    <td>Price</td>
+    <td>Sub-Total</td>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+    <td><input type="text" class="pnm" value="Product One" name="pnm" /></td>
+    <td><input type="text" class="qty" value="" name="qty"/></td>
+    <td><input type="text" class="price" value="220" name="price"/></td>
+    <td><input type="text" class="subtot" value="0" name="subtot"/></td>
+    </tr>
+</tbody>
+<tfoot>
+    <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><input type="text" class="grdtot" value="" name=""/></td>
+    </tr>
+</tfoot>
+    </table>
+</body>
+</html>

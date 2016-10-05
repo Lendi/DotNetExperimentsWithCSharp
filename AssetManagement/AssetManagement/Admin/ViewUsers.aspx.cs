@@ -21,5 +21,40 @@ namespace AssetManagement.Admin
 
             
         }
+
+        protected void lbCreateUser_Click(object sender, EventArgs e)
+        {
+            Server.Transfer("/Admin/CreateUser.aspx");
+        }
+
+        protected void lbModifyUser_Click(object sender, EventArgs e)
+        {
+            Server.Transfer("/Admin/ModifyUser.aspx");
+        }
+
+        protected void lbDeactivateUser_Click(object sender, EventArgs e)
+        {
+            Server.Transfer("/Admin/ModifyUser.aspx");
+        }
+
+        protected void lbChangePwd_Click(object sender, EventArgs e)
+        {
+            Server.Transfer("/Admin/ModifyUser.aspx");
+        }
+
+        protected void lbViewUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void lbViewUsers_Click(object sender, EventArgs e)
+        {
+            Server.Transfer("/Admin/ViewUsers.aspx");
+        }
+
+        protected void lbViewUsers_Click1(object sender, EventArgs e)
+        {
+            Server.Transfer("/Admin/ViewUsers.aspx");
+        }
     }
 }

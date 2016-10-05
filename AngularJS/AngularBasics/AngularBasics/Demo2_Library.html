@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="HelloController">
+        <h2>Welcome to the world of {{title}}</h2>
+    </div>
+    <script>
+        angular.module("myApp", [])
+        .controller("HelloController",function($scope)
+        {
+            $scope.title="AngularJs"
+        });
+    </script>
+</body>
+</html>

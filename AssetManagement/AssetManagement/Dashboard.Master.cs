@@ -13,10 +13,5 @@ namespace AssetManagement
         {
 
         }
-
-        protected void lbCreateUser_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

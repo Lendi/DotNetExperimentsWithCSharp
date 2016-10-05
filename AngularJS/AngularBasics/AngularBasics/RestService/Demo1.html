@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="mainApp" ng-controller="mycntl">
+       <p>{{msg}}</p>
+    </div>
+<script>
+    var mainApp = angular.module("mainApp", []);
+    mainApp.service("myservice", function ($http) {
+        this.get = function () {
+            return $http.get("http://localhost/RestService/Service.svc/Getdata/1");
+        };
+    });
+    mainApp.controller("mycntl", function ($scope, myservice) {
+        var ob=myservice.get();
+        ob.then(function(p1)
+        {
+            debugger;
+            $scope.msg = JSON.parse(p1.data);
+        }, function (error) {
+            alert(error);
+        });
+    });
+   
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+    <!-- Controller Demo -->
+<html>
+
+<head>
+  <title>Untitled</title>
+  <script src="angular.min.js"></script>
+</head>
+
+<body ng-app="myapp" ng-controller="mycntrl">
+   Firstname:<input type="text" ng-model="firstname" /><br><br>
+   Lastname:<input type="text" ng-model="lastname" /><br><br>
+   <span>Fullname {{firstname+' '+lastname}}</span>
+</body>
+   <script>
+   var app=angular.module("myapp",[])
+   app.controller('mycntrl',function($scope)
+   {
+       $scope.firstname="Sachin";
+       $scope.lastname="Tendulkar";
+   })
+   </script>
+</html>

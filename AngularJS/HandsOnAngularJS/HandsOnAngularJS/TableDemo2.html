@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>OrderByWithFilter</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script> 
+    <script src="../mainApp.js"></script>
+    <script src="../studentController.js"></script>
+    <style>
+        table {
+border-collapse:collapse;
+        }
+    </style>
+</head>
+
+<body ng-app="mainApp" ng-controller="PlayerList">
+    <table border="1">
+        <tr>
+            <td>Name</td>
+            <td>Country</td>
+        </tr>
+        <tr ng-repeat="p in Players">
+            <td>{{p.name}}</td>
+            <td>{{p.country}}</td>
+        </tr>
+    </table>
+</body>
+</html>

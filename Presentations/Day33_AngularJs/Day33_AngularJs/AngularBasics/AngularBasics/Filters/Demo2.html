@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>FiltersDemo2</title>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script> 
+</head>
+<body>
+    <div ng-app="myapp" ng-controller="personCtrl">
+        <p>{{fname+' '+lname|uppercase}}</p>
+        <p>{{fname+' '+lname|lowercase}}</p>
+       <!-- Adding filter to Directive-->
+        <ol>
+            <li ng-repeat="p in players | orderBy:'name' ">
+                {{'Name '+p.name+'  '+'Country '+p.country}}
+            </li>
+        </ol>
+        <p>Salary:{{salary|currency}}</p>
+        <!--Use Filter fileter-->
+        <ul>
+            <li ng-repeat="p in players|filter:'Ponting'">{{'Name '+p.name+'  '+'Country '+p.country}}</li>
+        </ul>
+    </div>
+    <script>
+        var myapp = angular.module("myapp", []);
+        myapp.controller("personCtrl",function($scope)
+        {
+            $scope.fname = 'santhosh';
+            $scope.lname = 'parsi';
+            $scope.salary = 12000;
+            $scope.players = [{name:'Sachin',country:'India'}, {name:'Ponting',country:'Australia'}];
+        });
+    </script>
+</body>
+</html>

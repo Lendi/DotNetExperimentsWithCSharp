@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="myapp" ng-controller="NamesCtrl">
+    Pls Enter Name:<input type="text" ng-model="test" />
+    <ul>
+        <li ng-repeat="n in names|filter:test">
+            {{n}}
+        </li>
+    </ul>
+</div>
+<script>
+    var myapp = angular.module("myapp", []);
+    myapp.controller("NamesCtrl", function ($scope) {
+        $scope.names = [
+       'Jani',
+       'Carl',
+       'Margareth',
+       'Hege',
+       'Joe',
+       'Gustav',
+       'Birgit',
+       'Mary',
+       'Kai'
+        ];
+    });
+</script>
+</body>
+</html>

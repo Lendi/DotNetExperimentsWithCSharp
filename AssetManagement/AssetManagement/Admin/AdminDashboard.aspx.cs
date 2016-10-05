@@ -28,7 +28,7 @@ namespace AssetManagement.Admin
 
         protected void lbChangePwd_Click(object sender, EventArgs e)
         {
-
+            Server.Transfer("/Admin/ModifyUser.aspx");
         }
 
         protected void lbCreateUser_Click(object sender, EventArgs e)
@@ -38,6 +38,11 @@ namespace AssetManagement.Admin
         }
 
         protected void lbViewUser_Click(object sender, EventArgs e)
+        {
+            Server.Transfer("/Admin/ViewUsers.aspx");
+        }
+
+        protected void lbViewUsers_Click(object sender, EventArgs e)
         {
             Server.Transfer("/Admin/ViewUsers.aspx");
         }

@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+<style>
+table, th , td {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+}
+table tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+</style>
+  <title>Untitled</title>
+<script src="angular.min.js"></script>
+</head>
+
+<body ng-app="" ng-init="obj=[{name:'sachin',country:'India'},{name:'Serina',country:'USA'},{name:'Dhoni',country:'India'}]">
+<table border="1">
+<tr>
+<td>Name</td><td>Country</td>
+</tr>
+<tr ng-repeat="x in obj">
+    <td>{{x.name}}</td>
+    <td>{{x.country}}</td>
+</tr>
+</table>
+
+</body>
+
+</html>

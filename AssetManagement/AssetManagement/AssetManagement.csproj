@@ -61,9 +61,11 @@
     <Content Include="Admin\CreateUser.aspx" />
     <Content Include="Admin\ModifyUser.aspx" />
     <Content Include="Admin\ViewUsers.aspx" />
-    <Content Include="DashoardStyling.css" />
+    <Content Include="Employee\EmpAssetPage.aspx" />
     <Content Include="Employee\EmployeePage.aspx" />
-    <Content Include="Login.aspx" />
+    <Content Include="Employee\EmpRequestPage.aspx" />
+    <Content Include="Login\css\style.css" />
+    <Content Include="Login\Login.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -102,6 +104,13 @@
     <Compile Include="Dashboard.Master.designer.cs">
       <DependentUpon>Dashboard.Master</DependentUpon>
     </Compile>
+    <Compile Include="Employee\EmpAssetPage.aspx.cs">
+      <DependentUpon>EmpAssetPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee\EmpAssetPage.aspx.designer.cs">
+      <DependentUpon>EmpAssetPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Employee\EmployeePage.aspx.cs">
       <DependentUpon>EmployeePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -109,11 +118,18 @@
     <Compile Include="Employee\EmployeePage.aspx.designer.cs">
       <DependentUpon>EmployeePage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Login.aspx.cs">
+    <Compile Include="Employee\EmpRequestPage.aspx.cs">
+      <DependentUpon>EmpRequestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee\EmpRequestPage.aspx.designer.cs">
+      <DependentUpon>EmpRequestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login.aspx.designer.cs">
+    <Compile Include="Login\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

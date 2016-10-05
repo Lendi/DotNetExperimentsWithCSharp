@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js">  
+            </script>  
+</head>
+<body>
+    <div ng-app="myapp" ng-controller="myctrl">
+        <table border="1">
+            <tr>
+                <td>Name</td><td>RollNo</td><td>Percentage</td>
+            </tr>
+            <tr ng-repeat="r in records">
+                <td>{{r.Name}}</td>
+                <td>{{r.RollNo}}</td>
+                <td>{{r.Percentage}}</td>
+            </tr>
+        </table>
+    </div>
+<script>
+    var app = angular.module("myapp", []);
+    app.controller("myctrl", function ($scope, $http) {
+        $http.get('data.txt').then(function (response) {
+            $scope.records = response.data;
+        });
+    });
+</script>
+</body>
+</html>

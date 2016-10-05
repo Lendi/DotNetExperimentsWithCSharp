@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app = "myapp" ng-controller = "myctrl">
+         <p>Enter a number: <input type = "number" ng-model = "number" /></p>
+         <button ng-click = "square()">X<sup>2</sup></button>
+         <p>Result: {{result}}</p>
+      </div>
+    <script>
+        var app = angular.module('myapp', []);
+        app.service('myservice', function () {
+            this.square = function (a) {
+                return a * a;
+            }
+        });
+        app.controller('myctrl', function ($scope,myservice) {
+            $scope.square = function () {
+                $scope.result = myservice.square($scope.number);
+            }
+        });
+
+    </script>
+</body>
+</html>

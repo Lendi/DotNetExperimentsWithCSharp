@@ -1,44 +1,115 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Dashboard.Master" AutoEventWireup="true" CodeBehind="CreateUser.aspx.cs" Inherits="AssetManagement.Admin.CreateUser" %>
 
-<%--<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    <style type="text/css">
-        .auto-style1
-        {
-            width: 50%;
-        }
-        .auto-style2
-        {
-            width: 200px;
-        }
-    </style>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>--%>
 
 
+<%--
 
-    <asp:Content ID="Content1" runat="server" contentplaceholderid="head">
-        <style type="text/css">
-        .auto-style2
-        {
-            height: 38px;
-        }
-    </style>
+<asp:Content ID="navbar" ContentPlaceHolderID="navbar" runat="server">   
+      <li><asp:LinkButton ID="lbCreateUser" runat="server" OnClick="lbCreateUser_Click" Height="40px" style="margin-left: 0px" 
+                  Width="175px">Create User</asp:LinkButton>
+
+      </li>       
+            
+         <li><asp:LinkButton ID="lbModifyUser" runat="server" OnClick="lbModifyUser_Click">Modify User</asp:LinkButton>
+      </li>       
+          
+          <li><asp:LinkButton ID="lbDeactivateUser" runat="server" 
+                        OnClick="lbDeactivateUser_Click">De(Re)activate User</asp:LinkButton>
+           </li>    
+               
+          <li><asp:LinkButton ID="lbViewUsers" runat="server" OnClick="lbCreateUser_Click">View Users</asp:LinkButton>
+         </li>  
+
+           <li><asp:LinkButton ID="lbChangePwd" runat="server" OnClick="lbChangePwd_Click">Change Password</asp:LinkButton>
+             </li>    
+    
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+
+</asp:Content>--%>
+      <asp:Content ID="content2" ContentPlaceHolderID="navbar" runat="server">   
+          <li><asp:LinkButton ID="LinkButton1" runat="server" 
+                  OnClick="lbCreateUser_Click" Height="40px" style="margin-left: 0px" 
+                  Width="175px">Create User</asp:LinkButton>
+       </li>       
+            <li><asp:LinkButton ID="LinkButton2" runat="server" 
+                  OnClick="lbModifyUser_Click" Height="40px" Width="175px">Modify User</asp:LinkButton>
+        </li>
+
+          <li><asp:LinkButton ID="LinkButton3" runat="server" 
+                        OnClick="lbDeactivateUser_Click" Height="40px" Width="175px">De(Re)activate User</asp:LinkButton>
+
+          </li>    
+            
+             <li>
+                 <asp:LinkButton ID="lbViewUsers" runat="server" Height="38px" 
+                     OnClick="lbViewUsers_Click" Width="99px">View Users</asp:LinkButton>
+
+             </li>       
+               
+                
+           <li style="height: 31px; width: 12px"><asp:LinkButton ID="LinkButton5" runat="server" 
+                   OnClick="lbChangePwd_Click" Height="40px" Width="175px">Change Password</asp:LinkButton>
+
+           </li>    
+    
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+
 </asp:Content>
 
 
-    <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">    
+    <asp:Content ID="content" ContentPlaceHolderID="content" runat="server">   
 
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     
         <table  class="auto-style1" style="height: 629px; width: 275px">
             <tr>
                 <td class="auto-style2">Employee ID</td>
-                <td>
+                <td>                
                     <asp:TextBox ID="tbEmpID" runat="server" Width="196px" >
                        </asp:TextBox>
                 </td>
@@ -84,9 +155,13 @@
             <tr>
                 <td class="auto-style2">Designation</td>
                 <td>
-                    <asp:DropDownList ID="ddlDesignation" runat="server" 
-                        DataSourceID="ObjectDataSource1" DataTextField="designation" 
-                        DataValueField="designation">
+                    <asp:DropDownList ID="ddlDesignation" runat="server">
+                        <asp:ListItem>Software Developer</asp:ListItem>
+                        <asp:ListItem>Software Engineer</asp:ListItem>
+                        <asp:ListItem>Senior Developer</asp:ListItem>
+                        <asp:ListItem>Tester</asp:ListItem>
+                        <asp:ListItem>Team Leader</asp:ListItem>
+                        <asp:ListItem>Project Manager</asp:ListItem>
                     </asp:DropDownList>
                     <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" 
                         SelectMethod="ViewUsers" TypeName="asset.datalayer.AdminDAO">
@@ -110,8 +185,9 @@
                 <td class="auto-style2">Account Status</td>
                 <td>
                     <asp:DropDownList ID="ddlAccountStatus" runat="server" 
-                        DataSourceID="ObjectDataSource1" DataTextField="active" DataValueField="active" 
                         >
+                        <asp:ListItem Value="a">Active</asp:ListItem>
+                        <asp:ListItem Value="i">Inactive</asp:ListItem>
                     </asp:DropDownList>
                 </td>
             </tr>
@@ -131,10 +207,8 @@
                 </td>
             </tr>
         </table>
-    </asp:Content>
-<%--    </div>
-    </form>
-</body>
-</html>--%>
+      
+   
+</asp:Content>
 
 

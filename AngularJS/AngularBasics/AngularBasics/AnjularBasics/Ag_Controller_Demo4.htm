@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Untitled</title>
+  <script src="angular.min.js"></script>
+</head>
+
+<body ng-app="myapp" ng-controller="mycntrl">
+   {{fname+" "+lname}}
+</body>
+    <script type="text/javascript">
+    var app=angular.module("myapp",[])
+   app.controller("mycntrl",function ($scope)
+    {
+        $scope.fname='sachin';
+        $scope.lname='tendulkar'
+    });
+    </script>
+</html>

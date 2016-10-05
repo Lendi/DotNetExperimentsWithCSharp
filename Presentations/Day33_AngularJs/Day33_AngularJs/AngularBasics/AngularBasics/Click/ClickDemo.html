@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="../angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="myapp" ng-controller="f1">
+        Enter FirstName:<input type="text" ng-model="fname" /><br />
+        Enter LastName:<input type="text" ng-model="lname" /><br />
+        <p>{{fullname}}</p>
+        <input type="button" ng-click="fname1()" value="ClickMe"/>
+        <p>Welcome {{fullname}}</p>
+    </div>
+    <script>
+        var myapp = angular.module("myapp", []).controller("f1", function ($scope) {
+            $scope.fname = "Santhosh";
+            $scope.lname = "Parsi";
+            $scope.fname1 = function () {
+                $scope.fullname = $scope.fname + "  " + $scope.lname;
+            }
+
+        });
+    </script>
+</body>
+</html>

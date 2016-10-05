@@ -1,0 +1,74 @@
+﻿<html>  
+  
+<head>  
+    <title>Angular JS Example</title>  
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>  
+  
+<body>  
+    <h2>AngularJS Service Example</h2>  
+    <div ng-app="mainApp" ng-controller="CalcController">  
+        <p>Enter First number:  
+            <input type="number" ng-model="number1" />  
+        </p>  
+        <p>Enter Second number:  
+            <input type="number" ng-model="number2" />  
+        </p>  
+        <button ng-click="Result()">Result</button>  
+            <p>Multiplication: {{multiply}}</p>  
+            <p>Addition: {{addition}}</p>  
+            <p>Substraction: {{substraction}}</p>  
+            <p>Divison: {{divison}}</p>  
+  
+            </div>  
+            <script>
+                var mainApp = angular.module("mainApp", []);
+                //Factory  
+                mainApp.factory('MathService', function () {
+                    var factory = {};
+
+                    factory.multiply = function (a, b) {
+                        return a * b
+                    }
+                    return factory;
+                });
+                //Service  
+                mainApp.service('addition', function () {
+                    this.add = function (a, b) {
+                        return a + b
+                    }
+                });
+
+                //Provider  
+                mainApp.provider('configurable', function () {
+                    var sub = 0;
+                    this.substraction = function (a, b) {
+                        sub = a - b;
+                    };
+                    this.$get = function () {
+                        return {
+                            data: sub
+                        };
+                    };
+                });
+                mainApp.config(function (configurableProvider) {
+                    configurableProvider.substraction(79, 13);
+                });
+
+
+                //Value  
+                mainApp.value("valueId", 79 / 13);
+                //Controller  
+                mainApp.controller('CalcController', function ($scope, MathService, addition, configurable, valueId) {
+                    $scope.Result = function () {
+                        $scope.multiply = MathService.multiply($scope.number1, $scope.number2);
+                        $scope.addition = addition.add($scope.number1, $scope.number2);
+                        $scope.substraction = configurable.data;
+                        $scope.divison = valueId;
+                    }
+                });
+            </script>  
+  
+</body>  
+  
+</html>  

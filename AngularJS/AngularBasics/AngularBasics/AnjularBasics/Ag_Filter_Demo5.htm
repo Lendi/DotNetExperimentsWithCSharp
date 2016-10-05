@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Angular Js Filters</title>
+  <script src="../angular.min.js"></script>
+</head>
+
+<body>
+      <h1>Angular Js Filters Demo Application</h1>
+      <div ng-app="" ng-controller="StudentController">
+         Enter Firstname <input type="text" ng-model="student.fname" /><br><br>
+         Enter Lastname <input type="text" ng-model="student.lname" /><br><br>
+         Enter Fee<input type="text" ng-model="student.fees" /><br><br>
+         Enter Subject <select  ng-model="subjectname">
+         <option>Physics</option>
+         <option>Maths</option>
+         <option>English</option>
+
+         </select><br><br>
+         <br><br>
+         Name in UpperCase {{student.fullname()|uppercase}}  <br><br>
+         Name in LowerCase {{student.fullname()|lowercase}}<br><br>
+         Fees {{student.fees|currency}}  <br><br>
+         Subject
+         <ul>
+         <li ng-repeat="s in student.subjects|filter:subjectname ">
+         {{s.name+' Marks:'+' '+s.marks}}
+         </li>
+         </ul>
+      </div>
+      <script>
+      function StudentController($scope)
+      {
+          $scope.student={
+            fname:'Santhosh',
+            lname:'Parsi',
+            fees:500,
+            subjects:[
+              {name:'Physics',marks:70},
+              {name:'Maths',marks:60},
+              {name:'English',marks:70},
+               {name:'Eng',marks:70}
+            ] ,
+            fullname:function()
+            {
+                return $scope.student.fname+'  '+$scope.student.lname
+            }
+
+          };
+      }
+      </script>
+</body>
+
+</html>

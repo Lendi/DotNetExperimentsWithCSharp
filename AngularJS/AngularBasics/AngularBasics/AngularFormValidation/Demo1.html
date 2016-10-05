@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="../angular.min.js"></script>
+</head>
+<body ng-app="">
+
+<p>Try writing in the input field:</p>
+
+<form name="myForm">
+<input name="myInput" ng-model="t" required>
+<p>The input's valid state is:</p>
+<h1>{{myForm.myInput.$valid}}</h1>
+<input type="email" name="myEmail" ng-model="myEmail" />
+<p>The input's valid state is:</p>
+<h1>{{myForm.myEmail.$valid}}</h1>
+
+</form>
+
+
+
+</body>
+</html>

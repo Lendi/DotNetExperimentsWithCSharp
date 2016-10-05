@@ -1,0 +1,10 @@
+D:\TRAINING CONTENT\TRAININGEXAMPLES\JQuery\JQuery_Ajax\JQuery_Ajax\bin\JQuery_Ajax.dll
+D:\TRAINING CONTENT\TRAININGEXAMPLES\JQuery\JQuery_Ajax\JQuery_Ajax\bin\JQuery_Ajax.pdb
+D:\TRAINING CONTENT\TRAININGEXAMPLES\JQuery\JQuery_Ajax\JQuery_Ajax\obj\Debug\JQuery_Ajax.csprojResolveAssemblyReference.cache
+D:\TRAINING CONTENT\TRAININGEXAMPLES\JQuery\JQuery_Ajax\JQuery_Ajax\obj\Debug\JQuery_Ajax.dll
+D:\TRAINING CONTENT\TRAININGEXAMPLES\JQuery\JQuery_Ajax\JQuery_Ajax\obj\Debug\JQuery_Ajax.pdb
+D:\DOT NET\Presentations\Day32_JQuery\Day32_JQuery\JQuery_Ajax\JQuery_Ajax\bin\JQuery_Ajax.dll
+D:\DOT NET\Presentations\Day32_JQuery\Day32_JQuery\JQuery_Ajax\JQuery_Ajax\bin\JQuery_Ajax.pdb
+D:\DOT NET\Presentations\Day32_JQuery\Day32_JQuery\JQuery_Ajax\JQuery_Ajax\obj\Debug\JQuery_Ajax.csprojResolveAssemblyReference.cache
+D:\DOT NET\Presentations\Day32_JQuery\Day32_JQuery\JQuery_Ajax\JQuery_Ajax\obj\Debug\JQuery_Ajax.dll
+D:\DOT NET\Presentations\Day32_JQuery\Day32_JQuery\JQuery_Ajax\JQuery_Ajax\obj\Debug\JQuery_Ajax.pdb

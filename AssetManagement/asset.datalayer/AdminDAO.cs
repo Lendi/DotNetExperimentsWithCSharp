@@ -14,8 +14,9 @@ namespace asset.datalayer
         {
             //using (assetDataContext obj = new assetDataContext())
             //{
-            int eid = GetID();
-                ObjUser.emp_id = eid;
+            
+            //int eid = GetID();
+            //    ObjUser.emp_id = eid;
                 obj.users.InsertOnSubmit(ObjUser);
                 obj.SubmitChanges(); 
            //}

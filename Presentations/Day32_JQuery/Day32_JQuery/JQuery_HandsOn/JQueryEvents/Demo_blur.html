@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>  
+<html>  
+<head>  
+    <style>
+        span
+        {
+            color:red;
+        }
+    </style>
+    <script src="../Scripts/jquery-1.7.1.js"></script>
+<script>
+    $(document).ready(function () {
+        $("input").blur(function () {
+            $(this).css("background-color", "yellow")
+            var name = $(this).val();
+            if (name == "") {
+                $("span").text("Pls Enter Name").show().fadeOut("9000");
+            }
+        });
+    });
+</script>  
+</head>  
+<body>  
+Enter your name: <input type="text"><span></span>
+</body>  
+</html>  

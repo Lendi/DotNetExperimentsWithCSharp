@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Untitled</title>
+  <script src="../angular.min.js"></script>
+</head>
+
+<body>
+   <div ng-app="" ng-init="price=20;qty=12;person={fname:'Sachin',lname:'Tendulkar',age:'40'};marks=[45,56,78]">
+    <p>Hello {{person.fname+'  '+person.lname}}</p>
+    <p>Expense on Books {{(price*qty)|currency}}</p>
+    <p>Age: {{person.age}}</p>
+    <p>Marks(Math): {{marks[2]}}</p>
+   </div>
+</body>
+
+</html>

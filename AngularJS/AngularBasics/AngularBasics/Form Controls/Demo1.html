@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body>
+  <div ng-app="myapp" ng-controller="CountryCntl">
+      <select ng-model="country">
+          <option ng-repeat="c in Country">{{c}}</option>
+      </select>
+     
+    <span>Selected Country:</span><span ng-bind="country"></span>
+  </div>
+    <script>
+        var app = angular.module('myapp', []).controller('CountryCntl', function ($scope) {
+            $scope.Country = [
+                'India',
+                'China',
+                'US',
+                'UK',
+                'Japan'
+            ]
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Untitled</title>
+ <script src="angular.min.js"></script>
+</head>
+
+<body ng-app="" ng-init="obj=[{name:'Sachin',country:'India'},{name:'Serina',country:'USA'},{name:'Dhoni',country:'India'}]">
+   <p ng-repeat="x in obj|orderBy:'country'">
+{{x.name+" "+x.country}}
+   </p><br><br>
+   <p ng-repeat="x in obj|orderBy:'name'">
+{{x.name+" "+x.country}}
+   </p>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.min.js"></script>
+</head>
+<body>
+    <div ng-app="myapp" ng-controller="myctrl">
+        <a href="#/route1">Rounte1</a><br />
+          <a href="#/route2">Rounte1</a>
+        <div ng-view></div>
+    </div>
+<script>
+    var app = angular.module('myapp', ['ngRoute']);
+    app.config(function ($routeProvider) {
+        $routeProvider.when('/route1', {
+            templateUrl: 'welcome.htm',
+            controller:'myctrl'
+        }).when('/route2',
+        {
+            templateUrl: 'test.html',
+            controller: 'myctrl'
+        }).otherwise(
+        {
+            redirectTo:'/'
+        });
+    });
+    app.controller('myctrl', function ($scope) {
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="../angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="" ng-controller="studentControler">
+        <table border="0">
+            <tr>
+                <td>Name in Upper Case</td>
+                <td>{{Student.Fullname()|uppercase}}</td>
+            </tr>
+            <tr>
+                 <td>Name in Lower Case</td>
+                <td>{{Student.Fullname()|lowercase}}</td>
+            </tr>
+            <tr>
+                <td>Subject:</td>
+                <td>
+                    <ul>
+                        <li ng-repeat="s in Student.subjects">
+                            {{"Name: "+s.name+"  "+"Marks: "+s.marks}}
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Fees:</td>
+                <td>{{Student.fee|currency}}</td>
+            </tr>
+        </table>
+    </div>
+<script>
+    function studentControler($scope) {
+        $scope.Student = {
+            fname: "Santhosh",
+            lname: "Parsi",
+            fee: 400,
+            subjects: [{ name: 'Physics', marks: 56 }, { name: 'Maths', marks: 86 },{name:'Social',marks:56}],
+            Fullname: function () {
+                var obj = $scope.Student
+                return obj.fname + " " + obj.lname
+            }
+        };
+    }
+</script>
+</body>
+</html>

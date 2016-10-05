@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="angular.min.js"></script>
+</head>
+<body ng-app="" ng-init="countries=[{culture:'en-US',name:'US'},{culture:'hi-IN',name:'India'},{culture:'en-GB',name:'UK'}]"> 
+    <p>Enter your name:<input type="text" ng-model="name" /></p>
+    <p>Hello <span ng-bind="name"></span></p>
+    <p>List of Countries with Culture</p>
+    <ol>
+<li ng-repeat="c in countries">
+    {{'Culture: '+c.culture+' '+'Country: '+c.name}}
+</li>
+    </ol>
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>AngularJs Service Example</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="myapp" ng-controller="myctrl">
+        <input type="button" ng-click="Greet()" value="ClickMe" />
+    </div>
+    <script>
+        var app = angular.module("myapp", []);
+        app.controller("myctrl", function ($scope,$window,$document) {
+            $scope.message = "I am Window Service";
+            $scope.Greet= function () {
+                $window.alert($scope.message);
+                $window.alert(document.title);
+            }
+        });
+    </script>
+</body>
+</html>

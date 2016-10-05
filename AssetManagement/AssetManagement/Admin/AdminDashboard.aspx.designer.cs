@@ -40,13 +40,13 @@ namespace AssetManagement.Admin {
         protected global::System.Web.UI.WebControls.LinkButton lbDeactivateUser;
         
         /// <summary>
-        /// lbViewUser control.
+        /// lbViewUsers control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbViewUser;
+        protected global::System.Web.UI.WebControls.LinkButton lbViewUsers;
         
         /// <summary>
         /// lbChangePwd control.

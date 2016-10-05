@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>    
+<html lang="en">    
+<head>    
+  <meta charset="utf-8">    
+  <title>change demo</title>    
+  <style>    
+  div {    
+    color: red;    
+  }    
+  </style>    
+    <script src="../Scripts/jquery-1.7.1.js"></script>
+</head>    
+<body>    
+ <select id="se" name="actors" >    
+  <option>Uthappa</option>    
+  <option selected="selected">Kattapa</option>    
+  <option>Veerappa</option>    
+  <option>Bahubali</option>    
+  <option>Bhallal Dev</option>    
+  <option>Awantika</option>    
+</select>    
+<div id="loc"></div>    
+ <script>
+     $("select").change(function () {
+         //document.getElementById("loc").innerHTML = "You selected: " + document.getElementById("se").value;
+         $("#loc").text("You selected: "+$("#se").val());
+     });
+</script>    
+ </body>    
+</html>    

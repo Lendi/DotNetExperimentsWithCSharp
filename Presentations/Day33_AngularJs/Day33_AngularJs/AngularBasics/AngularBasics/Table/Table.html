@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="../angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="" ng-controller="f1">
+        <table border="1" style="border-collapse:collapse">
+            <tr>
+                <td>Name</td>
+                <td>Country</td>
+            </tr>
+            <tr ng-repeat="p in obj.players">
+                <td>{{p.name}}</td>
+                <td>{{p.country}}</td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function f1($scope) {
+            $scope.obj = {
+                players: [{ name: 'Sachin', country: 'India' },
+                { name: 'Dhoni', country: 'India' },
+                { name: 'Polard', country: 'Westindies' },
+                { name: 'Lara', country: 'Westindies' },
+                { name: 'Miller', country: 'SourthAfrica' }]
+            };
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnAngularJS\HandsOnAngularJS\bin\HandsOnAngularJS.dll
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnAngularJS\HandsOnAngularJS\bin\HandsOnAngularJS.pdb
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnAngularJS\HandsOnAngularJS\obj\Debug\HandsOnAngularJS.csprojResolveAssemblyReference.cache
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnAngularJS\HandsOnAngularJS\obj\Debug\HandsOnAngularJS.dll
+D:\DotNetExperimentsWithCSharp\ASP.NET\HandsOnAngularJS\HandsOnAngularJS\obj\Debug\HandsOnAngularJS.pdb

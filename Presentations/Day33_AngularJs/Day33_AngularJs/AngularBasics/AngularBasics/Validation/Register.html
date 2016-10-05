@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script> 
+    <style>
+        span {
+            color:red;
+        }
+        table {
+            width:400px;
+        }
+        input.ng-invalid {
+            background-color:pink;
+        }
+        input.ng-valid {
+            background-color:lightgreen;
+        }
+    </style>
+</head>
+<body ng-app="">
+<form name="myform">
+    <table border="1" style="border-collapse:collapse">
+    <tr>
+        <td>Name</td>
+        <td><input type="text" name="myname" ng-model="myname" required />
+          <span ng-show="myform.myname.$touched && myform.myname.$invalid">Pls Enter Name</span>
+        </td>
+    </tr>
+         <tr>
+        <td>Age</td>
+        <td><input type="text" name="myage" ng-model="myage" required />
+          <span ng-show="myform.myage.$touched && myform.myage.$invalid">Pls Enter Age</span>
+        </td>
+    </tr>
+         <tr>
+        <td>Mobile</td>
+        <td><input type="text" name="mymobile" ng-model="mymobile" required />
+          <span ng-show="myform.mymobile.$touched && myform.mymobile.$invalid">Pls Enter Mobile</span>
+        </td>
+    </tr>
+         <tr>
+        <td>Name</td>
+        <td><input type="text" name="myemail" ng-model="myemail" required />
+          <span ng-show="myform.myemail.$touched && myform.myemail.$invalid">Pls Enter EmailId</span>
+        </td>
+    </tr>
+</table>
+</form>
+</body>
+</html>

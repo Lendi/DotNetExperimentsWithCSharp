@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Untitled</title>
+  <script src="../angular.min.js"></script>
+</head>
+
+<body>
+    <h1>Sample Application</h1>
+    <div ng-app="" ng-init="countries=[{Country:'USA',Lang:'english'},
+    {Country:'India',Lang:'Hindi'},
+    {Country:'Britan',Lang:'english'},
+    {Country:'France',Lang:'french'},
+    {Country:'Germany',Lang:'german'}]">
+     Pls Enter name <input type="text" ng-model="name" />
+     <p>Hello <span ng-bind="name">!</span></p>
+     <p>List of Countries with Lang</p>
+     <ol>
+        <li ng-repeat="c in countries">{{c.Country+'     '+c.Lang}}</li>
+     </ol>
+    </div>
+</body>
+
+</html>

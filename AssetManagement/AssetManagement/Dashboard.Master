@@ -1,51 +1,108 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Dashboard.master.cs" Inherits="AssetManagement.Dashboard" %>
 
+
 <!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    margin: 0;
+}
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 15%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+        top: -4px;
+        left: 1px;
+    }
 
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+</style>
+<title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
-
-
     </asp:ContentPlaceHolder>
-    
 
-
-    <link href="DashoardStyling.css" rel="stylesheet" />
-
-
-
-
-    </head>
+</head>
 <body>
-
-    <form id="form1" runat="server">
+<form id="form1" runat="server">
+    <div>
      
-    <div class = "Header">
-    <div class = "DisplyText">
-    <h1> Asset Manager&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1> 
-              
-    </div>
-       </div>
-    <div class = "Content"> 
 
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">        
-           
+<ul>
+
+    <asp:ContentPlaceHolder ID="navbar" runat="server">
+        <p>
+            <br />
+        <li></li>
+        <li></li>
+        <li>
             <p>
             </p>
-           
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+        </li>
+    </asp:ContentPlaceHolder>
+</ul>
+
+<asp:ContentPlaceHolder ID="fullpage" runat="server">
+<div style="margin-left:17%; padding:1px 16px;height:1096px;">
+  <h2 align="right"> Asset Management </h2> 
+  <h3>-------------------------------------------------------------------------------------------------------------------------------------</h3>
+    <p>
+  
+  <asp:ContentPlaceHolder ID="content" runat="server">
+
+      </asp:ContentPlaceHolder>
+    </p>
+
+</div>
+
         </asp:ContentPlaceHolder>
-
-        </div>
-
-<%--        <div class="footer">
-    CSC India Pvt Ltd
-    </div>--%>
-
- 
-    
+    </div>
     </form>
 </body>
 </html>
+
+
+        

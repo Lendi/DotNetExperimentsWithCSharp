@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>  
+<html>  
+<head>  
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+<script>
+    $(document).ready(function () {
+        $("button").click(function () {
+            var uname = $("#txtname").val();
+            $("span").text("Hello "+uname);
+        });
+    });
+</script>  
+</head>  
+<body>  
+<p>Name: <input id="txtname" type="text" name="user"></p><span></span>
+<button>ClickMe.</button>  
+</body>  
+</html>  

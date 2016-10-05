@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="../angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="" ng-controller="studentControler">
+        FirstName:<input type="text" ng-model="Student.fname" /><br />
+        LastName:<input type="text" ng-model="Student.lname" /><br />
+        <p>Fullname:{{Student.Fullname()|uppercase}}</p>
+    </div>
+    <script>
+        function studentControler($scope) {
+            $scope.Student = {
+                fname: "Santhosh",
+                lname: "Parsi",
+                Fullname: function () {
+                    var obj=$scope.Student
+                    return obj.fname + " " + obj.lname
+                }
+            };
+        }
+    </script>
+</body>
+</html>

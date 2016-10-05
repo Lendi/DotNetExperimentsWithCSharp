@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="../angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="myapp" ng-controller="mycntl" >
+        No1:<input type="text" ng-model="n1" /><br />
+        No2:<input type="text" ng-model="n2" /><br />
+        <input type="button" ng-click="add()" value="Add" /><br />
+        <input type="button" ng-click="mul()" value="mul" />
+       <p>Result{{result}}</p>
+    </div>
+<script>
+  
+    var app = angular.module("myapp", []);
+    app.factory("myfactory", function () {
+        var factory = {};
+        factory.add = function (a,b) {
+            return parseInt(a) + parseInt(b);
+            
+        }
+        factory.mul = function (a, b) {
+            return a * b;
+        }
+        return factory;
+    });
+    app.controller("mycntl", function ($scope,myfactory) {
+        $scope.add = function () {
+            $scope.result = myfactory.add($scope.n1, $scope.n2);
+        }
+        $scope.mul = function () {
+            $scope.result = myfactory.mul($scope.n1, $scope.n2);
+        }
+    });
+</script>
+</body>
+</html>

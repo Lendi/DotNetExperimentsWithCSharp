@@ -13,6 +13,51 @@ namespace AssetManagement.Admin {
     public partial class ViewUsers {
         
         /// <summary>
+        /// lbCreateUser control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbCreateUser;
+        
+        /// <summary>
+        /// lbModifyUser control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbModifyUser;
+        
+        /// <summary>
+        /// lbDeactivateUser control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbDeactivateUser;
+        
+        /// <summary>
+        /// lbViewUsers control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbViewUsers;
+        
+        /// <summary>
+        /// lbChangePwd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbChangePwd;
+        
+        /// <summary>
         /// Repeater1 control.
         /// </summary>
         /// <remarks>

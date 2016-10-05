@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Untitled</title>
+  <script src="../angular.min.js"></script>
+</head>
+
+<body ng-app="myapp">
+  <div ng-controller="HelloController">
+     <h2>Hello {{obj.name}}</h2>
+  </div>
+  <script>
+  angular.module("myapp",[])
+  .controller("HelloController",function($scope)
+  {
+      $scope.obj={name:'Sachin'};
+  })
+  </script>
+</body>
+
+</html>

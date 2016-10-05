@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+    <!-- Demo on uppercase Filter -->
+<html>
+
+<head>
+  <title>Untitled</title>
+  <script src="angular.min.js"></script>
+</head>
+
+<body ng-app="" ng-init="names=['India','China','Bangladesh']">
+<h3>List of Asian Countries</h3>
+<ul>
+<li ng-repeat="x in names">
+{{x|uppercase}}
+</li>
+</ul>
+</body>
+
+</html>

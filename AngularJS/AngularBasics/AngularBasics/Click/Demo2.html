@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="../angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="" ng-controller="f1">
+        <input type="text" ng-model="fname" required placeholder="Pls Enter first name" /><br />
+         <input type="text" ng-model="lname" required placeholder="Pls Enter last name" /><br />
+         <input type="text" ng-model="email" required placeholder="Pls Enter Email" />
+        <input type="button" ng-click="reset()" value="Reset" />
+    </div>
+<script>
+    function f1($scope) {
+        $scope.reset = function () {
+            $scope.fname = null;
+            $scope.lname = null;
+            $scope.email = null;
+        }
+        $scope.reset()
+    }
+</script>
+</body>
+</html>

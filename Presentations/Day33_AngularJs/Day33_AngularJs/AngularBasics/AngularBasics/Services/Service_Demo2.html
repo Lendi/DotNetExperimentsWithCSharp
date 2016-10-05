@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="myapp" ng-controller="mycntl">
+        <input type="text" ng-model="no1" placeholder="Enter no1" /><br />
+        <input type="text" ng-model="no2" placeholder="Enter no2" /><br />
+        <input type="button" ng-click="add()" value="Add" /> &nbsp;<input type="button" ng-click="mul()" value="Mul" />
+        <p>Result:{{result}}</p>
+    </div>
+<script>
+    var app = angular.module("myapp", []);
+    app.service("calcService", function () {
+        this.add = function (a, b) {
+            return parseInt(a) + parseInt(b);
+        }
+        this.mul = function (a, b) {
+            return a*b;
+        }
+    });
+    app.controller("mycntl", function ($scope, calcService) {
+        $scope.add = function () {
+            $scope.result = calcService.add($scope.no1, $scope.no2);
+        }
+        $scope.mul = function () {
+            $scope.result = calcService.mul($scope.no1, $scope.no2);
+        }
+    });
+</script>
+</body>
+</html>

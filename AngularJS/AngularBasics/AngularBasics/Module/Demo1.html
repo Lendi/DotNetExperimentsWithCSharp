@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="../angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="Myapp" ng-controller="f1">
+        <p>Hello {{(Student.fname+" "+Student.lname)|uppercase}}</p>
+    </div>
+    <script>
+        var Myapp = angular.module("Myapp", []);
+        Myapp.controller("f1", function ($scope) {
+            $scope.Student = {
+                fname: "Santhosh",
+                lname:"Parsi"
+            }
+        });
+    </script>
+</body>
+</html>

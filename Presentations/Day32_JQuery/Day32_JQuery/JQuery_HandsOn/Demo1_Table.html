@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="CSS/table.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.7.1.js"></script>
+    <script>
+        $(function () {
+            $("#b1").click(function () {
+                var name = '.'+$("#t1").val();
+                
+                $(name).toggle();
+            });
+        });
+    </script>
+</head>
+<body>
+<table id="someTable">
+        <thead>
+            <tr>
+                <th class="empid">EmpId</th>
+                <th class="fname">First Name</th>
+                <th class="lname">Last Name</th>
+                <th class="email">Email</th>
+                <th class="phone">Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="empid">E342</td>
+                <td class="fname">Bill</td>
+                <td class="lname">Evans</td>
+                <td class="email">Bill@devcurry.com</td>
+                <td class="phone">234-2345-2345</td>
+            </tr>
+            <tr>
+                <td class="empid">E343</td>
+                <td class="fname">Laura</td>
+                <td class="lname">Matt</td>
+                <td class="email">laura@devcurry.com</td>
+                <td class="phone">123-1234-5678</td>
+            </tr>
+            <tr>
+                <td class="empid">E344</td>
+                <td class="fname">Ram</td>
+                <td class="lname">Kumar</td>
+                <td class="email">ram@devcurry.com</td>
+                <td class="phone">345-3456-7890</td>
+            </tr>
+        </tbody>
+    </table>
+    <input type="text" id="t1" />
+    <input id="b1" type="button" value="Click" />
+</body>
+</html>

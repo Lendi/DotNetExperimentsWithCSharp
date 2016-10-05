@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="utf-8">  
+  <title>text demo</title>  
+  <style>  
+  p {  
+    color: blue;  
+    margin: 8px;  
+  }  
+  b {  
+    color: red;  
+  }  
+  </style>  
+    <script src="../Scripts/jquery-1.7.1.js"></script>
+</head>  
+<body>  
+<p><b>Hello! </b>JQuery Training..</p>  
+<p></p>  
+<script>
+    $("p:first").click(function () {
+        var str = $("p:first").text();
+        $("p:last").text(str);
+    });
+</script>  
+</body>  
+</html>  

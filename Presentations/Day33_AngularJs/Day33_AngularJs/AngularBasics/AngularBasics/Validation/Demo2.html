@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script> 
+    <style>
+        span {
+            color:red;
+        }
+    </style>
+</head>
+<body ng-app="">
+<form name="myform" novalidate>
+    <p>UserName:<br /><br />
+    <input type="text" name="user" ng-model="user"  required/>
+    <span ng-show="myform.user.$touched && myform.user.$invalid">
+        <span ng-show="myform.user.$error.required">Username is Required</span>
+    </span>
+
+    </p>
+    <p>EmailId:<br /><br />
+        <input type="email" name="email" ng-model="email" required />
+        <span ng-show="myform.email.$touched && myform.email.$invalid">
+            <span ng-show="myform.email.$error.required">EmailId is Required</span>
+            <span ng-show="myform.email.$error.email">Invalid EmailId</span>
+        </span>
+    </p>
+    <input type="submit" ng-disabled="myform.user.$touched && myform.user.$invalid || myform.email.$touched && myform.email.$invalid"/>
+</form>
+</body>
+</html>

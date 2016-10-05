@@ -1,0 +1,10 @@
+F:\TRAINING CONTENT\TRAININGEXAMPLES\AngularJs\AngularBasics\AngularBasics\bin\AngularBasics.dll
+F:\TRAINING CONTENT\TRAININGEXAMPLES\AngularJs\AngularBasics\AngularBasics\bin\AngularBasics.pdb
+F:\TRAINING CONTENT\TRAININGEXAMPLES\AngularJs\AngularBasics\AngularBasics\obj\Debug\AngularBasics.csprojResolveAssemblyReference.cache
+F:\TRAINING CONTENT\TRAININGEXAMPLES\AngularJs\AngularBasics\AngularBasics\obj\Debug\AngularBasics.dll
+F:\TRAINING CONTENT\TRAININGEXAMPLES\AngularJs\AngularBasics\AngularBasics\obj\Debug\AngularBasics.pdb
+D:\DOT NET\Day33_AngularJs\AngularBasics\AngularBasics\bin\AngularBasics.dll
+D:\DOT NET\Day33_AngularJs\AngularBasics\AngularBasics\bin\AngularBasics.pdb
+D:\DOT NET\Day33_AngularJs\AngularBasics\AngularBasics\obj\Debug\AngularBasics.csprojResolveAssemblyReference.cache
+D:\DOT NET\Day33_AngularJs\AngularBasics\AngularBasics\obj\Debug\AngularBasics.dll
+D:\DOT NET\Day33_AngularJs\AngularBasics\AngularBasics\obj\Debug\AngularBasics.pdb
