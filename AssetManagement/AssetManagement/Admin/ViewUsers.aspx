@@ -15,7 +15,7 @@
           </li>    
             
              <li>
-                 <asp:LinkButton ID="lbViewUsers" runat="server" OnClick="lbViewUsers_Click1">View Users</asp:LinkButton>
+                 <asp:LinkButton ID="lbViewUsers" runat="server" OnClick="lbViewUsers_Click1" Height="40px" Width="175px">View Users</asp:LinkButton>
 
              </li>       
                

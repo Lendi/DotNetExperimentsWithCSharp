@@ -18,8 +18,8 @@ ul {
     position: fixed;
     height: 100%;
     overflow: auto;
-        top: -4px;
-        left: 1px;
+        top: 0px;
+        left: -17px;
     }
 
 li a {
@@ -40,8 +40,7 @@ li a:hover:not(.active) {
 }
 </style>
 <title></title>
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
+
 
 </head>
 <body>
@@ -54,9 +53,7 @@ li a:hover:not(.active) {
     <asp:ContentPlaceHolder ID="navbar" runat="server">
         <p>
             <br />
-        <li></li>
-        <li></li>
-        <li>
+        
             <p>
             </p>
             <p>
@@ -81,12 +78,16 @@ li a:hover:not(.active) {
             </p>
             <p>
             </p>
-        </li>
+        <p>
+            </p>
+        <p>
+            </p>
+       
     </asp:ContentPlaceHolder>
 </ul>
 
 <asp:ContentPlaceHolder ID="fullpage" runat="server">
-<div style="margin-left:17%; padding:1px 16px;height:1096px;">
+<div style="margin-left:14%; padding:1px 16px;height:1096px;">
   <h2 align="right"> Asset Management </h2> 
   <h3>-------------------------------------------------------------------------------------------------------------------------------------</h3>
     <p>

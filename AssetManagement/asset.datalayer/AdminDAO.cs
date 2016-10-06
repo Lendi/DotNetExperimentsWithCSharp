@@ -16,21 +16,18 @@ namespace asset.datalayer
             //{
             
             //int eid = GetID();
-            //    ObjUser.emp_id = eid;
                 obj.users.InsertOnSubmit(ObjUser);
                 obj.SubmitChanges(); 
            //}
 
         }
 
-        public int GetID()
-        {
-            //using (assetDataContext obj = new assetDataContext())
-            //{
-            int eid = (obj.users.Select(i => i.emp_id)).Max();
-            eid = eid + 1;
-            return eid;
-        }
+        //public int GetID()
+        //{           
+        //    int eid = (obj.users.Select(i => i.emp_id)).Max();
+        //    eid = eid + 1;
+        //    return eid;
+        //}
 
       
 

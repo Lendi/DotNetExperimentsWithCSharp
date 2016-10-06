@@ -7,7 +7,7 @@
 
   <meta charset="UTF-8">
 
-  <title>CodePen - Log-in</title>
+  <title>Welcome - Asset Management</title>
 
   <link rel='stylesheet' href='http://codepen.io/assets/libs/fullpage/jquery-ui.css'>
 

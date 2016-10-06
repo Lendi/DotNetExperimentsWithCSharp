@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Dashboard.Master" AutoEventWireup="true" CodeBehind="ModifyUser.aspx.cs" Inherits="AssetManagement.Admin.ModifyUser" %>
 
       <asp:Content ID="content2" ContentPlaceHolderID="navbar" runat="server">   
+          <ul>
           <li><asp:LinkButton ID="lbCreateUser" runat="server" 
                   OnClick="lbCreateUser_Click" Height="40px" style="margin-left: 0px" 
                   Width="175px">Create User</asp:LinkButton>
@@ -24,7 +25,7 @@
                    OnClick="lbChangePwd_Click" Height="40px" Width="175px">Change Password</asp:LinkButton>
 
            </li>    
-    
+    </ul>
     <br />
     <br />
     <br />

@@ -16,12 +16,7 @@ namespace AssetManagement.Admin
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (IsPostBack==false) {
-            user usr = new user();
-            usr.emp_id = obj.GetID();
-            tbEmpID.Text = usr.emp_id.ToString();
-
-            }
+           
 
         }
 
@@ -29,29 +24,36 @@ namespace AssetManagement.Admin
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-           // user usr = new user();
-           // usr.emp_id = int.Parse(tbEmpID.Text);            
-           // usr.short_id = tbUname.Text;
-           // usr.fname = tbFirstname.Text;
-           // usr.lname = tbLastName.Text;
-           //usr.email_id = tbEmailID.Text;
-           // usr.user_password = tbPassword.Text;
-           // usr.manager_id = int.Parse(tbManagerID.Text);
-           // usr.designation = ddlDesignation.Text;
-           // usr.mobile = int.Parse(tbPhno.Text);
-           // usr.date_of_join = CalendarDOJ.SelectedDate;//check
-           // usr.active = ddlAccountStatus.SelectedItem.Value;
+            user usr = new user();
+            usr.emp_id = int.Parse(tbEmpID.Text);
+            usr.short_id = tbUname.Text;
+            usr.fname = tbFirstname.Text;
+            usr.lname = tbLastName.Text;
+            usr.email_id = tbEmailID.Text;
+            usr.user_password = tbPassword.Text;
+            if (usr.manager_id != null)
+            {
+                usr.manager_id = int.Parse(tbManagerID.Text);
+            }
+            else {
+                usr.manager_id = null;
+            }
+            usr.designation = ddlDesignation.Text;
+            usr.mobile = int.Parse(tbPhno.Text);
+            usr.date_of_join = CalendarDOJ.SelectedDate;//check
+            usr.active = ddlAccountStatus.SelectedItem.Value;
 
-           // obj.CreateUser(usr);
-           // Label1.Text = "User Created!";
+            obj.CreateUser(usr);
+            Label1.Text = "User Created!";
 
-           // if (usr.active == "a")
-           // {
-           //     Label2.Text = "User Activated";
-           // }
-           // else {
-           //     Label2.Text = "User Deactivated!";
-           // }
+            if (usr.active == "a")
+            {
+                Label2.Text = "User Activated";
+            }
+            else
+            {
+                Label2.Text = "User Deactivated!";
+            }
 
         }
 

@@ -13,22 +13,22 @@ namespace AssetManagement.Employee {
     public partial class EmployeePage {
         
         /// <summary>
-        /// btnReq control.
+        /// lbRequests control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnReq;
+        protected global::System.Web.UI.WebControls.LinkButton lbRequests;
         
         /// <summary>
-        /// btnMyAssets control.
+        /// lbAssets control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnMyAssets;
+        protected global::System.Web.UI.WebControls.LinkButton lbAssets;
         
         /// <summary>
         /// DetailsView1 control.
@@ -38,5 +38,14 @@ namespace AssetManagement.Employee {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DetailsView DetailsView1;
+        
+        /// <summary>
+        /// SqlDataSource1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
     }
 }

@@ -33,6 +33,9 @@ namespace asset.datalayer
     partial void Insertuser(user instance);
     partial void Updateuser(user instance);
     partial void Deleteuser(user instance);
+    partial void InsertTransferHistory(TransferHistory instance);
+    partial void UpdateTransferHistory(TransferHistory instance);
+    partial void DeleteTransferHistory(TransferHistory instance);
     partial void InsertRequestInfo(RequestInfo instance);
     partial void UpdateRequestInfo(RequestInfo instance);
     partial void DeleteRequestInfo(RequestInfo instance);
@@ -122,17 +125,27 @@ namespace asset.datalayer
 		
 		private string _user_password;
 		
-		private int _manager_id;
+		private System.Nullable<int> _manager_id;
 		
 		private string _designation;
 		
-		private int _mobile;
+		private System.Nullable<int> _mobile;
 		
 		private System.Nullable<System.DateTime> _date_of_join;
 		
 		private string _active;
 		
+		private EntitySet<TransferHistory> _TransferHistories;
+		
+		private EntitySet<TransferHistory> _TransferHistories1;
+		
+		private EntitySet<TransferHistory> _TransferHistories2;
+		
 		private EntitySet<RequestInfo> _RequestInfos;
+		
+		private EntitySet<RequestInfo> _RequestInfos1;
+		
+		private EntitySet<AssetInfo> _AssetInfos;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -150,11 +163,11 @@ namespace asset.datalayer
     partial void Onemail_idChanged();
     partial void Onuser_passwordChanging(string value);
     partial void Onuser_passwordChanged();
-    partial void Onmanager_idChanging(int value);
+    partial void Onmanager_idChanging(System.Nullable<int> value);
     partial void Onmanager_idChanged();
     partial void OndesignationChanging(string value);
     partial void OndesignationChanged();
-    partial void OnmobileChanging(int value);
+    partial void OnmobileChanging(System.Nullable<int> value);
     partial void OnmobileChanged();
     partial void Ondate_of_joinChanging(System.Nullable<System.DateTime> value);
     partial void Ondate_of_joinChanged();
@@ -164,11 +177,16 @@ namespace asset.datalayer
 		
 		public user()
 		{
+			this._TransferHistories = new EntitySet<TransferHistory>(new Action<TransferHistory>(this.attach_TransferHistories), new Action<TransferHistory>(this.detach_TransferHistories));
+			this._TransferHistories1 = new EntitySet<TransferHistory>(new Action<TransferHistory>(this.attach_TransferHistories1), new Action<TransferHistory>(this.detach_TransferHistories1));
+			this._TransferHistories2 = new EntitySet<TransferHistory>(new Action<TransferHistory>(this.attach_TransferHistories2), new Action<TransferHistory>(this.detach_TransferHistories2));
 			this._RequestInfos = new EntitySet<RequestInfo>(new Action<RequestInfo>(this.attach_RequestInfos), new Action<RequestInfo>(this.detach_RequestInfos));
+			this._RequestInfos1 = new EntitySet<RequestInfo>(new Action<RequestInfo>(this.attach_RequestInfos1), new Action<RequestInfo>(this.detach_RequestInfos1));
+			this._AssetInfos = new EntitySet<AssetInfo>(new Action<AssetInfo>(this.attach_AssetInfos), new Action<AssetInfo>(this.detach_AssetInfos));
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_emp_id", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_emp_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int emp_id
 		{
 			get
@@ -228,7 +246,7 @@ namespace asset.datalayer
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_lname", DbType="VarChar(25) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_lname", DbType="VarChar(25)")]
 		public string lname
 		{
 			get
@@ -248,7 +266,7 @@ namespace asset.datalayer
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_email_id", DbType="VarChar(25) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_email_id", DbType="VarChar(25)")]
 		public string email_id
 		{
 			get
@@ -268,7 +286,7 @@ namespace asset.datalayer
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_user_password", DbType="VarChar(25) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_user_password", DbType="VarChar(25)")]
 		public string user_password
 		{
 			get
@@ -288,8 +306,8 @@ namespace asset.datalayer
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_manager_id", DbType="Int NOT NULL")]
-		public int manager_id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_manager_id", DbType="Int")]
+		public System.Nullable<int> manager_id
 		{
 			get
 			{
@@ -328,8 +346,8 @@ namespace asset.datalayer
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mobile", DbType="Int NOT NULL")]
-		public int mobile
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mobile", DbType="Int")]
+		public System.Nullable<int> mobile
 		{
 			get
 			{
@@ -348,7 +366,7 @@ namespace asset.datalayer
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_date_of_join", DbType="DateTime")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_date_of_join", DbType="Date")]
 		public System.Nullable<System.DateTime> date_of_join
 		{
 			get
@@ -388,6 +406,45 @@ namespace asset.datalayer
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="user_TransferHistory", Storage="_TransferHistories", ThisKey="emp_id", OtherKey="from_emp_id")]
+		public EntitySet<TransferHistory> TransferHistories
+		{
+			get
+			{
+				return this._TransferHistories;
+			}
+			set
+			{
+				this._TransferHistories.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="user_TransferHistory1", Storage="_TransferHistories1", ThisKey="emp_id", OtherKey="manager_id")]
+		public EntitySet<TransferHistory> TransferHistories1
+		{
+			get
+			{
+				return this._TransferHistories1;
+			}
+			set
+			{
+				this._TransferHistories1.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="user_TransferHistory2", Storage="_TransferHistories2", ThisKey="emp_id", OtherKey="to_emp_id")]
+		public EntitySet<TransferHistory> TransferHistories2
+		{
+			get
+			{
+				return this._TransferHistories2;
+			}
+			set
+			{
+				this._TransferHistories2.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="user_RequestInfo", Storage="_RequestInfos", ThisKey="emp_id", OtherKey="emp_id")]
 		public EntitySet<RequestInfo> RequestInfos
 		{
@@ -398,6 +455,32 @@ namespace asset.datalayer
 			set
 			{
 				this._RequestInfos.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="user_RequestInfo1", Storage="_RequestInfos1", ThisKey="short_id", OtherKey="short_id")]
+		public EntitySet<RequestInfo> RequestInfos1
+		{
+			get
+			{
+				return this._RequestInfos1;
+			}
+			set
+			{
+				this._RequestInfos1.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="user_AssetInfo", Storage="_AssetInfos", ThisKey="emp_id", OtherKey="emp_id")]
+		public EntitySet<AssetInfo> AssetInfos
+		{
+			get
+			{
+				return this._AssetInfos;
+			}
+			set
+			{
+				this._AssetInfos.Assign(value);
 			}
 		}
 		
@@ -421,6 +504,42 @@ namespace asset.datalayer
 			}
 		}
 		
+		private void attach_TransferHistories(TransferHistory entity)
+		{
+			this.SendPropertyChanging();
+			entity.user = this;
+		}
+		
+		private void detach_TransferHistories(TransferHistory entity)
+		{
+			this.SendPropertyChanging();
+			entity.user = null;
+		}
+		
+		private void attach_TransferHistories1(TransferHistory entity)
+		{
+			this.SendPropertyChanging();
+			entity.user1 = this;
+		}
+		
+		private void detach_TransferHistories1(TransferHistory entity)
+		{
+			this.SendPropertyChanging();
+			entity.user1 = null;
+		}
+		
+		private void attach_TransferHistories2(TransferHistory entity)
+		{
+			this.SendPropertyChanging();
+			entity.user2 = this;
+		}
+		
+		private void detach_TransferHistories2(TransferHistory entity)
+		{
+			this.SendPropertyChanging();
+			entity.user2 = null;
+		}
+		
 		private void attach_RequestInfos(RequestInfo entity)
 		{
 			this.SendPropertyChanging();
@@ -432,13 +551,39 @@ namespace asset.datalayer
 			this.SendPropertyChanging();
 			entity.user = null;
 		}
+		
+		private void attach_RequestInfos1(RequestInfo entity)
+		{
+			this.SendPropertyChanging();
+			entity.user1 = this;
+		}
+		
+		private void detach_RequestInfos1(RequestInfo entity)
+		{
+			this.SendPropertyChanging();
+			entity.user1 = null;
+		}
+		
+		private void attach_AssetInfos(AssetInfo entity)
+		{
+			this.SendPropertyChanging();
+			entity.user = this;
+		}
+		
+		private void detach_AssetInfos(AssetInfo entity)
+		{
+			this.SendPropertyChanging();
+			entity.user = null;
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TransferHistory")]
-	public partial class TransferHistory
+	public partial class TransferHistory : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
-		private System.Nullable<int> _transfer_id;
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _transfer_id;
 		
 		private System.Nullable<int> _from_emp_id;
 		
@@ -450,18 +595,55 @@ namespace asset.datalayer
 		
 		private System.Nullable<int> _to_emp_id;
 		
-		private System.Data.Linq.Binary _transferdate;
+		private System.Nullable<System.DateTime> _transferdate;
 		
 		private System.Nullable<int> _transferstatus;
 		
 		private string _remarks;
 		
+		private EntityRef<user> _user;
+		
+		private EntityRef<user> _user1;
+		
+		private EntityRef<user> _user2;
+		
+		private EntityRef<AssetInfo> _AssetInfo;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Ontransfer_idChanging(int value);
+    partial void Ontransfer_idChanged();
+    partial void Onfrom_emp_idChanging(System.Nullable<int> value);
+    partial void Onfrom_emp_idChanged();
+    partial void Onmanager_idChanging(System.Nullable<int> value);
+    partial void Onmanager_idChanged();
+    partial void Onasset_idChanging(System.Nullable<int> value);
+    partial void Onasset_idChanged();
+    partial void OnassetnameChanging(string value);
+    partial void OnassetnameChanged();
+    partial void Onto_emp_idChanging(System.Nullable<int> value);
+    partial void Onto_emp_idChanged();
+    partial void OntransferdateChanging(System.Nullable<System.DateTime> value);
+    partial void OntransferdateChanged();
+    partial void OntransferstatusChanging(System.Nullable<int> value);
+    partial void OntransferstatusChanged();
+    partial void OnremarksChanging(string value);
+    partial void OnremarksChanged();
+    #endregion
+		
 		public TransferHistory()
 		{
+			this._user = default(EntityRef<user>);
+			this._user1 = default(EntityRef<user>);
+			this._user2 = default(EntityRef<user>);
+			this._AssetInfo = default(EntityRef<AssetInfo>);
+			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_transfer_id", DbType="Int", UpdateCheck=UpdateCheck.Never)]
-		public System.Nullable<int> transfer_id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_transfer_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int transfer_id
 		{
 			get
 			{
@@ -471,12 +653,16 @@ namespace asset.datalayer
 			{
 				if ((this._transfer_id != value))
 				{
+					this.Ontransfer_idChanging(value);
+					this.SendPropertyChanging();
 					this._transfer_id = value;
+					this.SendPropertyChanged("transfer_id");
+					this.Ontransfer_idChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_from_emp_id", DbType="Int", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_from_emp_id", DbType="Int")]
 		public System.Nullable<int> from_emp_id
 		{
 			get
@@ -487,12 +673,20 @@ namespace asset.datalayer
 			{
 				if ((this._from_emp_id != value))
 				{
+					if (this._user.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.Onfrom_emp_idChanging(value);
+					this.SendPropertyChanging();
 					this._from_emp_id = value;
+					this.SendPropertyChanged("from_emp_id");
+					this.Onfrom_emp_idChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_manager_id", DbType="Int", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_manager_id", DbType="Int")]
 		public System.Nullable<int> manager_id
 		{
 			get
@@ -503,12 +697,20 @@ namespace asset.datalayer
 			{
 				if ((this._manager_id != value))
 				{
+					if (this._user1.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.Onmanager_idChanging(value);
+					this.SendPropertyChanging();
 					this._manager_id = value;
+					this.SendPropertyChanged("manager_id");
+					this.Onmanager_idChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_asset_id", DbType="Int", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_asset_id", DbType="Int")]
 		public System.Nullable<int> asset_id
 		{
 			get
@@ -519,12 +721,20 @@ namespace asset.datalayer
 			{
 				if ((this._asset_id != value))
 				{
+					if (this._AssetInfo.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.Onasset_idChanging(value);
+					this.SendPropertyChanging();
 					this._asset_id = value;
+					this.SendPropertyChanged("asset_id");
+					this.Onasset_idChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_assetname", DbType="VarChar(25)", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_assetname", DbType="VarChar(25)")]
 		public string assetname
 		{
 			get
@@ -535,12 +745,16 @@ namespace asset.datalayer
 			{
 				if ((this._assetname != value))
 				{
+					this.OnassetnameChanging(value);
+					this.SendPropertyChanging();
 					this._assetname = value;
+					this.SendPropertyChanged("assetname");
+					this.OnassetnameChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_to_emp_id", DbType="Int", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_to_emp_id", DbType="Int")]
 		public System.Nullable<int> to_emp_id
 		{
 			get
@@ -551,13 +765,21 @@ namespace asset.datalayer
 			{
 				if ((this._to_emp_id != value))
 				{
+					if (this._user2.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.Onto_emp_idChanging(value);
+					this.SendPropertyChanging();
 					this._to_emp_id = value;
+					this.SendPropertyChanged("to_emp_id");
+					this.Onto_emp_idChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_transferdate", AutoSync=AutoSync.Always, DbType="rowversion NOT NULL", CanBeNull=false, IsDbGenerated=true, IsVersion=true, UpdateCheck=UpdateCheck.Never)]
-		public System.Data.Linq.Binary transferdate
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_transferdate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> transferdate
 		{
 			get
 			{
@@ -567,12 +789,16 @@ namespace asset.datalayer
 			{
 				if ((this._transferdate != value))
 				{
+					this.OntransferdateChanging(value);
+					this.SendPropertyChanging();
 					this._transferdate = value;
+					this.SendPropertyChanged("transferdate");
+					this.OntransferdateChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_transferstatus", DbType="Int", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_transferstatus", DbType="Int")]
 		public System.Nullable<int> transferstatus
 		{
 			get
@@ -583,12 +809,16 @@ namespace asset.datalayer
 			{
 				if ((this._transferstatus != value))
 				{
+					this.OntransferstatusChanging(value);
+					this.SendPropertyChanging();
 					this._transferstatus = value;
+					this.SendPropertyChanged("transferstatus");
+					this.OntransferstatusChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_remarks", DbType="VarChar(100)", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_remarks", DbType="VarChar(100)")]
 		public string remarks
 		{
 			get
@@ -599,8 +829,168 @@ namespace asset.datalayer
 			{
 				if ((this._remarks != value))
 				{
+					this.OnremarksChanging(value);
+					this.SendPropertyChanging();
 					this._remarks = value;
+					this.SendPropertyChanged("remarks");
+					this.OnremarksChanged();
 				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="user_TransferHistory", Storage="_user", ThisKey="from_emp_id", OtherKey="emp_id", IsForeignKey=true)]
+		public user user
+		{
+			get
+			{
+				return this._user.Entity;
+			}
+			set
+			{
+				user previousValue = this._user.Entity;
+				if (((previousValue != value) 
+							|| (this._user.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._user.Entity = null;
+						previousValue.TransferHistories.Remove(this);
+					}
+					this._user.Entity = value;
+					if ((value != null))
+					{
+						value.TransferHistories.Add(this);
+						this._from_emp_id = value.emp_id;
+					}
+					else
+					{
+						this._from_emp_id = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("user");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="user_TransferHistory1", Storage="_user1", ThisKey="manager_id", OtherKey="emp_id", IsForeignKey=true)]
+		public user user1
+		{
+			get
+			{
+				return this._user1.Entity;
+			}
+			set
+			{
+				user previousValue = this._user1.Entity;
+				if (((previousValue != value) 
+							|| (this._user1.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._user1.Entity = null;
+						previousValue.TransferHistories1.Remove(this);
+					}
+					this._user1.Entity = value;
+					if ((value != null))
+					{
+						value.TransferHistories1.Add(this);
+						this._manager_id = value.emp_id;
+					}
+					else
+					{
+						this._manager_id = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("user1");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="user_TransferHistory2", Storage="_user2", ThisKey="to_emp_id", OtherKey="emp_id", IsForeignKey=true)]
+		public user user2
+		{
+			get
+			{
+				return this._user2.Entity;
+			}
+			set
+			{
+				user previousValue = this._user2.Entity;
+				if (((previousValue != value) 
+							|| (this._user2.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._user2.Entity = null;
+						previousValue.TransferHistories2.Remove(this);
+					}
+					this._user2.Entity = value;
+					if ((value != null))
+					{
+						value.TransferHistories2.Add(this);
+						this._to_emp_id = value.emp_id;
+					}
+					else
+					{
+						this._to_emp_id = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("user2");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="AssetInfo_TransferHistory", Storage="_AssetInfo", ThisKey="asset_id", OtherKey="asset_id", IsForeignKey=true)]
+		public AssetInfo AssetInfo
+		{
+			get
+			{
+				return this._AssetInfo.Entity;
+			}
+			set
+			{
+				AssetInfo previousValue = this._AssetInfo.Entity;
+				if (((previousValue != value) 
+							|| (this._AssetInfo.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._AssetInfo.Entity = null;
+						previousValue.TransferHistories.Remove(this);
+					}
+					this._AssetInfo.Entity = value;
+					if ((value != null))
+					{
+						value.TransferHistories.Add(this);
+						this._asset_id = value.asset_id;
+					}
+					else
+					{
+						this._asset_id = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("AssetInfo");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}
@@ -619,7 +1009,7 @@ namespace asset.datalayer
 		
 		private string _asset_name;
 		
-		private int _manager_id;
+		private System.Nullable<int> _manager_id;
 		
 		private System.Nullable<int> _request_status;
 		
@@ -629,7 +1019,11 @@ namespace asset.datalayer
 		
 		private string _remarks;
 		
+		private EntitySet<AssetInfo> _AssetInfos;
+		
 		private EntityRef<user> _user;
+		
+		private EntityRef<user> _user1;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -643,7 +1037,7 @@ namespace asset.datalayer
     partial void Onshort_idChanged();
     partial void Onasset_nameChanging(string value);
     partial void Onasset_nameChanged();
-    partial void Onmanager_idChanging(int value);
+    partial void Onmanager_idChanging(System.Nullable<int> value);
     partial void Onmanager_idChanged();
     partial void Onrequest_statusChanging(System.Nullable<int> value);
     partial void Onrequest_statusChanged();
@@ -657,11 +1051,13 @@ namespace asset.datalayer
 		
 		public RequestInfo()
 		{
+			this._AssetInfos = new EntitySet<AssetInfo>(new Action<AssetInfo>(this.attach_AssetInfos), new Action<AssetInfo>(this.detach_AssetInfos));
 			this._user = default(EntityRef<user>);
+			this._user1 = default(EntityRef<user>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_request_id", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_request_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int request_id
 		{
 			get
@@ -705,7 +1101,7 @@ namespace asset.datalayer
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_short_id", DbType="VarChar(25) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_short_id", DbType="VarChar(25)")]
 		public string short_id
 		{
 			get
@@ -716,6 +1112,10 @@ namespace asset.datalayer
 			{
 				if ((this._short_id != value))
 				{
+					if (this._user1.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.Onshort_idChanging(value);
 					this.SendPropertyChanging();
 					this._short_id = value;
@@ -745,8 +1145,8 @@ namespace asset.datalayer
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_manager_id", DbType="Int NOT NULL")]
-		public int manager_id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_manager_id", DbType="Int")]
+		public System.Nullable<int> manager_id
 		{
 			get
 			{
@@ -785,7 +1185,7 @@ namespace asset.datalayer
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_request_date", DbType="DateTime")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_request_date", DbType="Date")]
 		public System.Nullable<System.DateTime> request_date
 		{
 			get
@@ -805,7 +1205,7 @@ namespace asset.datalayer
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_manager_approved_date", DbType="DateTime")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_manager_approved_date", DbType="Date")]
 		public System.Nullable<System.DateTime> manager_approved_date
 		{
 			get
@@ -845,6 +1245,19 @@ namespace asset.datalayer
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="RequestInfo_AssetInfo", Storage="_AssetInfos", ThisKey="request_id", OtherKey="request_id")]
+		public EntitySet<AssetInfo> AssetInfos
+		{
+			get
+			{
+				return this._AssetInfos;
+			}
+			set
+			{
+				this._AssetInfos.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="user_RequestInfo", Storage="_user", ThisKey="emp_id", OtherKey="emp_id", IsForeignKey=true)]
 		public user user
 		{
@@ -879,6 +1292,40 @@ namespace asset.datalayer
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="user_RequestInfo1", Storage="_user1", ThisKey="short_id", OtherKey="short_id", IsForeignKey=true)]
+		public user user1
+		{
+			get
+			{
+				return this._user1.Entity;
+			}
+			set
+			{
+				user previousValue = this._user1.Entity;
+				if (((previousValue != value) 
+							|| (this._user1.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._user1.Entity = null;
+						previousValue.RequestInfos1.Remove(this);
+					}
+					this._user1.Entity = value;
+					if ((value != null))
+					{
+						value.RequestInfos1.Add(this);
+						this._short_id = value.short_id;
+					}
+					else
+					{
+						this._short_id = default(string);
+					}
+					this.SendPropertyChanged("user1");
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -898,6 +1345,18 @@ namespace asset.datalayer
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
+		
+		private void attach_AssetInfos(AssetInfo entity)
+		{
+			this.SendPropertyChanging();
+			entity.RequestInfo = this;
+		}
+		
+		private void detach_AssetInfos(AssetInfo entity)
+		{
+			this.SendPropertyChanging();
+			entity.RequestInfo = null;
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.AssetInfo")]
@@ -916,6 +1375,14 @@ namespace asset.datalayer
 		
 		private System.Nullable<System.DateTime> _issueddate;
 		
+		private string _Status;
+		
+		private EntitySet<TransferHistory> _TransferHistories;
+		
+		private EntityRef<user> _user;
+		
+		private EntityRef<RequestInfo> _RequestInfo;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -930,14 +1397,19 @@ namespace asset.datalayer
     partial void Onrequest_idChanged();
     partial void OnissueddateChanging(System.Nullable<System.DateTime> value);
     partial void OnissueddateChanged();
+    partial void OnStatusChanging(string value);
+    partial void OnStatusChanged();
     #endregion
 		
 		public AssetInfo()
 		{
+			this._TransferHistories = new EntitySet<TransferHistory>(new Action<TransferHistory>(this.attach_TransferHistories), new Action<TransferHistory>(this.detach_TransferHistories));
+			this._user = default(EntityRef<user>);
+			this._RequestInfo = default(EntityRef<RequestInfo>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_asset_id", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_asset_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int asset_id
 		{
 			get
@@ -957,7 +1429,7 @@ namespace asset.datalayer
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_assetname", DbType="VarChar(25) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_assetname", DbType="VarChar(30) NOT NULL", CanBeNull=false)]
 		public string assetname
 		{
 			get
@@ -988,6 +1460,10 @@ namespace asset.datalayer
 			{
 				if ((this._emp_id != value))
 				{
+					if (this._user.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.Onemp_idChanging(value);
 					this.SendPropertyChanging();
 					this._emp_id = value;
@@ -1008,6 +1484,10 @@ namespace asset.datalayer
 			{
 				if ((this._request_id != value))
 				{
+					if (this._RequestInfo.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.Onrequest_idChanging(value);
 					this.SendPropertyChanging();
 					this._request_id = value;
@@ -1017,7 +1497,7 @@ namespace asset.datalayer
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_issueddate", DbType="DateTime")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_issueddate", DbType="Date")]
 		public System.Nullable<System.DateTime> issueddate
 		{
 			get
@@ -1033,6 +1513,107 @@ namespace asset.datalayer
 					this._issueddate = value;
 					this.SendPropertyChanged("issueddate");
 					this.OnissueddateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status", DbType="VarChar(25)")]
+		public string Status
+		{
+			get
+			{
+				return this._Status;
+			}
+			set
+			{
+				if ((this._Status != value))
+				{
+					this.OnStatusChanging(value);
+					this.SendPropertyChanging();
+					this._Status = value;
+					this.SendPropertyChanged("Status");
+					this.OnStatusChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="AssetInfo_TransferHistory", Storage="_TransferHistories", ThisKey="asset_id", OtherKey="asset_id")]
+		public EntitySet<TransferHistory> TransferHistories
+		{
+			get
+			{
+				return this._TransferHistories;
+			}
+			set
+			{
+				this._TransferHistories.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="user_AssetInfo", Storage="_user", ThisKey="emp_id", OtherKey="emp_id", IsForeignKey=true)]
+		public user user
+		{
+			get
+			{
+				return this._user.Entity;
+			}
+			set
+			{
+				user previousValue = this._user.Entity;
+				if (((previousValue != value) 
+							|| (this._user.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._user.Entity = null;
+						previousValue.AssetInfos.Remove(this);
+					}
+					this._user.Entity = value;
+					if ((value != null))
+					{
+						value.AssetInfos.Add(this);
+						this._emp_id = value.emp_id;
+					}
+					else
+					{
+						this._emp_id = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("user");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="RequestInfo_AssetInfo", Storage="_RequestInfo", ThisKey="request_id", OtherKey="request_id", IsForeignKey=true)]
+		public RequestInfo RequestInfo
+		{
+			get
+			{
+				return this._RequestInfo.Entity;
+			}
+			set
+			{
+				RequestInfo previousValue = this._RequestInfo.Entity;
+				if (((previousValue != value) 
+							|| (this._RequestInfo.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._RequestInfo.Entity = null;
+						previousValue.AssetInfos.Remove(this);
+					}
+					this._RequestInfo.Entity = value;
+					if ((value != null))
+					{
+						value.AssetInfos.Add(this);
+						this._request_id = value.request_id;
+					}
+					else
+					{
+						this._request_id = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("RequestInfo");
 				}
 			}
 		}
@@ -1055,6 +1636,18 @@ namespace asset.datalayer
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_TransferHistories(TransferHistory entity)
+		{
+			this.SendPropertyChanging();
+			entity.AssetInfo = this;
+		}
+		
+		private void detach_TransferHistories(TransferHistory entity)
+		{
+			this.SendPropertyChanging();
+			entity.AssetInfo = null;
 		}
 	}
 }

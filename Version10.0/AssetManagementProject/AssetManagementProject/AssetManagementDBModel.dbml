@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AssetManagementProject" Class="AssetManagementDBModelDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=CSCINDAE746239;Initial Catalog=AssetManagementProject;Integrated Security=True" SettingsObjectName="AssetManagementProject.DataLayer.Properties.Settings" SettingsPropertyName="AssetManagementProjectConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.UserDetail" Member="UserDetails">
+    <Type Name="UserDetail">
+      <Column Name="Emp_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Short_ID" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="Email_ID" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="Manager_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Designation" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="DateOfJoining" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Active" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Association Name="UserDetail_TranserHistory" Member="TranserHistories" ThisKey="Emp_ID" OtherKey="From_Emp_ID" Type="TranserHistory" />
+      <Association Name="UserDetail_TranserHistory1" Member="TranserHistories1" ThisKey="Emp_ID" OtherKey="Manager_ID" Type="TranserHistory" />
+      <Association Name="UserDetail_TranserHistory2" Member="TranserHistories2" ThisKey="Emp_ID" OtherKey="To_Emp_ID" Type="TranserHistory" />
+      <Association Name="UserDetail_RequestTable" Member="RequestTables" ThisKey="Emp_ID" OtherKey="Emp_ID" Type="RequestTable" />
+      <Association Name="UserDetail_RequestTable1" Member="RequestTables1" ThisKey="Short_ID" OtherKey="Short_ID" Type="RequestTable" />
+      <Association Name="UserDetail_AssetTable" Member="AssetTables" ThisKey="Emp_ID" OtherKey="Emp_ID" Type="AssetTable" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TranserHistory" Member="TranserHistories">
+    <Type Name="TranserHistory">
+      <Column Name="Transfer_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="From_Emp_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Manager_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Asset_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AssetName" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="To_Emp_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TransferDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Transfer_Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Comment_Remarks" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="UserDetail_TranserHistory" Member="UserDetail" ThisKey="From_Emp_ID" OtherKey="Emp_ID" Type="UserDetail" IsForeignKey="true" />
+      <Association Name="UserDetail_TranserHistory1" Member="UserDetail1" ThisKey="Manager_ID" OtherKey="Emp_ID" Type="UserDetail" IsForeignKey="true" />
+      <Association Name="UserDetail_TranserHistory2" Member="UserDetail2" ThisKey="To_Emp_ID" OtherKey="Emp_ID" Type="UserDetail" IsForeignKey="true" />
+      <Association Name="AssetTable_TranserHistory" Member="AssetTable" ThisKey="Asset_ID" OtherKey="Asset_ID" Type="AssetTable" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RequestTable" Member="RequestTables">
+    <Type Name="RequestTable">
+      <Column Name="Request_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Emp_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Short_ID" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="Manager_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ManagerApprovedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="AssetName" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="RequestDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Remarks_Comment" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="RequestTable_AssetTable" Member="AssetTables" ThisKey="Request_ID" OtherKey="Request_ID" Type="AssetTable" />
+      <Association Name="UserDetail_RequestTable" Member="UserDetail" ThisKey="Emp_ID" OtherKey="Emp_ID" Type="UserDetail" IsForeignKey="true" />
+      <Association Name="UserDetail_RequestTable1" Member="UserDetail1" ThisKey="Short_ID" OtherKey="Short_ID" Type="UserDetail" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AssetTable" Member="AssetTables">
+    <Type Name="AssetTable">
+      <Column Name="Asset_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Emp_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Request_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IssuedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="AssetName" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Association Name="AssetTable_TranserHistory" Member="TranserHistories" ThisKey="Asset_ID" OtherKey="Asset_ID" Type="TranserHistory" />
+      <Association Name="UserDetail_AssetTable" Member="UserDetail" ThisKey="Emp_ID" OtherKey="Emp_ID" Type="UserDetail" IsForeignKey="true" />
+      <Association Name="RequestTable_AssetTable" Member="RequestTable" ThisKey="Request_ID" OtherKey="Request_ID" Type="RequestTable" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

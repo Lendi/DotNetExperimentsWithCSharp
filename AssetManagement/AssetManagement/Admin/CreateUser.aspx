@@ -64,8 +64,8 @@
           </li>    
             
              <li>
-                 <asp:LinkButton ID="lbViewUsers" runat="server" Height="38px" 
-                     OnClick="lbViewUsers_Click" Width="99px">View Users</asp:LinkButton>
+                 <asp:LinkButton ID="lbViewUsers" runat="server" Height="40px" 
+                     OnClick="lbViewUsers_Click" Width="175px">View Users</asp:LinkButton>
 
              </li>       
                

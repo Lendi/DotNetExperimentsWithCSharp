@@ -18,37 +18,28 @@ namespace asset.datalayer
             return usr;
         }
 
-        public void CreateRequest(RequestInfo reqInf) {     
-                //int reqid = (obj.RequestInfos.Select(i => i.request_id)).Max();
-                //reqid = reqid + 1;
-                //reqInf.request_id = reqid;
-                ////RequestInfo reqinf = obj.RequestInfos.SingleOrDefault(i => i.emp_id == eid);  
-                //reqInf.emp_id = eid;
-                ////reqInf.short_id = obj.users;  
-                //reqInf.asset_name = assetname;
-                //reqInf.request_date = DateTime.Now;                
-                //obj.SubmitChanges();
+        public void CreateRequest(RequestInfo reqInf) {
 
-                int reqid = GetReqID();
-                reqInf.request_id = reqid;
+                //int reqid = GetReqID();
+                //reqInf.request_id = reqid;
 
                 obj.RequestInfos.InsertOnSubmit(reqInf);
                 obj.SubmitChanges();       
         }
 
-        public int GetReqID()
-        {
-            int reqid = (obj.RequestInfos.Select(i => i.request_id)).Max();
-            if (reqid == null)
-            {
-                return 1;
-            }
-            else
-            {
-                return reqid + 1;
-            }
-            //reqid += 1;            
-        }
+        //public int GetReqID()
+        //{
+        //    int reqid = (obj.RequestInfos.Select(i => i.request_id)).Max();
+        //    if (reqid == null)
+        //    {
+        //        return 1;
+        //    }
+        //    else
+        //    {
+        //        return reqid + 1;
+        //    }
+        //    //reqid += 1;            
+        //}
 
 
         public List<AssetInfo> ViewMyAssets(int eid)

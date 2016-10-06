@@ -13,10 +13,15 @@ namespace AssetManagement.Employee
         asset.datalayer.EmployeeDAO obj = new asset.datalayer.EmployeeDAO();
 		protected void Page_Load(object sender, EventArgs e)
 		{
-            int eid = Convert.ToInt32(Session["Eid"]);
-            DetailsView1.DataSource = obj.ViewEmployeeDetails(eid);
-            DetailsView1.DataBind();
+                     
 
 		}
+
+        protected void DetailsView1_PageIndexChanging(object sender, DetailsViewPageEventArgs e)
+        {
+            int eid = Convert.ToInt32(Session["Eid"]);
+            DetailsView1.DataSource = obj.ViewEmployeeDetails(eid);
+            DetailsView1.DataBind();  
+        }
 	}
 }
