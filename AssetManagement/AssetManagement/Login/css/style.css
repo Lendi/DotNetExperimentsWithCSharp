@@ -48,6 +48,7 @@ body {
     padding: 0 8px;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
+    margin-left: 0px;
 }
 
 .login-card input[type=text]:hover, input[type=password]:hover {

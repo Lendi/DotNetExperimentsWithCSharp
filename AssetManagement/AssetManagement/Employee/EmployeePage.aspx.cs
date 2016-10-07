@@ -26,7 +26,7 @@ namespace AssetManagement.Employee
 
         protected void lbPassword_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/Employee/PasswordChange.aspx");
+            Response.Redirect(@"~\Employee\PasswordChange.aspx");
 
         }
 

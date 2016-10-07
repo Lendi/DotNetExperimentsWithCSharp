@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.Security;
 using System.Web.UI.WebControls;
 using Asset.BusinessLayer;
+using asset.datalayer;
 using System.Collections;
+
+
 namespace AssetManagement.Login
 {
     public partial class Login : System.Web.UI.Page
@@ -27,16 +31,23 @@ namespace AssetManagement.Login
             string password = tbPwd.Text;
             ArrayList al = obj.LoginDetails(uname, password);
 
+            
+
             try
             {
-                if (uname == "admin" && password == "admin")
+                //if (FormsAuthentication.Authenticate(uname, password))
+                //{
+
+                    if (uname == "admin" && password == "admin")
+                    {
+                        Session["Eid"] = "Admin";
+                        Response.Redirect(@"~\Admin\AdminDashboard.aspx");
+                    }
+                //}
+                else if (uname == "store" && password == "store")
                 {
-                    Session["Eid"] = "Admin";
-                    Response.Redirect(@"~\Admin\AdminDashboard.aspx");
-                }
-                else if ((string)al[1] == "err")
-                {
-                    Label1.Text = "Invalid Login";
+                    Session["Eid"] = "Store";
+                    Response.Redirect(@"~\Store\StoreDashboard.aspx");
                 }
 
                 else if ((string)al[1] == "Employee")
@@ -47,19 +58,35 @@ namespace AssetManagement.Login
                 else if ((string)al[1] == "Manager")
                 {
                     Session["Eid"] = (int)al[0];
-                    Response.Redirect(@"~\Manager\ManagerDashboard.aspx");
+                    Response.Redirect(@"~\Manager\ManagerPage.aspx");
                 }
                 else
                 {
                     Label1.Text = "Invalid Login";
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-
+                
                 Label1.Text = "Invalid Login";
             }
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+                //else if ((string)al[1] == "err")
+                //{
+                //    Label1.Text = "Invalid Login";
+                //}

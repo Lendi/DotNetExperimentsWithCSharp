@@ -1,16 +1,40 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Dashboard.Master" AutoEventWireup="true" CodeBehind="PasswordChange.aspx.cs" Inherits="AssetManagement.Employee.PasswordChange" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Dashboard.Master" CodeBehind="PasswordChange.aspx.cs" Inherits="AssetManagement.Manager.PasswordChange" %>
 
-<asp:Content ID="content2" ContentPlaceHolderID="navbar" runat="server">   
-       <li><asp:LinkButton ID="lbProfile" runat="server" PostBackUrl="~/Employee/EmployeePage.aspx" Height="40px" style="margin-left: 0px" 
+
+
+<asp:Content ID="content2" ContentPlaceHolderID="navbar" runat="server">
+          <li><asp:LinkButton ID="lbProfile" runat="server" PostBackUrl="~/Manager/ManagerPage.aspx" Height="40px" style="margin-left: 0px" 
                   Width="175px">Profile</asp:LinkButton>
-       </li>  
-          <li><asp:LinkButton ID="lbRequests" runat="server" PostBackUrl="~/Employee/EmpRequestPage.aspx" Height="40px" style="margin-left: 0px" 
+       </li>    
+          <li><asp:LinkButton ID="lbRequests" runat="server" PostBackUrl="~/Manager/ViewRequests.aspx" Height="40px" style="margin-left: 0px" 
                   Width="175px">Requests</asp:LinkButton>
        </li>       
-            <li><asp:LinkButton ID="lbAssets" runat="server" PostBackUrl="~/Employee/EmpAssetPage.aspx" Height="40px" Width="175px">Assets</asp:LinkButton>
+            <li><asp:LinkButton ID="lbAssets" runat="server" PostBackUrl="~/Manager/ViewAssets.aspx" Height="40px" Width="175px">Assets</asp:LinkButton>
         </li>
+        
 
-                
+                 <br />
+                 <br />
+                 <br />
+                 <br />
+                 <br />
+                 <br />
+                 <br />
+                 <br />
+                 <br />
+                 <br />
+                 <br />
+                 <br />
+                 <br />
+                 <br />
+                 <br />
+                 <br />
+                 <br />
+                 <br />
+                 <br />
+                 <br />
+                 <br />
+                 <br />
 
 
 </asp:Content>
@@ -19,7 +43,9 @@
             
         </asp:Content>
 
-<asp:Content ID="content" ContentPlaceHolderID="content" runat="server">
+
+    
+<asp:Content ID="content1" ContentPlaceHolderID="content" runat="server">
     
     
    
@@ -70,3 +96,7 @@
     
 
 </asp:Content>
+    
+
+
+

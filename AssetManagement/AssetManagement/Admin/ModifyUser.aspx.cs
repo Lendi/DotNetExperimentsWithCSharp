@@ -51,10 +51,10 @@ namespace AssetManagement.Admin
 
         }
 
-       // protected void GridView1_RowUpdated(object sender, GridViewUpdatedEventArgs e)
-      //  {
+        protected void GridView1_RowUpdated(object sender, GridViewUpdatedEventArgs e)
+        {
 
-       // }
+        }
 
         protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
@@ -93,6 +93,7 @@ namespace AssetManagement.Admin
 
         protected void GridView1_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
+            Server.Transfer("/Admin/ModifyUser.aspx");
 
         }
 

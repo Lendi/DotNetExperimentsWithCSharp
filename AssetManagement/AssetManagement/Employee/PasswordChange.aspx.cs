@@ -30,31 +30,41 @@ namespace AssetManagement.Employee
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
             user usr = new user();
-            usr.emp_id = Convert.ToInt32(Session["Eid"]);
+            //usr.emp_id = Convert.ToInt32(Session["Eid"]);
 
-            if (tbOldPwd.Text != usr.user_password) {
-                Label5.Text = "Denied! Wrong Password";
-            }
-            else
-                { 
-                if(tbNewPwd != tbConfirmPwd){
-                Label4.Text = "Passwords do not match!!";
-                }
-                else{        
+            //if (tbOldPwd.Text != usr.user_password) {
+            //    Label5.Text = "Denied! Wrong Password";
+            //}
+            //else
+            //    { 
+            //    if(tbNewPwd != tbConfirmPwd){
+            //    Label4.Text = "Passwords do not match!!";
+            //    }
+            //    else{        
    
-                        usr.user_password = tbNewPwd.Text;
-                        obj.ChangePassword(usr.emp_id , usr);
-                        Label4.Text = "New Password Set!";
-                }
-                    }
+            //            usr.user_password = tbNewPwd.Text;
+            //            obj.ChangePassword(usr.emp_id , usr);
+            //            Label4.Text = "New Password Set!";
+            //    }
+            //        }
+
+
+            int eid = Convert.ToInt32(Session["Eid"]);
+            string oldpwd = tbOldPwd.Text;
+            string newpwd = tbNewPwd.Text;
+            string msg;
+            obj.ChangePassword(eid, oldpwd, newpwd, out msg);
+            status.Text = msg;
+            tbNewPwd.Text = "";
+            tbConfirmPwd.Text = "";
                     
                 
                 }
 
-/*        protected void lbPwdChangeCancel_Click(object sender, EventArgs e)
+       protected void lbPwdChangeCancel_Click(object sender, EventArgs e)
         {
+            Response.Redirect(@"~\Employee\EmployeePage.aspx");
         
-        }*/
+        }
         }
     }
-}

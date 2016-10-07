@@ -11,15 +11,14 @@ namespace asset.datalayer
     {
         assetDataContext obj = new assetDataContext();
         public ArrayList LoginDetails(string uname, string pwd) {
-            string username = uname;
-            string password = pwd;
+  
             int eid;
             ArrayList al = new ArrayList();
-            user usr = obj.users.SingleOrDefault(i => i.short_id == username && i.user_password == password);
+            user usr = obj.users.SingleOrDefault(i => i.short_id == uname && i.user_password == pwd);
 
             try
             {
-                if (usr.short_id == username)
+                if (usr.short_id == uname)
                 {
                     eid = usr.emp_id;
                     al.Add(eid);
@@ -34,7 +33,7 @@ namespace asset.datalayer
 
                 foreach (var a in objuser)
                 {
-                    if (username == a.short_id && password == a.user_password)
+                    if (uname == a.short_id && pwd == a.user_password)
                     {
                         al.Clear();
                         eid = a.emp_id;

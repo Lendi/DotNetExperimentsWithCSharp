@@ -75,8 +75,7 @@ namespace asset.datalayer
 
         }
 
-
-
+        
 
 
         //public void ViewRequest(int eid, int status, DateTime Mapprovedate, )
@@ -93,13 +92,21 @@ namespace asset.datalayer
 
 
 
-        public void ChangePassword(int eid, user ObjUser)
+        public void ChangePassword(int eid, string oldpwd, string newpwd, out string msg)
         {
             using (assetDataContext obj = new assetDataContext())
             {
-                user usr = obj.users.SingleOrDefault(i => i.emp_id == eid);
-                usr.user_password = ObjUser.user_password;
-                obj.SubmitChanges();
+                user usr = obj.users.SingleOrDefault(i => i.emp_id == eid && i.user_password == oldpwd);
+                if (usr == null)
+                {
+                    msg = "Invalid Password";
+                }
+                else {
+                    usr.user_password = newpwd;
+                    msg = "Password Changed!";
+                    obj.SubmitChanges();
+                }
+             
             }
 
         } 

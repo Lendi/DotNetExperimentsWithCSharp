@@ -70,7 +70,7 @@
         <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
         <RowStyle BackColor="#EEEEEE" ForeColor="Black" />
 </asp:DetailsView>
-<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AssetManagementConnectionString2 %>" SelectCommand="SELECT * FROM [users] WHERE ([emp_id] = @emp_id)">
+<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AssetManagementConnectionString %>" SelectCommand="SELECT * FROM [users] WHERE ([emp_id] = @emp_id)">
     <SelectParameters>
         <asp:SessionParameter Name="emp_id" SessionField="Eid" Type="Int32" />
     </SelectParameters>

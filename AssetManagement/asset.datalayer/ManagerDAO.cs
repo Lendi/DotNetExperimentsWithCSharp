@@ -11,7 +11,7 @@ namespace asset.datalayer
     {
         assetDataContext obj = new assetDataContext();
 
-
+        //normal requests
         public List<RequestInfo> GetRequests(int eid)
         {
             List<RequestInfo> list = obj.RequestInfos.Where(i => i.manager_id == eid && i.request_status == 1).ToList();
@@ -19,29 +19,67 @@ namespace asset.datalayer
             return list;
         }
 
-        //list of requests that arent approved yet
-
-        public void ApproveReject(int eid, int req_id, int reqstatus, string remarks)
+        //get transfer requests
+        public List<TransferHistory> GetTransferRequest(int eid)
         {
-            if (reqstatus == 5) //approve it & forward to store
+            List<TransferHistory> list = obj.TransferHistories.Where(i => i.manager_id == eid && i.transferstatus == 0).ToList();
+            return list;
+        }
+
+       //normal asset requests 
+
+        public void NormalRequests(int eid, int req_id, int reqstatus, string remarks)
+        {
+
+            RequestInfo reqinf = obj.RequestInfos.SingleOrDefault(i => i.emp_id == eid && i.request_id == req_id);
+            reqinf.request_status = reqstatus  ;
+            reqinf.remarks = remarks;           
+            if (reqstatus == 3) //
             {
-                RequestInfo reqinf  = obj.RequestInfos.SingleOrDefault(i => i.emp_id == eid && i.request_id == req_id);
-                reqinf.request_status = reqstatus;
                 reqinf.manager_approved_date = DateTime.Now;
-                reqinf.remarks = remarks;
-                obj.SubmitChanges();
             }
-            if (reqstatus == 4) //reject it
-            {
-                RequestInfo reqinf = obj.RequestInfos.SingleOrDefault(i => i.emp_id == eid && i.request_id == req_id);
-                reqinf.request_status = reqstatus;
-                reqinf.remarks = remarks;
-                obj.SubmitChanges();
-            }
+            obj.SubmitChanges();
+
+            //if (reqstatus == 5) //approve it & forward to store
+            //{
+            //    RequestInfo reqinf  = obj.RequestInfos.SingleOrDefault(i => i.emp_id == eid && i.request_id == req_id);
+            //    reqinf.request_status = reqstatus;
+            //    reqinf.manager_approved_date = DateTime.Now;
+            //    reqinf.remarks = remarks;
+            //    obj.SubmitChanges();
+            //}
+            //if (reqstatus == 4) //reject it
+            //{
+            //    RequestInfo reqinf = obj.RequestInfos.SingleOrDefault(i => i.emp_id == eid && i.request_id == req_id);
+            //    reqinf.request_status = reqstatus;
+            //    reqinf.remarks = remarks;
+            //    obj.SubmitChanges();
+            //}
+
+
+
         }
 
 
-        public List<user> GetEmployees(int eid) //all employees under me
+
+        public void TransferRequests(int from_eid, int to_eid, int asset_id, int trans_status)
+        {
+            TransferHistory tranHistory = obj.TransferHistories.SingleOrDefault(i => i.from_emp_id == from_eid && i.asset_id == asset_id);
+            tranHistory.transferstatus = trans_status;
+
+            if (trans_status == 1)
+            {
+                tranHistory.transferdate = DateTime.Now;
+                AssetInfo assetInf = obj.AssetInfos.SingleOrDefault(i => i.emp_id == from_eid && i.asset_id == asset_id);
+                assetInf.emp_id = to_eid;
+                assetInf.Status = "Issued";
+            }
+            obj.SubmitChanges();
+        }
+        
+
+
+        public List<user> GetEmployees(int eid) //employees under me
         {
             List<user> usr = obj.users.Where(i => i.manager_id == eid).ToList();
             return usr;
@@ -59,7 +97,9 @@ namespace asset.datalayer
                                    requestid = (int)a.request_id,                                   
                                    issuedate = (DateTime) a.issueddate
                                }).ToList();
+
             return myempassets;
+
            
         }
     }

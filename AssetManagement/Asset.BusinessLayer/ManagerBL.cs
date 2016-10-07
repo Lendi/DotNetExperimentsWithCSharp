@@ -15,15 +15,26 @@ namespace Asset.BusinessLayer
         {
             return obj.GetRequests(eid);
         }
-        public void ApproveReject(int eid, int request_id, int rstatus, string remarks)
-        {
-            obj.ApproveReject(eid, request_id, rstatus, remarks);
+
+        public List<TransferHistory> GetTransferRequest(int eid) {
+            return obj.GetTransferRequest(eid);
         }
 
+        public void NormalRequests(int eid, int req_id, int reqstatus, string remarks) {
+            obj.NormalRequests(eid, req_id, reqstatus, remarks);
+        }
+
+        public void TransferRequests(int from_eid, int to_eid, int asset_id, int trans_status) {
+            obj.TransferRequests(from_eid, to_eid, asset_id, trans_status);
+        }
+
+  
         public List<EmployeeAssets> GetEmployeesAssets(int eid)
         {
             return obj.GetEmployeesAssets(eid);
         }
+
+
         public List<user> GetEmployees(int eid)
         {
             return obj.GetEmployees(eid);

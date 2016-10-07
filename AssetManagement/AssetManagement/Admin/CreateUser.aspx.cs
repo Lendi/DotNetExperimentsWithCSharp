@@ -31,13 +31,7 @@ namespace AssetManagement.Admin
             usr.lname = tbLastName.Text;
             usr.email_id = tbEmailID.Text;
             usr.user_password = tbPassword.Text;
-            if (usr.manager_id != null)
-            {
-                usr.manager_id = int.Parse(tbManagerID.Text);
-            }
-            else {
-                usr.manager_id = null;
-            }
+            usr.manager_id = int.Parse(tbManagerID.Text);            
             usr.designation = ddlDesignation.Text;
             usr.mobile = int.Parse(tbPhno.Text);
             usr.date_of_join = CalendarDOJ.SelectedDate;//check
@@ -45,6 +39,14 @@ namespace AssetManagement.Admin
 
             obj.CreateUser(usr);
             Label1.Text = "User Created!";
+            tbEmpID.Text = "";
+            tbUname.Text = "";
+            tbPhno.Text = "";
+            tbPassword.Text = "";
+            tbManagerID.Text = "";
+            tbLastName.Text = "";
+            tbFirstname.Text = "";
+            tbEmailID.Text = "";
 
             if (usr.active == "a")
             {
@@ -54,6 +56,15 @@ namespace AssetManagement.Admin
             {
                 Label2.Text = "User Deactivated!";
             }
+
+            tbEmpID.Text = "";
+            tbUname.Text = "";
+            tbPhno.Text = "";
+            tbPassword.Text = "";
+            tbManagerID.Text = "";
+            tbLastName.Text = "";
+            tbFirstname.Text = "";
+            tbEmailID.Text = "";
 
         }
 

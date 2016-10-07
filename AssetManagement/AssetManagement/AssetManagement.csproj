@@ -67,6 +67,10 @@
     <Content Include="Employee\PasswordChange.aspx" />
     <Content Include="Login\css\style.css" />
     <Content Include="Login\Login.aspx" />
+    <Content Include="Manager\PasswordChange.aspx" />
+    <Content Include="Manager\ViewAssets.aspx" />
+    <Content Include="Manager\ViewRequests.aspx" />
+    <Content Include="Manager\ManagerPage.aspx" />
     <Content Include="Store\StoreDashboard.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -141,6 +145,34 @@
     <Compile Include="Login\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Manager\PasswordChange.aspx.cs">
+      <DependentUpon>PasswordChange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\PasswordChange.aspx.designer.cs">
+      <DependentUpon>PasswordChange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\ViewAssets.aspx.cs">
+      <DependentUpon>ViewAssets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\ViewAssets.aspx.designer.cs">
+      <DependentUpon>ViewAssets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\ViewRequests.aspx.cs">
+      <DependentUpon>ViewRequests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\ViewRequests.aspx.designer.cs">
+      <DependentUpon>ViewRequests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\ManagerPage.aspx.cs">
+      <DependentUpon>ManagerPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\ManagerPage.aspx.designer.cs">
+      <DependentUpon>ManagerPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Store\StoreDashboard.aspx.cs">
       <DependentUpon>StoreDashboard.aspx</DependentUpon>
@@ -159,9 +191,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Manager\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Asset.BusinessLayer\Asset.BusinessLayer.csproj">
       <Project>{d990fdae-fac8-4c5f-a4a6-48162b1a2117}</Project>

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AssetManagement.Employee {
+namespace AssetManagement.Manager {
     
     
     public partial class PasswordChange {

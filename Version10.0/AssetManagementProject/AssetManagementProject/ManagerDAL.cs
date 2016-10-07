@@ -9,28 +9,36 @@ namespace AssetManagementProject.DataLayer
     public class ManagerDAL:EmployeeDAL
     {
         AssetManagementDBModelDataContext obj = new AssetManagementDBModelDataContext();
+        //normal requests
+
         public List<RequestTable> GetRequests(int eid)
         {
             List<RequestTable> list = obj.RequestTables.Where(i => i.Manager_ID == eid&&i.Status==1).ToList();
 
             return list;
         }
+        
+        //get transfer requests
         public List<TranserHistory> GetTransferRequest(int eid)
         {
             List<TranserHistory> list = obj.TranserHistories.Where(i => i.Manager_ID == eid && i.Transfer_Status==0).ToList();
             return list;
         }
+
+        //pending normal requests
+        
         public void PendingRequestApproval(int eid,int request_id,int RequestType)
         {
             RequestTable r = obj.RequestTables.SingleOrDefault(i => i.Emp_ID == eid && i.Request_ID == request_id);
-            r.Status = RequestType;
-           //r.Remarks_Comment = Comments;
-            if (RequestType == 3)
+            r.Status = RequestType;          
+            if (RequestType == 3) 
             {
                 r.ManagerApprovedDate = DateTime.Now;
             }
             obj.SubmitChanges();
         }
+
+        //asset transfter transfer status 1 = approved , 2 rejected
         public void PendingTrasferRequest(int fromeid, int toeid, int assetid,int RequestType)
         {
             TranserHistory r = obj.TranserHistories.SingleOrDefault(i => i.From_Emp_ID == fromeid && i.Asset_ID == assetid);
