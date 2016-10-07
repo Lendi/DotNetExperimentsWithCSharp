@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AssetManagement" Class="assetDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=CSCINDAE745733;Initial Catalog=AssetManagement;Integrated Security=True" SettingsObjectName="asset.datalayer.Properties.Settings" SettingsPropertyName="AssetManagementConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=JUMPER\SQLEXPRESS;Initial Catalog=AssetManagement;Integrated Security=True" SettingsObjectName="asset.datalayer.Properties.Settings" SettingsPropertyName="AssetManagementConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.users" Member="users">
     <Type Name="user">
       <Column Name="emp_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />

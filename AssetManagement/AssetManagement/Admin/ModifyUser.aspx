@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Dashboard.Master" AutoEventWireup="true" CodeBehind="ModifyUser.aspx.cs" Inherits="AssetManagement.Admin.ModifyUser" %>
 
       <asp:Content ID="content2" ContentPlaceHolderID="navbar" runat="server">   
-          <ul>
+          
           <li><asp:LinkButton ID="lbCreateUser" runat="server" 
                   OnClick="lbCreateUser_Click" Height="40px" style="margin-left: 0px" 
                   Width="175px">Create User</asp:LinkButton>
@@ -25,34 +25,13 @@
                    OnClick="lbChangePwd_Click" Height="40px" Width="175px">Change Password</asp:LinkButton>
 
            </li>    
-    </ul>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-
+  
 
 </asp:Content>
 
+<asp:Content ID="logoutbar" ContentPlaceHolderID="logoutbar" runat="server"> 
+            
+        </asp:Content>
 
     <asp:Content ID="Content1" ContentPlaceHolderID="content" runat="server">        
         <asp:GridView ID="GridView1" runat="server" AllowPaging="True" 
@@ -62,8 +41,8 @@
             OnRowEditing="GridView1_RowEditing" 
             OnRowUpdating="GridView1_RowUpdating" 
             OnSelectedIndexChanged="GridView1_SelectedIndexChanged" 
-            AutoGenerateColumns="False" 
-            OnRowCancelingEdit="GridView1_RowCancelingEdit">
+            AutoGenerateColumns="false" 
+            OnRowCancelingEdit="GridView1_RowCancelingEdit" Width="958px" EnableViewState="false">
             <Columns>
                 <asp:TemplateField HeaderText="Employee ID">
                     <ItemTemplate>

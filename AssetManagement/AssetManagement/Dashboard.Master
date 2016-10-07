@@ -51,37 +51,10 @@ li a:hover:not(.active) {
 <ul>
 
     <asp:ContentPlaceHolder ID="navbar" runat="server">
-        <p>
+        
             <br />
         
-            <p>
-            </p>
-            <p>
-            </p>
-            <p>
-            </p>
-            <p>
-            </p>
-            <p>
-            </p>
-            <p>
-            </p>
-            <p>
-            </p>
-            <p>
-            </p>
-            <p>
-            </p>
-            <p>
-            </p>
-            <p>
-            </p>
-            <p>
-            </p>
-        <p>
-            </p>
-        <p>
-            </p>
+           
        
     </asp:ContentPlaceHolder>
 </ul>
@@ -89,13 +62,18 @@ li a:hover:not(.active) {
 <asp:ContentPlaceHolder ID="fullpage" runat="server">
 <div style="margin-left:14%; padding:1px 16px;height:1096px;">
   <h2 align="right"> Asset Management </h2> 
-  <h3>-------------------------------------------------------------------------------------------------------------------------------------</h3>
-    <p>
+    <hr />
+  
+    <h4> 
+        <asp:ContentPlaceHolder ID="logoutbar" runat="server"> 
+
+        </asp:ContentPlaceHolder>
+    </h4>
   
   <asp:ContentPlaceHolder ID="content" runat="server">
 
       </asp:ContentPlaceHolder>
-    </p>
+    
 
 </div>
 

@@ -71,17 +71,6 @@ namespace AssetManagement.Admin
             DropDownList active;//11 c
             eid =int.Parse(((GridView1.Rows[e.RowIndex].Cells[1].FindControl("LinkButton1"))as LinkButton).Text);
             sid = ((GridView1.Rows[e.RowIndex].Cells[2].FindControl("Label1") as Label).Text);
-            //fname = GridView1.Rows[e.RowIndex].Cells[3].Controls[0] as TextBox;
-            //lname = GridView1.Rows[e.RowIndex].Cells[4].Controls[1] as TextBox;
-            //email = GridView1.Rows[e.RowIndex].Cells[5].Controls[2] as TextBox;
-            //pwd = GridView1.Rows[e.RowIndex].Cells[6].Controls[3] as TextBox;
-            //mid = GridView1.Rows[e.RowIndex].Cells[7].Controls[4] as TextBox;
-            //desig = GridView1.Rows[e.RowIndex].Cells[8].Controls[5] as DropDownList;
-            //phno = GridView1.Rows[e.RowIndex].Cells[9].Controls[6] as TextBox;
-            //doj = DateTime.Parse(GridView1.Rows[e.RowIndex].Cells[10].Text) ;
-            //doj = DateTime.Parse(((GridView1.Rows[e.RowIndex].Cells[10].FindControl("Label1") as Label).Text));
-            //active = GridView1.Rows[e.RowIndex].Cells[11].Controls[7] as DropDownList;
-
             fname = ((GridView1.Rows[e.RowIndex].Cells[3].FindControl("TextBox1")) as TextBox);
             lname = ((GridView1.Rows[e.RowIndex].Cells[4].FindControl("TextBox2")) as TextBox);
             email = ((GridView1.Rows[e.RowIndex].Cells[5].FindControl("TextBox3")) as TextBox);

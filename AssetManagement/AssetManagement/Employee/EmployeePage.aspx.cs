@@ -23,5 +23,16 @@ namespace AssetManagement.Employee
             DetailsView1.DataSource = obj.ViewEmployeeDetails(eid);
             DetailsView1.DataBind();  
         }
+
+        protected void lbPassword_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Employee/PasswordChange.aspx");
+
+        }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+
+        }
 	}
 }

@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Dashboard.Master" AutoEventWireup="true" CodeBehind="ViewUsers.aspx.cs" Inherits="AssetManagement.Admin.ViewUsers" %>
 
+
+
       <asp:Content ID="content2" ContentPlaceHolderID="navbar" runat="server">   
           <li><asp:LinkButton ID="lbCreateUser" runat="server" 
                   OnClick="lbCreateUser_Click" Height="40px" style="margin-left: 0px" 

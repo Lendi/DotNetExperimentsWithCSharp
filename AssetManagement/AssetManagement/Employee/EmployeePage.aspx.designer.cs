@@ -13,6 +13,15 @@ namespace AssetManagement.Employee {
     public partial class EmployeePage {
         
         /// <summary>
+        /// lbProfile control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbProfile;
+        
+        /// <summary>
         /// lbRequests control.
         /// </summary>
         /// <remarks>

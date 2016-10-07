@@ -1,6 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Dashboard.Master"  AutoEventWireup="true" CodeBehind="EmpRequestPage.aspx.cs" Inherits="AssetManagement.Employee.EmpRequestPage" %>
 
-<asp:Content ID="content2" ContentPlaceHolderID="navbar" runat="server">   
+<asp:Content ID="content2" ContentPlaceHolderID="navbar" runat="server">  
+          <li><asp:LinkButton ID="lbProfile" runat="server" PostBackUrl="~/Employee/EmployeePage.aspx" Height="40px" style="margin-left: 0px" 
+                  Width="175px">Profile</asp:LinkButton>
+       </li>  
           <li><asp:LinkButton ID="lbRequests" runat="server" 
                   PostBackUrl="~/Employee/EmpRequestPage.aspx" Height="40px" style="margin-left: 0px" 
                   Width="175px" OnClick="lbRequests_Click">Requests</asp:LinkButton>
@@ -8,32 +11,13 @@
             <li><asp:LinkButton ID="lbAssets" runat="server" PostBackUrl="~/Employee/EmpAssetPage.aspx" Height="40px" Width="175px">Assets</asp:LinkButton>
         </li>
 
-                 <br />
-                 <br />
-                 <br />
-                 <br />
-                 <br />
-                 <br />
-                 <br />
-                 <br />
-                 <br />
-                 <br />
-                 <br />
-                 <br />
-                 <br />
-                 <br />
-                 <br />
-                 <br />
-                 <br />
-                 <br />
-                 <br />
-                 <br />
-                 <br />
-                 <br />
-
+                 
 
 </asp:Content>
 
+<asp:Content ID="logoutbar" ContentPlaceHolderID="logoutbar" runat="server"> 
+            
+        </asp:Content>
 
 <asp:Content ID="content" ContentPlaceHolderID="content" runat="server">
     

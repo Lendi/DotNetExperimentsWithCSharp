@@ -7,20 +7,23 @@ using System.Web.UI.WebControls;
 using asset.datalayer;
 using Asset.BusinessLayer;
 
-namespace AssetManagement.Employee
+namespace AssetManagement.Store
 {
-        public partial class EmpAssetPage : System.Web.UI.Page
+    public partial class StoreDashboard : System.Web.UI.Page
     {
-            EmployeeBL obj = new EmployeeBL();
-
+        StoreBL obj = new StoreBL();
         protected void Page_Load(object sender, EventArgs e)
         {
-            int eid = Convert.ToInt32(Session["Eid"]);
-            if (obj.ViewMyAssets(eid) != null)
+            if (IsPostBack == false)
             {
-                GridView1.DataSource = obj.ViewMyAssets(eid);
+                GridView1.DataSource = obj.ViewRequest();
                 GridView1.DataBind();
             }
+
+        }
+
+        protected void lbProfile_Click(object sender, EventArgs e)
+        {
 
         }
     }
